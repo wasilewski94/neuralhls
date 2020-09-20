@@ -1,0 +1,109 @@
+Konfiguracja Petalinuxa:
+
+petalinux-create -t project -n <project_name> --template zynq
+cd <project_name>
+petalinux-config --get-hw-description <vivado_project_dir>
+Image Packaging Configuration -> Rootfs type na EXT /dev/mmcblk0p2
+
+petalinux-config -c kernel
+
+  │ │      <*>   Userspace I/O platform driver with generic IRQ handling                │ │  
+  │ │      <*>   Userspace platform driver with generic irq and dynamic memory  
+
+  │ │      <*>   USB Video Class (UVC)                                                  │ │  
+  │ │      [*]     UVC input events device support (NEW)   
+
+disable:
+
+General setup->
+
+  │ │      [ ] Initial RAM filesystem and RAM disk (initramfs/initrd) support 
+
+
+petalinux-config -c rootfs
+
+
+devel -> python -> python
+  │ │      [*] python                                                                   │ │  
+  │ │      [ ] python-dbg                                                               │ │  
+  │ │      [ ] python-mailbox                                                           │ │  
+  │ │      [ ] python-resource                                                          │ │  
+  │ │      [ ] python-compile                                                           │ │  
+  │ │      [*] python-math       
+
+python-numpy
+  │ │      [*] python-numpy                                                             │ │  
+  │ │      [*] python-numpy-dev   
+
+Petalinux Package Groups -> v4l-utils
+  │ │      [*] packagegroup-petalinux-v4lutils                                          │ │  
+  │ │      [*] packagegroup-petalinux-v4lutils-dbg 
+
+opencv
+  │ │      [*] packagegroup-petalinux-opencv                                            │ │  
+  │ │      [ ] packagegroup-petalinux-opencv-dbg                                        │ │  
+  │ │      [*] packagegroup-petalinux-opencv-dev       
+
+petalinux-build
+petalinux-create -t apps -n <app_name>
+
+petalinux-build -c <app_name>
+
+device tree:
+Gdy chcemy uzyc generic-uio i kamery usb, edytujemy project-spec/meta-user/recipes-bsp/device-tree/files/system-user.dtsi
+
+
+/include/ "system-conf.dtsi"
+/ {
+    chosen {
+        bootargs = "earlycon clk_ignore_unused  root=/dev/mmcblk0p2 rw rootwait  uio_pdrv_genirq.of_id=generic-uio";
+        stdout-path = "serial0:115200n8";
+    };
+
+	usb_phy0: usb_phy@0 {
+		compatible = "usb-nop-xceiv";
+		#phy-cells = <0>;
+	};
+};
+
+&usb0 {
+	dr_mode = "host";
+	usb-phy = <&usb_phy0>;
+};
+
+&neural_net_axi_bram_ctrl_0 {
+    compatible = "generic-uio";
+};
+
+&neural_net_axi_bram_ctrl_1 {
+    compatible = "generic-uio";
+};
+
+&neural_net_axi_bram_ctrl_2 {
+    compatible = "generic-uio";
+};
+
+&neural_net_axi_bram_ctrl_3 {
+    compatible = "generic-uio";
+};
+
+&neural_net_calcPerceptron_0 {
+    compatible = "generic-uio";
+};
+
+petalinux-build
+petalinux-package --boot --format BIN --fsbl ./images/linux/zynq_fsbl.elf
+--fpga ./images/linux/system.bit --u-boot --force
+
+cp images/linux/BOOT.BIN images/linux/image.ub /media/wask/BOOT
+sudo tar -xvf images/linux/rootfs.tar.gz -C /media/wask/ROOTFS/
+umount /media/wask/*
+
+po kolejnym wprowadzeniu zmian:
+umount /media/wask/ROOTFS 
+sudo mkfs.ext4 /dev/mmcblk0p2
+
+wyjmij i włóż kartę do czytnika
+
+sudo tar -xvf images/linux/rootfs.tar.gz -C /media/wask/<nazwa>
+
