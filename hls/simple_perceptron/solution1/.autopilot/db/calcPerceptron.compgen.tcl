@@ -1,7 +1,7 @@
 # This script segment is generated automatically by AutoPilot
 
 set id 1
-set name calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1
+set name calcPerceptron_fabkb
 set corename simcore_fadd
 set op fadd
 set stage_num 5
@@ -92,7 +92,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_XILINX_FPV6::fpv6_gen, check your p
 
 
 set id 2
-set name calcPerceptron_fmul_32ns_32ns_32_4_max_dsp_1
+set name calcPerceptron_fmcud
 set corename simcore_fmul
 set op fmul
 set stage_num 4
@@ -183,13 +183,12 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_XILINX_FPV6::fpv6_gen, check your p
 
 
 set id 3
-set name calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1
-set corename simcore_frecip
-set op frecip
-set stage_num 10
+set name calcPerceptron_fddEe
+set corename simcore_fdiv
+set op fdiv
+set stage_num 16
 set max_latency -1
 set registered_input 1
-set impl_style full_dsp
 set Futype4reduceCEFanout 1
 set clk_width 1
 set clk_signed 0
@@ -203,8 +202,8 @@ set ce_width 1
 set ce_signed 0
 set out_width 32
 if {${::AESL::PGuard_simmodel_gen}} {
-if {[info proc ap_gen_simcore_frecip] == "ap_gen_simcore_frecip"} {
-eval "ap_gen_simcore_frecip { \
+if {[info proc ap_gen_simcore_fdiv] == "ap_gen_simcore_fdiv"} {
+eval "ap_gen_simcore_fdiv { \
     id ${id} \
     name ${name} \
     corename ${corename} \
@@ -214,7 +213,6 @@ eval "ap_gen_simcore_frecip { \
     stage_num ${stage_num} \
     max_latency ${max_latency} \
     registered_input ${registered_input} \
-    style ${impl_style} \
     Futype4reduceCEFanout ${Futype4reduceCEFanout} \
     clk_width ${clk_width} \
     clk_signed ${clk_signed} \
@@ -229,7 +227,7 @@ eval "ap_gen_simcore_frecip { \
     out_width ${out_width} \
 }"
 } else {
-puts "@W \[IMPL-100\] Cannot find ap_gen_simcore_frecip, check your AutoPilot builtin lib"
+puts "@W \[IMPL-100\] Cannot find ap_gen_simcore_fdiv, check your AutoPilot builtin lib"
 }
 }
 
@@ -239,8 +237,8 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 }
 
 
-set op frecip
-set corename FRecip
+set op fdiv
+set corename FDiv
 if {${::AESL::PGuard_autocg_gen} && (${::AESL::PGuard_autocg_fpip} || ${::AESL::PGuard_autocg_fpv6en} || ${::AESL::PGuard_autocg_hpen})} {
 if {[info proc ::AESL_LIB_XILINX_FPV6::fpv6_gen] == "::AESL_LIB_XILINX_FPV6::fpv6_gen"} {
 eval "::AESL_LIB_XILINX_FPV6::fpv6_gen { \
@@ -253,7 +251,6 @@ eval "::AESL_LIB_XILINX_FPV6::fpv6_gen { \
     stage_num ${stage_num} \
     max_latency ${max_latency} \
     registered_input ${registered_input} \
-    style ${impl_style} \
     Futype4reduceCEFanout ${Futype4reduceCEFanout} \
     clk_width ${clk_width} \
     clk_signed ${clk_signed} \
@@ -274,7 +271,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_XILINX_FPV6::fpv6_gen, check your p
 
 
 set id 4
-set name calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1
+set name calcPerceptron_feeOg
 set corename simcore_fexp
 set op fexp
 set stage_num 9

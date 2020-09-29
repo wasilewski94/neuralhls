@@ -1,0 +1,7 @@
+/*mlp_hls*/
+the_ROM_image:
+{
+  [bootloader]<mlp_hls/boot/fsbl.elf>
+   <bitstream> 
+  <elf,ps7_cortexa9_0>
+}

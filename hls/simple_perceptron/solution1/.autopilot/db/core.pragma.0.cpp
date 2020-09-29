@@ -26887,9 +26887,9 @@ void calcPerceptron(float x[784], float w[12704], float b[26], float res[26], in
 #pragma HLS INTERFACE bram port=&w
 #pragma HLS INTERFACE bram port=&res
 #pragma HLS INTERFACE bram port=&b
-# 24 "simple_perceptron/core.cpp"
-float sum = 0.0;
 
+
+float sum = 0.0;
 
 
 

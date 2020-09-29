@@ -3,10 +3,10 @@
 <!--                                                         -->
 <!-- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="44" Path="/home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/impl/ip/tmp.xpr">
+<Project Version="7" Minor="44" Path="/home/wask/workspace/mgr/neuralhls/hls/simple_perceptron/solution1/impl/ip/tmp.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="3bff596833794ebbbb0c374fbcdea9f8"/>
+    <Option Name="Id" Val="607708449cda47a1ac2faa8f06178804"/>
     <Option Name="Part" Val="xc7z020clg400-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -65,6 +65,13 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/ip/calcPerceptron_ap_fdiv_14_no_dsp_32/calcPerceptron_ap_fdiv_14_no_dsp_32.xci">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/ip/calcPerceptron_ap_fexp_7_full_dsp_32/calcPerceptron_ap_fexp_7_full_dsp_32.xci">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -73,13 +80,6 @@
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/ip/calcPerceptron_ap_fmul_2_max_dsp_32/calcPerceptron_ap_fmul_2_max_dsp_32.xci">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/ip/calcPerceptron_ap_frecip_8_full_dsp_32/calcPerceptron_ap_frecip_8_full_dsp_32.xci">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>

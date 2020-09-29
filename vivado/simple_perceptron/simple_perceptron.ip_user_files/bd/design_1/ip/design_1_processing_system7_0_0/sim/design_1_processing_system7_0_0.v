@@ -107,6 +107,7 @@ M_AXI_GP0_RID,
 M_AXI_GP0_BRESP, 
 M_AXI_GP0_RRESP, 
 M_AXI_GP0_RDATA, 
+IRQ_F2P, 
 FCLK_CLK0, 
 FCLK_CLK1, 
 FCLK_RESET0_N, 
@@ -183,6 +184,7 @@ input [11 : 0] M_AXI_GP0_RID;
 input [1 : 0] M_AXI_GP0_BRESP;
 input [1 : 0] M_AXI_GP0_RRESP;
 input [31 : 0] M_AXI_GP0_RDATA;
+input [0 : 0] IRQ_F2P;
 output FCLK_CLK0;
 output FCLK_CLK1;
 output FCLK_RESET0_N;

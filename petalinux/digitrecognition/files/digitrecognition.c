@@ -21,6 +21,7 @@ int main(int argc, char* argv[])
     FILE *f_weights;
     FILE *f_input;
     FILE *f_bias;
+    FILE *f_labels;
 
     struct timeval t1, t2;
     double elapsedTime;
@@ -31,9 +32,19 @@ int main(int argc, char* argv[])
         test_samples = atoi(argv[1]);
     }     
 
+    if(test_samples < 1 || test_samples > 10000) {
+        printf ("Number of test samples must be between 1 and 10000!\n");    
+        return 0;
+    }
+   
     float buffer;
+    int label_buf;
+
     float max_output;
     int recognized_digit; 
+    
+    int labels[10000];
+    int misclassified = 0;
 
     int fd_x;
     int fd_w;
@@ -216,6 +227,22 @@ int main(int argc, char* argv[])
             i++;
         }
         fclose (f_bias);
+
+
+        if ((f_labels = fopen("test_labels.txt", "r")) == NULL) {
+            printf ("Can't open file: labels.txt\n");
+            return 0;
+        }
+
+        printf("Setting labels values.\n");
+        i = 0;
+        while (!feof (f_labels)) {
+            fscanf (f_labels, "%d", &label_buf);
+            labels[i] = label_buf;
+            i++;
+        }
+        fclose (f_labels);
+
         return 1;
     }
 
@@ -237,7 +264,7 @@ int main(int argc, char* argv[])
     }
 
 // ---------------------------Start calculation----------------------
-    // printf("MNIST hand-written digits recognition Neural Network - test with %d samples\n", test_samples);
+    printf("MNIST hand-written digits recognition Neural Network - test with %d samples\n", test_samples);
 
     if(!init_load_data()) {
         return 0;
@@ -308,11 +335,18 @@ int main(int argc, char* argv[])
                 recognized_digit = i;    
             }
     	}
-    	printf("x_test[%d]: Recognized digit: %d with output = %f\n", sample, recognized_digit, max_output);
-        // printf("%d\n", recognized_digit);
+        // chceck the prediction 
+    	if(recognized_digit != labels[sample]) {
+            printf("x_test[%d]: Recognized digit: %d with output = %f -- FALSE (expected %d)\n", sample, recognized_digit, max_output, labels[sample]);
+            misclassified++;
+        }
+
+        printf("x_test[%d]: Recognized digit: %d with output = %f\n", sample, recognized_digit, max_output);
     }
 
-	printf("End of test\n");
+    printf("Misclassified: %d digits.\n", misclassified);
+    printf("Accuracy: %f\n", (float)(test_samples - misclassified)/test_samples);
+    printf("End of test\n");
 
     munmap(x_bram_ptr, 4096);
     munmap(w_bram_ptr, 65536);

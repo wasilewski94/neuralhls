@@ -26887,9 +26887,9 @@ _ssdm_op_SpecInterface(x, "bram", 0, 0, "", 0, 0, "", "", "", 0, 0, 0, 0, "", ""
 _ssdm_op_SpecInterface(w, "bram", 0, 0, "", 0, 0, "", "", "", 0, 0, 0, 0, "", "");
 _ssdm_op_SpecInterface(res, "bram", 0, 0, "", 0, 0, "", "", "", 0, 0, 0, 0, "", "");
 _ssdm_op_SpecInterface(b, "bram", 0, 0, "", 0, 0, "", "", "", 0, 0, 0, 0, "", "");
-# 24 "simple_perceptron/core.cpp"
-float sum = 0.0;
 
+
+float sum = 0.0;
 
 
 

@@ -8,17 +8,22 @@ from keras.layers import Conv2D, MaxPooling2D
 from keras import backend as K
 import sys
 import matplotlib.pyplot as plt
+import time
+
 
 np.set_printoptions(suppress=True, threshold=sys.maxsize)
 
 batch_size = 128
 num_classes = 10
-epochs = 10
+epochs = 50
 
-# the data, split between train and test sets
 (x_train, y_train), (x_test, y_test) = mnist.load_data()
 
-# Now lets take a look at some of our triaining images!
+with open('test_labels.txt', 'w') as f:
+  for i in range(10000):
+    f.write("%d\n" % y_test[i])
+
+# plotting digits
 # plt.figure(figsize=(11,6))
 # for i in range(66):
 #     plt.subplot(6,11,i+1)
@@ -29,13 +34,13 @@ epochs = 10
 # plt.tight_layout()
 # plt.show()
 
+# for plotting digits later 
 x_draw = x_test
 
 x_train = x_train.astype('float32')
 x_test = x_test.astype('float32')
 x_train /= 255
 x_test /= 255 
-
 
 # Make sure images have shape (28, 28, 1)
 # x_train = np.expand_dims(x_train, -1)
@@ -62,7 +67,7 @@ model.compile(loss=keras.losses.categorical_crossentropy,
               optimizer=keras.optimizers.Adam(),
               metrics=['accuracy'])
 
-model.fit(x_train, y_train,
+history = model.fit(x_train, y_train,
           batch_size=batch_size,
           epochs=epochs,
           verbose=1,
@@ -74,11 +79,34 @@ print('Test accuracy:', score[1])
 
 weights = model.get_weights()
 
+# measure elapsed time
+start = time.time()
 predictions = model.predict(x_test)
+end = time.time()
+print("Elapsed time for 10000 digits: " + str(end - start))
 
-# for i in range(100):
-  # recognized_digit = np.argmax(predictions[i])
-  # print("x_test no. " + str(i) + " recognized digit: " + str(recognized_digit) + " with output = " + str(predictions[i][recognized_digit]))
+for img in range(10):
+  # measure elapsed time
+  start = time.time()
+  predictions = model.predict(x_test[0:1])
+  end = time.time()
+  print("Elapsed time for digit no. " + str(img) + ": " + str(end - start))
+
+
+plt.figure(num=None, figsize=(12, 6), dpi=80, facecolor='w', edgecolor='k')
+plt.plot(history.history['accuracy'])
+plt.plot(history.history['val_accuracy'])
+plt.title('model accuracy')
+plt.grid()
+plt.ylabel('accuracy')
+plt.xlabel('epoch')
+plt.legend(['training', 'validation'], loc='upper left')
+# plt.savefig('accuracy1.png')
+plt.show()
+
+# for i in range(10):
+#   recognized_digit = np.argmax(predictions[i])
+#   print("x_test no. " + str(i) + " recognized digit: " + str(recognized_digit) + " with output = " + str(predictions[i][recognized_digit]))
   # fig = plt.figure
   # plt.imshow(x_draw[i], cmap='gray')
   # plt.show()
@@ -115,7 +143,7 @@ np.save('biases2.npy', biases2)
 
 
 # ------------------------for Petalinux ----------------------------
-# save 10 digits images
+# save 10000 digits images
 
 # input_filenames = list()
 # for i in range(10000):
@@ -125,7 +153,6 @@ np.save('biases2.npy', biases2)
 #   with open(input_filenames[i], 'w') as f:
 #     for j in range(784):
 #       f.write("%5.8f\n" % x_test[i][j])
-
 
 with open('weights.txt', 'w') as f:
   for i in range(weights1.shape[1]):
@@ -145,47 +172,42 @@ with open('biases.txt', 'w') as f:
 
 # # ---------------------for Vitis ------------------------------
 
-# with open('input.txt', 'w') as f:
-#   for i in range(10):
-#     for j in range(784):
-#       f.write("%5.8f\n" % x_test[i][j])
-
-# with open('weights.h', 'w') as f:
-#   f.write("const float weights[12704] = { ")
-#   for i in range(weights1.shape[1]):
-#     for j in range(weights1.shape[0]):
-#       f.write("%5.8f, " % weights1[j,i])
-#     f.write("\n")
-# #2nd layer weights
-#   for i in range(weights2.shape[1]):
-#     for j in range(weights2.shape[0]):
-#       f.write("%5.8f, " % weights2[j,i])
-#     f.write("\n")
-#   f.write(" };")
+with open('weights.h', 'w') as f:
+  f.write("const float weights[12704] = { ")
+  for i in range(weights1.shape[1]):
+    for j in range(weights1.shape[0]):
+      f.write("%5.8f, " % weights1[j,i])
+    f.write("\n")
+#2nd layer weights
+  for i in range(weights2.shape[1]):
+    for j in range(weights2.shape[0]):
+      f.write("%5.8f, " % weights2[j,i])
+    f.write("\n")
+  f.write(" };")
 
 
-# #inputs for Vitis simulation run
-# with open('inputs.h', 'w') as f:
-#   f.write("const float X[7840] = { ")
-#   for i in range(10):
-#     for j in range(784):
-#       f.write("%5.8f, " % x_test[i][j])
-#     f.write("\n")
-#   f.write(" };")
+#inputs for Vitis simulation run
+with open('inputs.h', 'w') as f:
+  f.write("const float X[7840] = { ")
+  for i in range(10):
+    for j in range(784):
+      f.write("%5.8f, " % x_test[i][j])
+    f.write("\n")
+  f.write(" };")
 
 
-# with open('biases.h', 'w') as f:
-#     f.write("const float biases[26] = { ")
-#     for i in range(biases1.shape[0]):
-#         f.write("%5.8f, " % biases1[i])
-#     for i in range(biases2.shape[0]):
-#         f.write("%5.8f, " % biases2[i])
-#     f.write(" };")
+with open('biases.h', 'w') as f:
+    f.write("const float biases[26] = { ")
+    for i in range(biases1.shape[0]):
+        f.write("%5.8f, " % biases1[i])
+    for i in range(biases2.shape[0]):
+        f.write("%5.8f, " % biases2[i])
+    f.write(" };")
 
 
 # # ----------------------------for Vivado HLS ---------------------------
 
-with open('hls_weights.h', 'w') as f:
+with open('../hls/simple_perceptron/hls_weights.h', 'w') as f:
   for i in range(weights1.shape[1]):
     for j in range(weights1.shape[0]):
       f.write("%5.8f, " % weights1[j,i])
@@ -197,14 +219,14 @@ with open('hls_weights.h', 'w') as f:
     f.write("\n")
 
 
-with open('hls_biases.h', 'w') as f:
+with open('../hls/simple_perceptron/hls_biases.h', 'w') as f:
     for i in range(biases1.shape[0]):
         f.write("%5.8f, " % biases1[i])
     for i in range(biases2.shape[0]):
         f.write("%5.8f, " % biases2[i])
 
 #inputs for Vitis simulation run
-with open('hls_input.h', 'w') as f:
+with open('../hls/simple_perceptron/hls_input.h', 'w') as f:
     for j in range(784):
       f.write("%5.8f, " % x_test[0][j])
 
@@ -215,11 +237,6 @@ results2layer = np.zeros(10)
 results = np.zeros(100)
 
 x_in = x_test
-
-with open('input.txt', 'r') as f:
-    for line in f:
-        if line: #avoid blank lines
-            np.append(x_in[0], float(line.strip()))
 
 # print("1st layer output:")
 # for i in range(16):
@@ -249,8 +266,6 @@ with open('input.txt', 'r') as f:
 # # serialize weights to HDF5
 # model.save_weights("model.h5")
 # print("Saved model to disk")
-
-# print(x_in)
 
 # test model on my own data
 # predictions2 = model.predict(x_in)

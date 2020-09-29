@@ -17,14 +17,14 @@ print("LISTENING AT:",socket_address)
 client_socket,addr = server_socket.accept()
 print('GOT CONNECTION FROM:',addr)
 cam = cv2.VideoCapture(0)
-img_width = 320
-img_height = 240
+img_width = 640
+img_height = 480
 cam.set(3, img_width)
 cam.set(4, img_height)
 
 max_dim_ratio = 2.0 # it is the maximum difference between heigth and width of the digit to be detected ( (w/h) <= max_dim_diff )
 min_dim_ratio = 0.3
-max_digits = 3 # the maximum number of digits that can be found at each frame
+max_digits = 10 # the maximum number of digits that can be found at each frame
 crop_padding_top = 4
 
 try:
@@ -100,7 +100,7 @@ try:
             
             # print("Contours found (including FP) : " + str(len(contours)))
             # send low resolution image to keep higher fps
-            img_lq = cv2.resize(img, (160,120), interpolation = cv2.INTER_AREA)
+            img_lq = cv2.resize(img, (640,480), interpolation = cv2.INTER_AREA)
             a = pickle.dumps(img_lq, protocol=2) #client use python2 so I need pickle protocol=2
             message = struct.pack("Q",len(a))+a
             client_socket.sendall(message)

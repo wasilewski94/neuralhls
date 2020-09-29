@@ -42,13 +42,13 @@ set SCTraceOption all
 set TargetInfo xc7z020:-clg400:-1
 set SourceFiles {sc {} c ../core.cpp}
 set SourceFlags {sc {} c {{}}}
-set DirectiveFile /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/solution1.directive
-set TBFiles {verilog {../test_core.cpp ../hls_weights.h ../hls_input.h ../hls_biases.h} bc {../test_core.cpp ../hls_weights.h ../hls_input.h ../hls_biases.h} sc {../test_core.cpp ../hls_weights.h ../hls_input.h ../hls_biases.h} vhdl {../test_core.cpp ../hls_weights.h ../hls_input.h ../hls_biases.h} c {} cas {../test_core.cpp ../hls_weights.h ../hls_input.h ../hls_biases.h}}
+set DirectiveFile /home/wask/workspace/mgr/neuralhls/hls/simple_perceptron/solution1/solution1.directive
+set TBFiles {verilog ../test_core.cpp bc ../test_core.cpp vhdl ../test_core.cpp sc ../test_core.cpp cas ../test_core.cpp c {}}
 set SpecLanguage C
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
 set TVOutFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
-set TBTops {verilog {} bc {} sc {} vhdl {} c {} cas {}}
-set TBInstNames {verilog {} bc {} sc {} vhdl {} c {} cas {}}
+set TBTops {verilog {} bc {} vhdl {} sc {} cas {} c {}}
+set TBInstNames {verilog {} bc {} vhdl {} sc {} cas {} c {}}
 set XDCFiles {}
 set ExtraGlobalOptions {"area_timing" 1 "clock_gate" 1 "impl_flow" map "power_gate" 0}
 set TBTVFileNotFound {}

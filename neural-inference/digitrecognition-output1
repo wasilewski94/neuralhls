@@ -1,0 +1,49 @@
+1st layer calculation took 0.636000 ms.
+2nd layer calculation took 0.014000 ms.
+x_test[0]: Recognized digit: 7 with output = 0.003358
+Reading file: x/x1.txt
+Setting input values.
+1st layer calculation took 0.636000 ms.
+2nd layer calculation took 0.014000 ms.
+x_test[1]: Recognized digit: 3 with output = 0.430748
+Reading file: x/x2.txt
+Setting input values.
+1st layer calculation took 0.636000 ms.
+2nd layer calculation took 0.014000 ms.
+x_test[2]: Recognized digit: 3 with output = 0.007908
+Reading file: x/x3.txt
+Setting input values.
+1st layer calculation took 0.636000 ms.
+2nd layer calculation took 0.014000 ms.
+x_test[3]: Recognized digit: 4 with output = 0.002549
+Reading file: x/x4.txt
+Setting input values.
+1st layer calculation took 0.636000 ms.
+2nd layer calculation took 0.014000 ms.
+x_test[4]: Recognized digit: 5 with output = 0.027857
+Reading file: x/x5.txt
+Setting input values.
+1st layer calculation took 0.636000 ms.
+2nd layer calculation took 0.014000 ms.
+x_test[5]: Recognized digit: 3 with output = 0.451524
+Reading file: x/x6.txt
+Setting input values.
+1st layer calculation took 0.635000 ms.
+2nd layer calculation took 0.014000 ms.
+x_test[6]: Recognized digit: 3 with output = 0.008614
+Reading file: x/x7.txt
+Setting input values.
+1st layer calculation took 0.636000 ms.
+2nd layer calculation took 0.014000 ms.
+x_test[7]: Recognized digit: 6 with output = 0.026249
+Reading file: x/x8.txt
+Setting input values.
+1st layer calculation took 0.636000 ms.
+2nd layer calculation took 0.014000 ms.
+x_test[8]: Recognized digit: 3 with output = 0.024581
+Reading file: x/x9.txt
+Setting input values.
+1st layer calculation took 0.636000 ms.
+2nd layer calculation took 0.014000 ms.
+x_test[9]: Recognized digit: 2 with output = 0.229220
+End of test

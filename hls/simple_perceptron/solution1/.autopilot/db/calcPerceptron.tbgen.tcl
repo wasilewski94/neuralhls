@@ -158,18 +158,18 @@ set RtlHierarchyInfo {[
 			{"Name" : "w_offset", "Type" : "None", "Direction" : "I"},
 			{"Name" : "b_offset", "Type" : "None", "Direction" : "I"}]},
 	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.calcPerceptron_CTRL_BUS_s_axi_U", "Parent" : "0"},
-	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1_U1", "Parent" : "0"},
-	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.calcPerceptron_fmul_32ns_32ns_32_4_max_dsp_1_U2", "Parent" : "0"},
-	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U3", "Parent" : "0"},
-	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1_U4", "Parent" : "0"}]}
+	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.calcPerceptron_fabkb_U1", "Parent" : "0"},
+	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.calcPerceptron_fmcud_U2", "Parent" : "0"},
+	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.calcPerceptron_fddEe_U3", "Parent" : "0"},
+	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.calcPerceptron_feeOg_U4", "Parent" : "0"}]}
 
 
 set ArgLastReadFirstWriteLatency {
 	calcPerceptron {
 		x {Type I LastRead 2 FirstWrite -1}
 		w {Type I LastRead 2 FirstWrite -1}
-		b {Type I LastRead 3 FirstWrite -1}
-		res {Type O LastRead -1 FirstWrite 34}
+		b {Type I LastRead 2 FirstWrite -1}
+		res {Type O LastRead -1 FirstWrite 38}
 		inputs {Type I LastRead 0 FirstWrite -1}
 		neurons {Type I LastRead 0 FirstWrite -1}
 		w_offset {Type I LastRead 0 FirstWrite -1}
@@ -183,7 +183,6 @@ set PerformanceInfo {[
 ]}
 
 set PipelineEnableSignalInfo {[
-	{"Pipeline" : "0", "EnableSignal" : "ap_enable_pp0"}
 ]}
 
 set Spec2ImplPortList { 
