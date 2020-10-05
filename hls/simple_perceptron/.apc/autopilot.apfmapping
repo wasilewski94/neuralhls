@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
-    <originFiles name="hls_weights.h" path="/home/wask/workspace/mgr/neuralhls/hls/simple_perceptron/hls_weights.h"/>
-    <originFiles name="hls_input.h" path="/home/wask/workspace/mgr/neuralhls/hls/simple_perceptron/hls_input.h"/>
-    <originFiles name="hls_biases.h" path="/home/wask/workspace/mgr/neuralhls/hls/simple_perceptron/hls_biases.h"/>
     <originFiles name="core.cpp" path="/home/wask/workspace/mgr/neuralhls/hls/simple_perceptron/core.cpp"/>
   </source>
   <testbench>

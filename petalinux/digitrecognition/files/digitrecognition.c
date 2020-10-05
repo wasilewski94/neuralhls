@@ -6,12 +6,6 @@
 #include <string.h>
 #include <sys/time.h>
 
-#define XCALCPERCEPTRON_CTRL_BUS_ADDR_INPUTS_DATA  0x10
-#define XCALCPERCEPTRON_CTRL_BUS_ADDR_NEURONS_DATA 0x18
-
-#define XCALCPERCEPTRON_CTRL_BUS_ADDR_W_OFFSET_DATA 0x20
-#define XCALCPERCEPTRON_CTRL_BUS_ADDR_B_OFFSET_DATA 0x28
-
 #define XIL_COMPONENT_IS_READY     0x11111111U
 
 
@@ -22,6 +16,7 @@ int main(int argc, char* argv[])
     FILE *f_input;
     FILE *f_bias;
     FILE *f_labels;
+    FILE *f_model;
 
     struct timeval t1, t2;
     double elapsedTime;
@@ -39,6 +34,8 @@ int main(int argc, char* argv[])
    
     float buffer;
     int label_buf;
+    int model_buf;
+
 
     float max_output;
     int recognized_digit; 
@@ -51,12 +48,14 @@ int main(int argc, char* argv[])
     int fd_calc;
     int fd_res;
     int fd_b;
+    int fd_mod;
 
     char *x_bram = "/dev/uio0";
     char *res_bram = "/dev/uio1";
     char *w_bram = "/dev/uio2";
     char *b_bram = "/dev/uio3";
-    char *calcPerceptron = "/dev/uio4";
+    char *model_bram = "/dev/uio4";
+    char *calcPerceptron = "/dev/uio5";
 
 
     void *x_bram_ptr;
@@ -64,7 +63,8 @@ int main(int argc, char* argv[])
     void *w_bram_ptr;
     void *b_bram_ptr;
     void *calcPerceptron_ptr;
-
+    void *model_bram_ptr;
+    
 
     // open the UIO device file to allow access to the device in user space
     fd_x = open(x_bram, O_RDWR);
@@ -97,6 +97,11 @@ int main(int argc, char* argv[])
         return -1;
     }
 
+    fd_mod = open(model_bram, O_RDWR);
+    if (fd_mod < 1) {
+        printf("Invalid UIO device file:%s.\n", model_bram);
+        return -1;
+    }
 
     // mmap the bram device into user space
     x_bram_ptr = mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_SHARED, fd_x, 0);
@@ -106,7 +111,7 @@ int main(int argc, char* argv[])
     }
     volatile float *XVecHW = (float *)(x_bram_ptr);
 
-    w_bram_ptr = mmap(NULL, 65536, PROT_READ|PROT_WRITE, MAP_SHARED, fd_w, 0);
+    w_bram_ptr = mmap(NULL, 262144, PROT_READ|PROT_WRITE, MAP_SHARED, fd_w, 0);
     if (w_bram_ptr == MAP_FAILED) {
         printf("Mmap w_bram call failure.\n");
         return -1;
@@ -119,11 +124,6 @@ int main(int argc, char* argv[])
         return -1;
     }
     volatile unsigned *regCtrl = (unsigned int *)(calcPerceptron_ptr);
-    volatile unsigned *reg_inputs = (unsigned int *)(calcPerceptron_ptr + XCALCPERCEPTRON_CTRL_BUS_ADDR_INPUTS_DATA);
-    volatile unsigned *reg_neurons = (unsigned int *)(calcPerceptron_ptr + XCALCPERCEPTRON_CTRL_BUS_ADDR_NEURONS_DATA);
-
-    volatile unsigned *reg_w_offset = (unsigned int *)(calcPerceptron_ptr + XCALCPERCEPTRON_CTRL_BUS_ADDR_W_OFFSET_DATA);
-    volatile unsigned *reg_b_offset = (unsigned int *)(calcPerceptron_ptr + XCALCPERCEPTRON_CTRL_BUS_ADDR_B_OFFSET_DATA);
 
     res_bram_ptr = mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_SHARED, fd_res, 0);
     if (res_bram_ptr == MAP_FAILED) {
@@ -138,6 +138,14 @@ int main(int argc, char* argv[])
         return -1;
     }
     volatile float *bHW = (float *)(b_bram_ptr);
+
+    model_bram_ptr = mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_SHARED, fd_mod, 0);
+    if (model_bram_ptr == MAP_FAILED) {
+        printf("Mmap model_bram call failure.\n");
+        return -1;
+    }
+    volatile int *model = (int *)(model_bram_ptr);
+
 
     void IP_Start() {
     	unsigned int data = (*regCtrl & 0x80);
@@ -154,25 +162,70 @@ int main(int argc, char* argv[])
     	return ((data) & 0x1);
     }
 
-    void IP_set_inputs(volatile unsigned int data) {
-        // while(!(IP_IsReady() == XIL_COMPONENT_IS_READY));
-        *reg_inputs = data;
+//	 activation hidden:
+	//sigmoid (0)
+	//relu (1)
+
+//	 activation out:
+	//sigmoid (0)
+	//softmax (1)
+
+int init_load_model() {
+
+    if ((f_model = fopen("model.txt", "r")) == NULL) {
+        printf ("Can't open file: model.txt\n");
+        return 0;
     }
 
-    void IP_set_neurons(volatile unsigned int data) {
-        // while(!(IP_IsReady() == XIL_COMPONENT_IS_READY));
-        *reg_neurons = data;
+    printf("Setting model parameters.\n");
+    int i = 0;
+    while (!feof (f_model)) {
+        fscanf (f_model, "%d", &model_buf);
+        model[i] = model_buf;
+        printf("Model parameter %d loaded:\n", model[i]);
+        i++;
+    }
+    fclose (f_model);
+
+	//	         layers, activation_hidden,  activation_out    inputs,  neurons1, neurons2,neurons3
+	// int ann_model[30] = {2,      0,                 0,          784,        16,      10	};
+    int layers = model[0];
+    int w_number = 0;
+    int b_number = 0;
+
+	printf("Model has %d layers:\n", layers);
+
+	for(int i=0; i< layers; i++) {
+		printf("  - layer %d with %d neurons ", i+1, model[i+4]);
+		if(i == layers-1)
+			printf(" -- output layer\n");
+		else
+			printf(" -- hidden layer\n");
     }
 
-    void IP_set_w_offset(volatile unsigned int data) {
-        // while(!(IP_IsReady() == XIL_COMPONENT_IS_READY));
-        *reg_w_offset = data;
+	printf("Activation functions: \n");
+	printf("  - hidden layers: ");
+
+	if(model[1] == 0)
+		printf("sigmoid()\n");
+	else
+		printf("ReLU()\n");
+
+	printf("  - output layer: ");
+	if(model[2] == 0)
+		printf("sigmoid()\n");
+	else
+		printf("softmax()\n");
+
+
+    // calculate w_number and b_number
+    for(int i=0;i < layers; i++) {
+    	w_number += model[i+3]*model[i+4];
+    	b_number += model[i+4];
     }
 
-    void IP_set_b_offset(volatile unsigned int data) {
-        // while(!(IP_IsReady() == XIL_COMPONENT_IS_READY));
-        *reg_b_offset = data;
-    }
+    return 1;
+}
 
 
     int load_digit_file(int n_sample) {
@@ -205,7 +258,7 @@ int main(int argc, char* argv[])
             return 0;
         }
 
-        printf("Setting weigths values.\n");
+        printf("Setting weights values.\n");
         int i = 0;
         while (!feof (f_weights)) {
             fscanf (f_weights, "%f", &buffer);
@@ -246,27 +299,15 @@ int main(int argc, char* argv[])
         return 1;
     }
 
-    void load_2_layer_data() {
-        // set biases for layer 2
-        // for(int i=0; i<10; i++) {
-        //     bHW[i] = bHW[i + 16];
-        // }
-        //
-        // set weights for layer 2
-        // for(int i=0; i<160; i++) {
-        //     WVecHW[i] = WVecHW[i+12544];
-        // }
-
-        // save the 1st layer output to XVecHW variable
-        for(int i=0; i<16; i++) {
-            XVecHW[i] = result[i];
-        }
-    }
 
 // ---------------------------Start calculation----------------------
     printf("MNIST hand-written digits recognition Neural Network - test with %d samples\n", test_samples);
 
     if(!init_load_data()) {
+        return 0;
+    }
+
+    if(!init_load_model()) {
         return 0;
     }
 
@@ -277,15 +318,6 @@ int main(int argc, char* argv[])
             return 0;
         }
 
-        int inputs = 784;
-        int neurons = 16;
-
-        IP_set_inputs(inputs);
-        IP_set_neurons(neurons);
-
-        IP_set_w_offset(0);
-        IP_set_b_offset(0);
-
         gettimeofday(&t1, NULL); // start timer
 
         IP_Start();
@@ -296,40 +328,15 @@ int main(int argc, char* argv[])
         // compute and print the elapsed time in millisec
         elapsedTime = (t2.tv_sec - t1.tv_sec) * 1000.0;      // sec to ms
         elapsedTime += (t2.tv_usec - t1.tv_usec) / 1000.0;   // us to ms
-        printf("1st layer calculation took %lf ms.\n", elapsedTime);
+        printf("Neural Network calculation took %lf ms.\n", elapsedTime);
 
-
-    // ----------------------------2nd layer--------------------------------
-
-        load_2_layer_data();
-
-        inputs = 16;
-        neurons = 10;
-
-        IP_set_inputs(16);
-        IP_set_neurons(10);
-
-        IP_set_w_offset(12544);
-        IP_set_b_offset(16);
-
-        gettimeofday(&t1, NULL); // start timer
-
-        IP_Start();
-        while(!IP_IsDone());
-
-        gettimeofday(&t2, NULL); // stop timer
-        
-        // compute and print the elapsed time in millisec
-        elapsedTime = (t2.tv_sec - t1.tv_sec) * 1000.0;      // sec to ms
-        elapsedTime += (t2.tv_usec - t1.tv_usec) / 1000.0;   // us to ms
-        printf("2nd layer calculation took %lf ms.\n", elapsedTime);
 
 
         // find max value and print it with the recognized digit (i index)
         max_output = result[0];
         recognized_digit = 0;
          
-        for (int i = 0; i < 10; i++) {
+        for(int i = 0; i < 10; i++) {
             if (max_output < result[i]) {
                 max_output = result[i];
                 recognized_digit = i;    
@@ -339,9 +346,9 @@ int main(int argc, char* argv[])
     	if(recognized_digit != labels[sample]) {
             printf("x_test[%d]: Recognized digit: %d with output = %f -- FALSE (expected %d)\n", sample, recognized_digit, max_output, labels[sample]);
             misclassified++;
+        } else {
+            printf("x_test[%d]: Recognized digit: %d with output = %f\n", sample, recognized_digit, max_output);
         }
-
-        printf("x_test[%d]: Recognized digit: %d with output = %f\n", sample, recognized_digit, max_output);
     }
 
     printf("Misclassified: %d digits.\n", misclassified);

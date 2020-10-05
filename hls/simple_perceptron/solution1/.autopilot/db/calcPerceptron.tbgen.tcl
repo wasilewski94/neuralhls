@@ -14,26 +14,20 @@ set isEnableWaveformDebug 1
 set C_modelName {calcPerceptron}
 set C_modelType { void 0 }
 set C_modelArgList {
-	{ x float 32 regular {bram 784 { 1 3 } 1 1 }  }
-	{ w float 32 regular {bram 12704 { 1 3 } 1 1 }  }
-	{ b float 32 regular {bram 26 { 1 3 } 1 1 }  }
-	{ res float 32 regular {bram 26 { 0 3 } 0 1 }  }
-	{ inputs int 32 regular {axi_slave 0}  }
-	{ neurons int 32 regular {axi_slave 0}  }
-	{ w_offset int 32 regular {axi_slave 0}  }
-	{ b_offset int 32 regular {axi_slave 0}  }
+	{ x float 32 regular {bram 784 { 2 3 } 1 1 }  }
+	{ w float 32 regular {bram 64000 { 1 3 } 1 1 }  }
+	{ b float 32 regular {bram 500 { 1 3 } 1 1 }  }
+	{ res float 32 regular {bram 300 { 2 3 } 1 1 }  }
+	{ model int 32 regular {bram 30 { 1 3 } 1 1 }  }
 }
 set C_modelArgMapList {[ 
-	{ "Name" : "x", "interface" : "bram", "bitwidth" : 32, "direction" : "READONLY", "bitSlice":[{"low":0,"up":31,"cElement": [{"cName": "x","cData": "float","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 0,"up" : 783,"step" : 1}]}]}]} , 
- 	{ "Name" : "w", "interface" : "bram", "bitwidth" : 32, "direction" : "READONLY", "bitSlice":[{"low":0,"up":31,"cElement": [{"cName": "w","cData": "float","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 0,"up" : 12703,"step" : 1}]}]}]} , 
- 	{ "Name" : "b", "interface" : "bram", "bitwidth" : 32, "direction" : "READONLY", "bitSlice":[{"low":0,"up":31,"cElement": [{"cName": "b","cData": "float","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 0,"up" : 25,"step" : 1}]}]}]} , 
- 	{ "Name" : "res", "interface" : "bram", "bitwidth" : 32, "direction" : "WRITEONLY", "bitSlice":[{"low":0,"up":31,"cElement": [{"cName": "res","cData": "float","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 0,"up" : 25,"step" : 1}]}]}]} , 
- 	{ "Name" : "inputs", "interface" : "axi_slave", "bundle":"CTRL_BUS","type":"ap_none","bitwidth" : 32, "direction" : "READONLY", "bitSlice":[{"low":0,"up":31,"cElement": [{"cName": "inputs","cData": "int","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 0,"up" : 0,"step" : 0}]}]}], "offset" : {"in":16}, "offset_end" : {"in":23}} , 
- 	{ "Name" : "neurons", "interface" : "axi_slave", "bundle":"CTRL_BUS","type":"ap_none","bitwidth" : 32, "direction" : "READONLY", "bitSlice":[{"low":0,"up":31,"cElement": [{"cName": "neurons","cData": "int","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 0,"up" : 0,"step" : 0}]}]}], "offset" : {"in":24}, "offset_end" : {"in":31}} , 
- 	{ "Name" : "w_offset", "interface" : "axi_slave", "bundle":"CTRL_BUS","type":"ap_none","bitwidth" : 32, "direction" : "READONLY", "bitSlice":[{"low":0,"up":31,"cElement": [{"cName": "w_offset","cData": "int","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 0,"up" : 0,"step" : 0}]}]}], "offset" : {"in":32}, "offset_end" : {"in":39}} , 
- 	{ "Name" : "b_offset", "interface" : "axi_slave", "bundle":"CTRL_BUS","type":"ap_none","bitwidth" : 32, "direction" : "READONLY", "bitSlice":[{"low":0,"up":31,"cElement": [{"cName": "b_offset","cData": "int","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 0,"up" : 0,"step" : 0}]}]}], "offset" : {"in":40}, "offset_end" : {"in":47}} ]}
+	{ "Name" : "x", "interface" : "bram", "bitwidth" : 32, "direction" : "READWRITE", "bitSlice":[{"low":0,"up":31,"cElement": [{"cName": "x","cData": "float","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 0,"up" : 783,"step" : 1}]}]}]} , 
+ 	{ "Name" : "w", "interface" : "bram", "bitwidth" : 32, "direction" : "READONLY", "bitSlice":[{"low":0,"up":31,"cElement": [{"cName": "w","cData": "float","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 0,"up" : 63999,"step" : 1}]}]}]} , 
+ 	{ "Name" : "b", "interface" : "bram", "bitwidth" : 32, "direction" : "READONLY", "bitSlice":[{"low":0,"up":31,"cElement": [{"cName": "b","cData": "float","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 0,"up" : 499,"step" : 1}]}]}]} , 
+ 	{ "Name" : "res", "interface" : "bram", "bitwidth" : 32, "direction" : "READWRITE", "bitSlice":[{"low":0,"up":31,"cElement": [{"cName": "res","cData": "float","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 0,"up" : 299,"step" : 1}]}]}]} , 
+ 	{ "Name" : "model", "interface" : "bram", "bitwidth" : 32, "direction" : "READONLY", "bitSlice":[{"low":0,"up":31,"cElement": [{"cName": "model","cData": "int","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 0,"up" : 29,"step" : 1}]}]}]} ]}
 # RTL Port declarations: 
-set portNum 48
+set portNum 55
 set portList { 
 	{ ap_clk sc_in sc_logic 1 clock -1 } 
 	{ ap_rst_n sc_in sc_logic 1 reset -1 active_low_sync } 
@@ -65,16 +59,23 @@ set portList {
 	{ res_Dout_A sc_in sc_lv 32 signal 3 } 
 	{ res_Clk_A sc_out sc_logic 1 signal 3 } 
 	{ res_Rst_A sc_out sc_logic 1 signal 3 } 
+	{ model_Addr_A sc_out sc_lv 32 signal 4 } 
+	{ model_EN_A sc_out sc_logic 1 signal 4 } 
+	{ model_WEN_A sc_out sc_lv 4 signal 4 } 
+	{ model_Din_A sc_out sc_lv 32 signal 4 } 
+	{ model_Dout_A sc_in sc_lv 32 signal 4 } 
+	{ model_Clk_A sc_out sc_logic 1 signal 4 } 
+	{ model_Rst_A sc_out sc_logic 1 signal 4 } 
 	{ s_axi_CTRL_BUS_AWVALID sc_in sc_logic 1 signal -1 } 
 	{ s_axi_CTRL_BUS_AWREADY sc_out sc_logic 1 signal -1 } 
-	{ s_axi_CTRL_BUS_AWADDR sc_in sc_lv 6 signal -1 } 
+	{ s_axi_CTRL_BUS_AWADDR sc_in sc_lv 4 signal -1 } 
 	{ s_axi_CTRL_BUS_WVALID sc_in sc_logic 1 signal -1 } 
 	{ s_axi_CTRL_BUS_WREADY sc_out sc_logic 1 signal -1 } 
 	{ s_axi_CTRL_BUS_WDATA sc_in sc_lv 32 signal -1 } 
 	{ s_axi_CTRL_BUS_WSTRB sc_in sc_lv 4 signal -1 } 
 	{ s_axi_CTRL_BUS_ARVALID sc_in sc_logic 1 signal -1 } 
 	{ s_axi_CTRL_BUS_ARREADY sc_out sc_logic 1 signal -1 } 
-	{ s_axi_CTRL_BUS_ARADDR sc_in sc_lv 6 signal -1 } 
+	{ s_axi_CTRL_BUS_ARADDR sc_in sc_lv 4 signal -1 } 
 	{ s_axi_CTRL_BUS_RVALID sc_out sc_logic 1 signal -1 } 
 	{ s_axi_CTRL_BUS_RREADY sc_in sc_logic 1 signal -1 } 
 	{ s_axi_CTRL_BUS_RDATA sc_out sc_lv 32 signal -1 } 
@@ -85,14 +86,14 @@ set portList {
 	{ interrupt sc_out sc_logic 1 signal -1 } 
 }
 set NewPortList {[ 
-	{ "name": "s_axi_CTRL_BUS_AWADDR", "direction": "in", "datatype": "sc_lv", "bitwidth":6, "type": "signal", "bundle":{"name": "CTRL_BUS", "role": "AWADDR" },"address":[{"name":"calcPerceptron","role":"start","value":"0","valid_bit":"0"},{"name":"calcPerceptron","role":"continue","value":"0","valid_bit":"4"},{"name":"calcPerceptron","role":"auto_start","value":"0","valid_bit":"7"},{"name":"inputs","role":"data","value":"16"},{"name":"neurons","role":"data","value":"24"},{"name":"w_offset","role":"data","value":"32"},{"name":"b_offset","role":"data","value":"40"}] },
+	{ "name": "s_axi_CTRL_BUS_AWADDR", "direction": "in", "datatype": "sc_lv", "bitwidth":4, "type": "signal", "bundle":{"name": "CTRL_BUS", "role": "AWADDR" },"address":[{"name":"calcPerceptron","role":"start","value":"0","valid_bit":"0"},{"name":"calcPerceptron","role":"continue","value":"0","valid_bit":"4"},{"name":"calcPerceptron","role":"auto_start","value":"0","valid_bit":"7"}] },
 	{ "name": "s_axi_CTRL_BUS_AWVALID", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "CTRL_BUS", "role": "AWVALID" } },
 	{ "name": "s_axi_CTRL_BUS_AWREADY", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "CTRL_BUS", "role": "AWREADY" } },
 	{ "name": "s_axi_CTRL_BUS_WVALID", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "CTRL_BUS", "role": "WVALID" } },
 	{ "name": "s_axi_CTRL_BUS_WREADY", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "CTRL_BUS", "role": "WREADY" } },
 	{ "name": "s_axi_CTRL_BUS_WDATA", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "CTRL_BUS", "role": "WDATA" } },
 	{ "name": "s_axi_CTRL_BUS_WSTRB", "direction": "in", "datatype": "sc_lv", "bitwidth":4, "type": "signal", "bundle":{"name": "CTRL_BUS", "role": "WSTRB" } },
-	{ "name": "s_axi_CTRL_BUS_ARADDR", "direction": "in", "datatype": "sc_lv", "bitwidth":6, "type": "signal", "bundle":{"name": "CTRL_BUS", "role": "ARADDR" },"address":[{"name":"calcPerceptron","role":"start","value":"0","valid_bit":"0"},{"name":"calcPerceptron","role":"done","value":"0","valid_bit":"1"},{"name":"calcPerceptron","role":"idle","value":"0","valid_bit":"2"},{"name":"calcPerceptron","role":"ready","value":"0","valid_bit":"3"},{"name":"calcPerceptron","role":"auto_start","value":"0","valid_bit":"7"}] },
+	{ "name": "s_axi_CTRL_BUS_ARADDR", "direction": "in", "datatype": "sc_lv", "bitwidth":4, "type": "signal", "bundle":{"name": "CTRL_BUS", "role": "ARADDR" },"address":[{"name":"calcPerceptron","role":"start","value":"0","valid_bit":"0"},{"name":"calcPerceptron","role":"done","value":"0","valid_bit":"1"},{"name":"calcPerceptron","role":"idle","value":"0","valid_bit":"2"},{"name":"calcPerceptron","role":"ready","value":"0","valid_bit":"3"},{"name":"calcPerceptron","role":"auto_start","value":"0","valid_bit":"7"}] },
 	{ "name": "s_axi_CTRL_BUS_ARVALID", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "CTRL_BUS", "role": "ARVALID" } },
 	{ "name": "s_axi_CTRL_BUS_ARREADY", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "CTRL_BUS", "role": "ARREADY" } },
 	{ "name": "s_axi_CTRL_BUS_RVALID", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "CTRL_BUS", "role": "RVALID" } },
@@ -132,10 +133,17 @@ set NewPortList {[
  	{ "name": "res_Din_A", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "res", "role": "Din_A" }} , 
  	{ "name": "res_Dout_A", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "res", "role": "Dout_A" }} , 
  	{ "name": "res_Clk_A", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "res", "role": "Clk_A" }} , 
- 	{ "name": "res_Rst_A", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "res", "role": "Rst_A" }}  ]}
+ 	{ "name": "res_Rst_A", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "res", "role": "Rst_A" }} , 
+ 	{ "name": "model_Addr_A", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "model", "role": "Addr_A" }} , 
+ 	{ "name": "model_EN_A", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "model", "role": "EN_A" }} , 
+ 	{ "name": "model_WEN_A", "direction": "out", "datatype": "sc_lv", "bitwidth":4, "type": "signal", "bundle":{"name": "model", "role": "WEN_A" }} , 
+ 	{ "name": "model_Din_A", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "model", "role": "Din_A" }} , 
+ 	{ "name": "model_Dout_A", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "model", "role": "Dout_A" }} , 
+ 	{ "name": "model_Clk_A", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "model", "role": "Clk_A" }} , 
+ 	{ "name": "model_Rst_A", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "model", "role": "Rst_A" }}  ]}
 
 set RtlHierarchyInfo {[
-	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2", "3", "4", "5"],
+	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2", "3", "4", "5", "6"],
 		"CDFG" : "calcPerceptron",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
@@ -149,31 +157,26 @@ set RtlHierarchyInfo {[
 		"InDataflowNetwork" : "0",
 		"HasNonBlockingOperation" : "0",
 		"Port" : [
-			{"Name" : "x", "Type" : "Bram", "Direction" : "I"},
+			{"Name" : "x", "Type" : "Bram", "Direction" : "IO"},
 			{"Name" : "w", "Type" : "Bram", "Direction" : "I"},
 			{"Name" : "b", "Type" : "Bram", "Direction" : "I"},
-			{"Name" : "res", "Type" : "Bram", "Direction" : "O"},
-			{"Name" : "inputs", "Type" : "None", "Direction" : "I"},
-			{"Name" : "neurons", "Type" : "None", "Direction" : "I"},
-			{"Name" : "w_offset", "Type" : "None", "Direction" : "I"},
-			{"Name" : "b_offset", "Type" : "None", "Direction" : "I"}]},
+			{"Name" : "res", "Type" : "Bram", "Direction" : "IO"},
+			{"Name" : "model", "Type" : "Bram", "Direction" : "I"}]},
 	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.calcPerceptron_CTRL_BUS_s_axi_U", "Parent" : "0"},
 	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.calcPerceptron_fabkb_U1", "Parent" : "0"},
 	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.calcPerceptron_fmcud_U2", "Parent" : "0"},
 	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.calcPerceptron_fddEe_U3", "Parent" : "0"},
-	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.calcPerceptron_feeOg_U4", "Parent" : "0"}]}
+	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.calcPerceptron_fceOg_U4", "Parent" : "0"},
+	{"ID" : "6", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.calcPerceptron_fefYi_U5", "Parent" : "0"}]}
 
 
 set ArgLastReadFirstWriteLatency {
 	calcPerceptron {
-		x {Type I LastRead 2 FirstWrite -1}
-		w {Type I LastRead 2 FirstWrite -1}
-		b {Type I LastRead 2 FirstWrite -1}
-		res {Type O LastRead -1 FirstWrite 38}
-		inputs {Type I LastRead 0 FirstWrite -1}
-		neurons {Type I LastRead 0 FirstWrite -1}
-		w_offset {Type I LastRead 0 FirstWrite -1}
-		b_offset {Type I LastRead 0 FirstWrite -1}}}
+		x {Type IO LastRead 8 FirstWrite 7}
+		w {Type I LastRead 7 FirstWrite -1}
+		b {Type I LastRead 8 FirstWrite -1}
+		res {Type IO LastRead 6 FirstWrite 8}
+		model {Type I LastRead 8 FirstWrite -1}}}
 
 set hasDtUnsupportedChannel 0
 
@@ -190,6 +193,7 @@ set Spec2ImplPortList {
 	w { bram {  { w_Addr_A MemPortADDR2 1 32 }  { w_EN_A MemPortCE2 1 1 }  { w_WEN_A MemPortWE2 1 4 }  { w_Din_A MemPortDIN2 1 32 }  { w_Dout_A MemPortDOUT2 0 32 }  { w_Clk_A mem_clk 1 1 }  { w_Rst_A mem_rst 1 1 } } }
 	b { bram {  { b_Addr_A MemPortADDR2 1 32 }  { b_EN_A MemPortCE2 1 1 }  { b_WEN_A MemPortWE2 1 4 }  { b_Din_A MemPortDIN2 1 32 }  { b_Dout_A MemPortDOUT2 0 32 }  { b_Clk_A mem_clk 1 1 }  { b_Rst_A mem_rst 1 1 } } }
 	res { bram {  { res_Addr_A MemPortADDR2 1 32 }  { res_EN_A MemPortCE2 1 1 }  { res_WEN_A MemPortWE2 1 4 }  { res_Din_A MemPortDIN2 1 32 }  { res_Dout_A MemPortDOUT2 0 32 }  { res_Clk_A mem_clk 1 1 }  { res_Rst_A mem_rst 1 1 } } }
+	model { bram {  { model_Addr_A MemPortADDR2 1 32 }  { model_EN_A MemPortCE2 1 1 }  { model_WEN_A MemPortWE2 1 4 }  { model_Din_A MemPortDIN2 1 32 }  { model_Dout_A MemPortDOUT2 0 32 }  { model_Clk_A mem_clk 1 1 }  { model_Rst_A mem_rst 1 1 } } }
 }
 
 set busDeadlockParameterList { 

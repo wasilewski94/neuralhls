@@ -15,7 +15,7 @@ np.set_printoptions(suppress=True, threshold=sys.maxsize)
 
 batch_size = 128
 num_classes = 10
-epochs = 50
+epochs = 20
 
 (x_train, y_train), (x_test, y_test) = mnist.load_data()
 
@@ -58,7 +58,7 @@ model = Sequential()
 # model.add(MaxPooling2D(pool_size=(2, 2)))
 # model.add(Dropout(0.25))
 model.add(Flatten())
-# model.add(Dense(64, use_bias=True, activation='sigmoid'))
+model.add(Dense(64, use_bias=True, activation='sigmoid'))
 model.add(Dense(16, use_bias=True, activation='sigmoid'))
 # model.add(Dropout(0.5))
 model.add(Dense(num_classes, use_bias=True, activation='sigmoid'))
@@ -77,13 +77,23 @@ score = model.evaluate(x_test, y_test, verbose=2)
 print('Test loss:', score[0])
 print('Test accuracy:', score[1])
 
-weights = model.get_weights()
+# save weights an biases as a list of 2d numpy arrays
+weights = []
+biases = []
+for i in range(len(model.layers)): # only Dense layers, without 1.Flatten and Dropout
+  if(model.layers[i].__class__.__name__ == 'Dense'):
+    weights.append(model.layers[i].get_weights()[0])
+    biases.append(model.layers[i].get_weights()[1])
 
 # measure elapsed time
 start = time.time()
 predictions = model.predict(x_test)
 end = time.time()
 print("Elapsed time for 10000 digits: " + str(end - start))
+
+for i in range(10):
+  recognized_digit = np.argmax(predictions[i])
+  print("x_test no. " + str(i) + " recognized digit: " + str(recognized_digit) + " with output = " + str(predictions[i][recognized_digit]))
 
 for img in range(10):
   # measure elapsed time
@@ -92,17 +102,17 @@ for img in range(10):
   end = time.time()
   print("Elapsed time for digit no. " + str(img) + ": " + str(end - start))
 
-
-plt.figure(num=None, figsize=(12, 6), dpi=80, facecolor='w', edgecolor='k')
+plt.rcParams.update({'font.size': 14})
+plt.figure(num=None, figsize=(14, 9), dpi=100, facecolor='w', edgecolor='k')
 plt.plot(history.history['accuracy'])
 plt.plot(history.history['val_accuracy'])
-plt.title('model accuracy')
+# plt.title('model accuracy')
 plt.grid()
-plt.ylabel('accuracy')
-plt.xlabel('epoch')
-plt.legend(['training', 'validation'], loc='upper left')
+plt.ylabel('dokładność')
+plt.xlabel('epoki')
+plt.legend(['uczenie', 'walidacja'], loc='upper left')
 # plt.savefig('accuracy1.png')
-plt.show()
+# plt.show()
 
 # for i in range(10):
 #   recognized_digit = np.argmax(predictions[i])
@@ -118,11 +128,11 @@ def sigmoid(x):
 
 np.set_printoptions(suppress=True, threshold=sys.maxsize)
 
-weights1 = model.layers[1].get_weights()[0]
-biases1 = model.layers[1].get_weights()[1]
+# weights1 = model.layers[1].get_weights()[0]
+# biases1 = model.layers[1].get_weights()[1]
 
-weights2 = model.layers[2].get_weights()[0]
-biases2 = model.layers[2].get_weights()[1]
+# weights2 = model.layers[2].get_weights()[0]
+# biases2 = model.layers[2].get_weights()[1]
 
 # weights3 = model.layers[3].get_weights()[0]
 # biases3 = model.layers[3].get_weights()[1]
@@ -133,12 +143,12 @@ x_test = x_test.reshape(x_test.shape[0], 784)
 
 # ------------------------for python without keras ----------------------------
 
-np.save('weights1.npy', weights1)
-np.save('weights2.npy', weights2)
-# np.save('weights3.npy', weights3)
+# np.save('weights1.npy', weights1)
+# np.save('weights2.npy', weights2)
+# # np.save('weights3.npy', weights3)
 
-np.save('biases1.npy', biases1)
-np.save('biases2.npy', biases2)
+# np.save('biases1.npy', biases1)
+# np.save('biases2.npy', biases2)
 # np.save('biases3.npy', biases3)
 
 
@@ -154,89 +164,83 @@ np.save('biases2.npy', biases2)
 #     for j in range(784):
 #       f.write("%5.8f\n" % x_test[i][j])
 
+
 with open('weights.txt', 'w') as f:
-  for i in range(weights1.shape[1]):
-    for j in range(weights1.shape[0]):
-      f.write("%5.8f\n" % weights1[j,i])
-#2nd layer weights
-  for i in range(weights2.shape[1]):
-    for j in range(weights2.shape[0]):
-      f.write("%5.8f\n" % weights2[j,i])
+  for w in weights:
+    for i in range(w.shape[1]):
+      for j in range(w.shape[0]):
+        f.write("%5.8f\n" % w[j,i])
 
 with open('biases.txt', 'w') as f:
-    for i in range(biases1.shape[0]):
-        f.write("%5.8f\n" % biases1[i])
-#2nd alyer biases
-    for i in range(biases2.shape[0]):
-        f.write("%5.8f\n" % biases2[i])
+  for b in biases:
+    for i in range(b.shape[0]):
+      f.write("%5.8f\n" % b[i])
+
+
 
 # # ---------------------for Vitis ------------------------------
 
-with open('weights.h', 'w') as f:
-  f.write("const float weights[12704] = { ")
-  for i in range(weights1.shape[1]):
-    for j in range(weights1.shape[0]):
-      f.write("%5.8f, " % weights1[j,i])
-    f.write("\n")
-#2nd layer weights
-  for i in range(weights2.shape[1]):
-    for j in range(weights2.shape[0]):
-      f.write("%5.8f, " % weights2[j,i])
-    f.write("\n")
-  f.write(" };")
-
-
 #inputs for Vitis simulation run
-with open('inputs.h', 'w') as f:
-  f.write("const float X[7840] = { ")
-  for i in range(10):
-    for j in range(784):
-      f.write("%5.8f, " % x_test[i][j])
-    f.write("\n")
+# with open('inputs.h', 'w') as f:
+#   f.write("const float X[7840] = { ")
+#   for i in range(10):
+#     for j in range(784):
+#       f.write("%5.8f, " % x_test[i][j])
+#     f.write("\n")
+#   f.write(" };")
+
+with open('/home/wask/workspace/vitis/mlp_hls_sw/src/weights.h', 'w') as f:
+  f.write("const float weights[64000] = { ")
+  for w in weights:
+    for i in range(w.shape[1]):
+      for j in range(w.shape[0]):
+        f.write("%5.8f, " % w[j,i])
+      f.write("\n")
   f.write(" };")
 
-
-with open('biases.h', 'w') as f:
-    f.write("const float biases[26] = { ")
-    for i in range(biases1.shape[0]):
-        f.write("%5.8f, " % biases1[i])
-    for i in range(biases2.shape[0]):
-        f.write("%5.8f, " % biases2[i])
-    f.write(" };")
+with open('/home/wask/workspace/vitis/mlp_hls_sw/src/biases.h', 'w') as f:
+  f.write("const float biases[500] = { ")
+  for b in biases:
+    for i in range(b.shape[0]):
+      f.write("%5.8f, " % b[i])
+    f.write("\n")
+  f.write(" };")
 
 
 # # ----------------------------for Vivado HLS ---------------------------
 
-with open('../hls/simple_perceptron/hls_weights.h', 'w') as f:
-  for i in range(weights1.shape[1]):
-    for j in range(weights1.shape[0]):
-      f.write("%5.8f, " % weights1[j,i])
-    f.write("\n")
-#2nd layer weights
-  for i in range(weights2.shape[1]):
-    for j in range(weights2.shape[0]):
-      f.write("%5.8f, " % weights2[j,i])
-    f.write("\n")
+# # inputs
+# with open('../hls/simple_perceptron/hls_input.h', 'w') as f:
+#     f.write("float xk[784] = { ")
+#     for j in range(784):
+#       f.write("%5.8f, " % x_test[0][j])
+#     f.write(" };")
 
+with open('../hls/simple_perceptron/hls_weights.h', 'w') as f:
+  f.write("float weights[64000] = { ")
+  for w in weights:
+    for i in range(w.shape[1]):
+      for j in range(w.shape[0]):
+        f.write("%5.8f, " % w[j,i])
+      f.write("\n")
+  f.write(" };")
 
 with open('../hls/simple_perceptron/hls_biases.h', 'w') as f:
-    for i in range(biases1.shape[0]):
-        f.write("%5.8f, " % biases1[i])
-    for i in range(biases2.shape[0]):
-        f.write("%5.8f, " % biases2[i])
+  f.write("float biases[500] = { ")
+  for b in biases:
+    for i in range(b.shape[0]):
+      f.write("%5.8f, " % b[i])
+    f.write("\n")
+  f.write(" };")
 
-#inputs for Vitis simulation run
-with open('../hls/simple_perceptron/hls_input.h', 'w') as f:
-    for j in range(784):
-      f.write("%5.8f, " % x_test[0][j])
-
+    
 # # save results to file
 
-results1layer = np.zeros(16)
-results2layer = np.zeros(10)
-results = np.zeros(100)
+# results1layer = np.zeros(16)
+# results2layer = np.zeros(10)
+# results = np.zeros(100)
 
-x_in = x_test
+# x_in = x_test
 
 # print("1st layer output:")
 # for i in range(16):
@@ -259,13 +263,13 @@ x_in = x_test
 #         f.write("%s | %5.8f\n" % (i, results2layer[i]))
 
 
-# # serialize model to JSON
-# model_json = model.to_json()
-# with open("model.json", "w") as json_file:
-#     json_file.write(model_json)
-# # serialize weights to HDF5
-# model.save_weights("model.h5")
-# print("Saved model to disk")
+# serialize model to JSON
+model_json = model.to_json()
+with open("model.json", "w") as json_file:
+    json_file.write(model_json)
+# serialize weights to HDF5
+model.save_weights("model.h5")
+print("Saved model to disk")
 
 # test model on my own data
 # predictions2 = model.predict(x_in)

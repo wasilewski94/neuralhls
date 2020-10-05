@@ -1,11 +1,11 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-// Date        : Fri Jul  3 00:25:41 2020
-// Host        : legion running 64-bit Ubuntu 18.04.4 LTS
+// Date        : Sun Oct  4 01:28:33 2020
+// Host        : legion running 64-bit Ubuntu 18.04.5 LTS
 // Command     : write_verilog -force -mode synth_stub -rename_top design_1_auto_ds_0 -prefix
-//               design_1_auto_ds_0_ design_1_auto_ds_0_stub.v
-// Design      : design_1_auto_ds_0
+//               design_1_auto_ds_0_ design_1_auto_ds_6_stub.v
+// Design      : design_1_auto_ds_6
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg400-1
 // --------------------------------------------------------------------------------

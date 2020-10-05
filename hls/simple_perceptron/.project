@@ -47,21 +47,6 @@
 			<location>/home/wask/workspace/mgr/neuralhls/hls/simple_perceptron/core.cpp</location>
 		</link>
 		<link>
-			<name>source/hls_biases.h</name>
-			<type>1</type>
-			<location>/home/wask/workspace/mgr/neuralhls/hls/simple_perceptron/hls_biases.h</location>
-		</link>
-		<link>
-			<name>source/hls_input.h</name>
-			<type>1</type>
-			<location>/home/wask/workspace/mgr/neuralhls/hls/simple_perceptron/hls_input.h</location>
-		</link>
-		<link>
-			<name>source/hls_weights.h</name>
-			<type>1</type>
-			<location>/home/wask/workspace/mgr/neuralhls/hls/simple_perceptron/hls_weights.h</location>
-		</link>
-		<link>
 			<name>testbench/test_core.cpp</name>
 			<type>1</type>
 			<location>/home/wask/workspace/mgr/neuralhls/hls/simple_perceptron/test_core.cpp</location>

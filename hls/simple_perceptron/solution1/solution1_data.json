@@ -13,7 +13,22 @@
     "Speed": "-1"
   },
   "HlsSolution": {
-    
+    "Config": [
+      "config_export -format=ip_catalog",
+      "config_export -rtl=verilog"
+    ],
+    "DirectiveTcl": [
+      "set_directive_unroll calcPerceptron\/calcPerceptron_label1 ",
+      "set_directive_unroll calcPerceptron\/calcPerceptron_label0 ",
+      "set_directive_pipeline calcPerceptron\/calcPerceptron_label2 ",
+      "set_directive_pipeline calcPerceptron\/calcPerceptron_label3 "
+    ],
+    "DirectiveInfo": [
+      "unroll calcPerceptron\/calcPerceptron_label1 {} {}",
+      "unroll calcPerceptron\/calcPerceptron_label0 {} {}",
+      "pipeline calcPerceptron\/calcPerceptron_label2 {} {}",
+      "pipeline calcPerceptron\/calcPerceptron_label3 {} {}"
+    ]
   },
   "Args": {
     "x": {
@@ -32,7 +47,7 @@
         "kinds": ["array"],
         "dataType": "float",
         "dataWidth": "32",
-        "arraySizes": ["12704"],
+        "arraySizes": ["64000"],
         "interfaceRef": "w"
       }
     },
@@ -42,7 +57,7 @@
         "kinds": ["array"],
         "dataType": "float",
         "dataWidth": "32",
-        "arraySizes": ["26"],
+        "arraySizes": ["500"],
         "interfaceRef": "b"
       }
     },
@@ -52,44 +67,18 @@
         "kinds": ["array"],
         "dataType": "float",
         "dataWidth": "32",
-        "arraySizes": ["26"],
+        "arraySizes": ["300"],
         "interfaceRef": "res"
       }
     },
-    "inputs": {
+    "model": {
       "index": "4",
       "type": {
+        "kinds": ["array"],
         "dataType": "int",
         "dataWidth": "32",
-        "interfaceRef": "s_axi_CTRL_BUS",
-        "registerRefs": ["inputs"]
-      }
-    },
-    "neurons": {
-      "index": "5",
-      "type": {
-        "dataType": "int",
-        "dataWidth": "32",
-        "interfaceRef": "s_axi_CTRL_BUS",
-        "registerRefs": ["neurons"]
-      }
-    },
-    "w_offset": {
-      "index": "6",
-      "type": {
-        "dataType": "int",
-        "dataWidth": "32",
-        "interfaceRef": "s_axi_CTRL_BUS",
-        "registerRefs": ["w_offset"]
-      }
-    },
-    "b_offset": {
-      "index": "7",
-      "type": {
-        "dataType": "int",
-        "dataWidth": "32",
-        "interfaceRef": "s_axi_CTRL_BUS",
-        "registerRefs": ["b_offset"]
+        "arraySizes": ["30"],
+        "interfaceRef": "model"
       }
     }
   },
@@ -121,16 +110,18 @@
     "Vhdl": [
       "impl\/vhdl\/calcPerceptron_CTRL_BUS_s_axi.vhd",
       "impl\/vhdl\/calcPerceptron_fabkb.vhd",
+      "impl\/vhdl\/calcPerceptron_fceOg.vhd",
       "impl\/vhdl\/calcPerceptron_fddEe.vhd",
-      "impl\/vhdl\/calcPerceptron_feeOg.vhd",
+      "impl\/vhdl\/calcPerceptron_fefYi.vhd",
       "impl\/vhdl\/calcPerceptron_fmcud.vhd",
       "impl\/vhdl\/calcPerceptron.vhd"
     ],
     "Verilog": [
       "impl\/verilog\/calcPerceptron_CTRL_BUS_s_axi.v",
       "impl\/verilog\/calcPerceptron_fabkb.v",
+      "impl\/verilog\/calcPerceptron_fceOg.v",
       "impl\/verilog\/calcPerceptron_fddEe.v",
-      "impl\/verilog\/calcPerceptron_feeOg.v",
+      "impl\/verilog\/calcPerceptron_fefYi.v",
       "impl\/verilog\/calcPerceptron_fmcud.v",
       "impl\/verilog\/calcPerceptron.v"
     ],
@@ -147,6 +138,7 @@
     "Misc": ["impl\/misc\/logo.png"],
     "Subcore": [
       "impl\/misc\/calcPerceptron_ap_fadd_3_full_dsp_32_ip.tcl",
+      "impl\/misc\/calcPerceptron_ap_fcmp_0_no_dsp_32_ip.tcl",
       "impl\/misc\/calcPerceptron_ap_fdiv_14_no_dsp_32_ip.tcl",
       "impl\/misc\/calcPerceptron_ap_fexp_7_full_dsp_32_ip.tcl",
       "impl\/misc\/calcPerceptron_ap_fmul_2_max_dsp_32_ip.tcl"
@@ -163,6 +155,11 @@
         "name": "calcPerceptron_ap_fadd_3_full_dsp_32",
         "vlnv": "xilinx.com:ip:floating_point:7.1",
         "params": "CONFIG.a_precision_type Single CONFIG.a_tuser_width 1 CONFIG.add_sub_value Add CONFIG.b_tuser_width 1 CONFIG.c_a_exponent_width 8 CONFIG.c_a_fraction_width 24 CONFIG.c_compare_operation Programmable CONFIG.c_has_divide_by_zero false CONFIG.c_has_invalid_op false CONFIG.c_has_overflow false CONFIG.c_has_underflow false CONFIG.c_latency 3 CONFIG.c_mult_usage Full_Usage CONFIG.c_optimization Speed_Optimized CONFIG.c_rate 1 CONFIG.c_result_exponent_width 8 CONFIG.c_result_fraction_width 24 CONFIG.component_name calcPerceptron_ap_fadd_3_full_dsp_32 CONFIG.flow_control NonBlocking CONFIG.has_a_tlast false CONFIG.has_a_tuser false CONFIG.has_aclken true CONFIG.has_aresetn false CONFIG.has_b_tlast false CONFIG.has_b_tuser false CONFIG.has_operation_tlast false CONFIG.has_operation_tuser false CONFIG.has_result_tready false CONFIG.maximum_latency false CONFIG.operation_tuser_width 1 CONFIG.operation_type Add_Subtract CONFIG.result_precision_type Single CONFIG.result_tlast_behv Null"
+      },
+      {
+        "name": "calcPerceptron_ap_fcmp_0_no_dsp_32",
+        "vlnv": "xilinx.com:ip:floating_point:7.1",
+        "params": "CONFIG.a_precision_type Single CONFIG.a_tuser_width 1 CONFIG.add_sub_value Both CONFIG.b_tuser_width 1 CONFIG.c_a_exponent_width 8 CONFIG.c_a_fraction_width 24 CONFIG.c_compare_operation Programmable CONFIG.c_has_divide_by_zero false CONFIG.c_has_invalid_op false CONFIG.c_has_overflow false CONFIG.c_has_underflow false CONFIG.c_latency 0 CONFIG.c_mult_usage No_Usage CONFIG.c_optimization Speed_Optimized CONFIG.c_rate 1 CONFIG.c_result_exponent_width 1 CONFIG.c_result_fraction_width 0 CONFIG.component_name calcPerceptron_ap_fcmp_0_no_dsp_32 CONFIG.flow_control NonBlocking CONFIG.has_a_tlast false CONFIG.has_a_tuser false CONFIG.has_aclken false CONFIG.has_aresetn false CONFIG.has_b_tlast false CONFIG.has_b_tuser false CONFIG.has_operation_tlast false CONFIG.has_operation_tuser false CONFIG.has_result_tready false CONFIG.maximum_latency false CONFIG.operation_tuser_width 1 CONFIG.operation_type Compare CONFIG.result_precision_type Custom CONFIG.result_tlast_behv Null"
       },
       {
         "name": "calcPerceptron_ap_fdiv_14_no_dsp_32",
@@ -236,6 +233,39 @@
       "bundle_name": "CTRL_BUS",
       "bundle_role": "interrupt"
     },
+    "model": {
+      "type": "native_bram",
+      "is_adaptor": "true",
+      "mode": "master",
+      "port_prefix": "model",
+      "mem_width": "32",
+      "mem_depth": "1",
+      "mem_ports": "a",
+      "addr_width": "32",
+      "we_width": "4",
+      "master_type": "BRAM_CTRL",
+      "ctype": {
+        "EN": {"Type": "bool"},
+        "CLK": {"Type": "bool"},
+        "RST": {"Type": "bool"},
+        "ADDR": {
+          "Type": "integer unsigned",
+          "Width": "32"
+        },
+        "WE": {
+          "Type": "integer unsigned",
+          "Width": "4"
+        },
+        "DIN": {
+          "Type": "integer signed",
+          "Width": "32"
+        },
+        "DOUT": {
+          "Type": "integer signed",
+          "Width": "32"
+        }
+      }
+    },
     "res": {
       "type": "native_bram",
       "is_adaptor": "true",
@@ -275,7 +305,7 @@
       "mode": "slave",
       "port_prefix": "s_axi_CTRL_BUS",
       "param_prefix": "C_S_AXI_CTRL_BUS",
-      "addr_bits": "6",
+      "addr_bits": "4",
       "registers": [
         {
           "offset": "0x00",
@@ -432,66 +462,6 @@
               "description": "Reserved.  0s on read."
             }
           ]
-        },
-        {
-          "offset": "0x10",
-          "name": "inputs",
-          "access": "W",
-          "reset_value": "0x0",
-          "description": "Data signal of inputs",
-          "fields": [{
-              "offset": "0",
-              "width": "32",
-              "name": "inputs",
-              "access": "W",
-              "reset_value": "0",
-              "description": "Bit 31 to 0 Data signal of inputs"
-            }]
-        },
-        {
-          "offset": "0x18",
-          "name": "neurons",
-          "access": "W",
-          "reset_value": "0x0",
-          "description": "Data signal of neurons",
-          "fields": [{
-              "offset": "0",
-              "width": "32",
-              "name": "neurons",
-              "access": "W",
-              "reset_value": "0",
-              "description": "Bit 31 to 0 Data signal of neurons"
-            }]
-        },
-        {
-          "offset": "0x20",
-          "name": "w_offset",
-          "access": "W",
-          "reset_value": "0x0",
-          "description": "Data signal of w_offset",
-          "fields": [{
-              "offset": "0",
-              "width": "32",
-              "name": "w_offset",
-              "access": "W",
-              "reset_value": "0",
-              "description": "Bit 31 to 0 Data signal of w_offset"
-            }]
-        },
-        {
-          "offset": "0x28",
-          "name": "b_offset",
-          "access": "W",
-          "reset_value": "0x0",
-          "description": "Data signal of b_offset",
-          "fields": [{
-              "offset": "0",
-              "width": "32",
-              "name": "b_offset",
-              "access": "W",
-              "reset_value": "0",
-              "description": "Bit 31 to 0 Data signal of b_offset"
-            }]
         }
       ],
       "ctype": {
@@ -515,10 +485,10 @@
         },
         "AWADDR": {
           "Type": "integer unsigned",
-          "Width": "6"
+          "Width": "4"
         },
         "WDATA": {
-          "Type": "integer signed",
+          "Type": "null",
           "Width": "32"
         },
         "WSTRB": {
@@ -527,17 +497,17 @@
         },
         "ARADDR": {
           "Type": "integer unsigned",
-          "Width": "6"
+          "Width": "4"
         },
         "RDATA": {
-          "Type": "integer signed",
+          "Type": "null",
           "Width": "32"
         }
       },
       "data_width": "32",
       "port_width": {
-        "ARADDR": "6",
-        "AWADDR": "6",
+        "ARADDR": "4",
+        "AWADDR": "4",
         "RDATA": "32",
         "WDATA": "32",
         "WSTRB": "4"
@@ -621,7 +591,7 @@
     },
     "s_axi_CTRL_BUS_AWADDR": {
       "dir": "in",
-      "width": "6"
+      "width": "4"
     },
     "s_axi_CTRL_BUS_WVALID": {
       "dir": "in",
@@ -649,7 +619,7 @@
     },
     "s_axi_CTRL_BUS_ARADDR": {
       "dir": "in",
-      "width": "6"
+      "width": "4"
     },
     "s_axi_CTRL_BUS_RVALID": {
       "dir": "out",
@@ -803,6 +773,34 @@
     "res_Rst_A": {
       "dir": "out",
       "width": "1"
+    },
+    "model_Addr_A": {
+      "dir": "out",
+      "width": "32"
+    },
+    "model_EN_A": {
+      "dir": "out",
+      "width": "1"
+    },
+    "model_WEN_A": {
+      "dir": "out",
+      "width": "4"
+    },
+    "model_Din_A": {
+      "dir": "out",
+      "width": "32"
+    },
+    "model_Dout_A": {
+      "dir": "in",
+      "width": "32"
+    },
+    "model_Clk_A": {
+      "dir": "out",
+      "width": "1"
+    },
+    "model_Rst_A": {
+      "dir": "out",
+      "width": "1"
     }
   },
   "ModuleInfo": {
@@ -826,27 +824,52 @@
         "Timing": {
           "Target": "10.00",
           "Uncertainty": "1.25",
-          "Estimate": "8.677"
+          "Estimate": "8.685"
         },
-        "Loops": [{
-            "Name": "Loop 1",
+        "Loops": [
+          {
+            "Name": "calcPerceptron_label2",
             "TripCount": "",
             "Latency": "",
             "PipelineII": "",
             "PipelineDepth": "",
-            "Loops": [{
-                "Name": "Loop 1.1",
+            "Loops": [
+              {
+                "Name": "calcPerceptron_label3",
                 "TripCount": "",
                 "Latency": "",
                 "PipelineII": "",
-                "PipelineDepth": "11"
-              }]
-          }],
+                "PipelineDepth": "",
+                "Loops": [{
+                    "Name": "calcPerceptron_label0",
+                    "TripCount": "",
+                    "Latency": "",
+                    "PipelineII": "",
+                    "PipelineDepth": "12"
+                  }]
+              },
+              {
+                "Name": "calcPerceptron_label1",
+                "TripCount": "",
+                "Latency": "",
+                "PipelineII": "",
+                "PipelineDepth": "3"
+              }
+            ]
+          },
+          {
+            "Name": "Loop 2",
+            "TripCount": "",
+            "Latency": "",
+            "PipelineII": "",
+            "PipelineDepth": "20"
+          }
+        ],
         "Area": {
           "BRAM_18K": "0",
-          "DSP48E": "12",
-          "FF": "2194",
-          "LUT": "3510",
+          "DSP48E": "18",
+          "FF": "2709",
+          "LUT": "4840",
           "URAM": "0"
         }
       }}
@@ -861,7 +884,7 @@
   },
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2020-09-22 23:46:34 CEST",
+    "Time": "2020-10-05 13:07:19 CEST",
     "ToolName": "vivado_hls",
     "ToolVersion": "2019.2"
   }

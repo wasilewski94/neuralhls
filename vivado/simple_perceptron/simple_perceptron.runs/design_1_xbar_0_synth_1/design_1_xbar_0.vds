@@ -2,16 +2,16 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Wed Sep  9 11:00:15 2020
-# Process ID: 9763
-# Current directory: /home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/design_1_xbar_0_synth_1
+# Start of session at: Mon Oct  5 11:14:09 2020
+# Process ID: 7948
+# Current directory: /home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.runs/design_1_xbar_0_synth_1
 # Command line: vivado -log design_1_xbar_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_xbar_0.tcl
-# Log file: /home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/design_1_xbar_0_synth_1/design_1_xbar_0.vds
-# Journal file: /home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/design_1_xbar_0_synth_1/vivado.jou
+# Log file: /home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.runs/design_1_xbar_0_synth_1/design_1_xbar_0.vds
+# Journal file: /home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.runs/design_1_xbar_0_synth_1/vivado.jou
 #-----------------------------------------------------------
 source design_1_xbar_0.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/wask/workspace/mgr/neuralhls/hls/simple_perceptron'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2019.2/data/ip'.
 Command: synth_design -top design_1_xbar_0 -part xc7z020clg400-1 -mode out_of_context
 Starting synth_design
@@ -19,12 +19,12 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 9795 
+INFO: Helper process launched with PID 7991 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:14 . Memory (MB): peak = 1962.578 ; gain = 201.684 ; free physical = 599 ; free virtual = 21711
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:13 . Memory (MB): peak = 1961.582 ; gain = 201.715 ; free physical = 21028 ; free virtual = 27620
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'design_1_xbar_0' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ip/design_1_xbar_0/synth/design_1_xbar_0.v:59]
-INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_21_axi_crossbar' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:4884]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xbar_0' [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ip/design_1_xbar_0/synth/design_1_xbar_0.v:59]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_21_axi_crossbar' [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:4884]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_NUM_SLAVE_SLOTS bound to: 2 - type: integer 
 	Parameter C_NUM_MASTER_SLOTS bound to: 8 - type: integer 
@@ -33,8 +33,8 @@ INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_21_axi_crossbar' [/h
 	Parameter C_AXI_DATA_WIDTH bound to: 64 - type: integer 
 	Parameter C_AXI_PROTOCOL bound to: 0 - type: integer 
 	Parameter C_NUM_ADDR_RANGES bound to: 1 - type: integer 
-	Parameter C_M_AXI_BASE_ADDR bound to: 512'b11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111000000000000000000000000000000000100011000000000000000000000000011111111111111111111111111111111111111111111111111111111111111110000000000000000000000000000000001000100000000000000000000000000000000000000000000000000000000000100001000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000001000011110000000000000000000000 
-	Parameter C_M_AXI_ADDR_WIDTH bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011010000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000011010000000000000000000000000000110100000000000000000000000000010000 
+	Parameter C_M_AXI_BASE_ADDR bound to: 512'b11111111111111111111111111111111111111111111111111111111111111110000000000000000000000000000000001000010100000000000000000000000000000000000000000000000000000000100011000000000000000000000000000000000000000000000000000000000010010000000000000000000000000000000000000000000000000000000000001000100000000000000000000000000000000000000000000000000000000000100001000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000001000011110000000000000000000000 
+	Parameter C_M_AXI_ADDR_WIDTH bound to: 256'b0000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000011110000000000000000000000000000110100000000000000000000000000010010000000000000000000000000000100000000000000000000000000000001000000000000000000000000000000010000 
 	Parameter C_S_AXI_BASE_ID bound to: 64'b0000000000000000000000000000000100000000000000000000000000000000 
 	Parameter C_S_AXI_THREAD_ID_WIDTH bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
 	Parameter C_AXI_SUPPORTS_USER_SIGNALS bound to: 0 - type: integer 
@@ -73,7 +73,7 @@ INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_21_axi_crossbar' [/h
 	Parameter P_LEN bound to: 8 - type: integer 
 	Parameter P_LOCK bound to: 1 - type: integer 
 	Parameter P_FAMILY bound to: zynq - type: string 
-INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_21_crossbar' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:2239]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_21_crossbar' [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:2239]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_NUM_SLAVE_SLOTS bound to: 2 - type: integer 
 	Parameter C_NUM_MASTER_SLOTS bound to: 8 - type: integer 
@@ -82,8 +82,8 @@ INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_21_crossbar' [/home/
 	Parameter C_AXI_ADDR_WIDTH bound to: 32 - type: integer 
 	Parameter C_AXI_DATA_WIDTH bound to: 64 - type: integer 
 	Parameter C_AXI_PROTOCOL bound to: 0 - type: integer 
-	Parameter C_M_AXI_BASE_ADDR bound to: 512'b11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111000000000000000000000000000000000100011000000000000000000000000011111111111111111111111111111111111111111111111111111111111111110000000000000000000000000000000001000100000000000000000000000000000000000000000000000000000000000100001000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000001000011110000000000000000000000 
-	Parameter C_M_AXI_HIGH_ADDR bound to: 512'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100011000000000000111111111111100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000100000000001111111111111111000000000000000000000000000000000100001000000000000111111111111100000000000000000000000000000000010000000000000000011111111111110000000000000000000000000000000001000011110000001111111111111111 
+	Parameter C_M_AXI_BASE_ADDR bound to: 512'b11111111111111111111111111111111111111111111111111111111111111110000000000000000000000000000000001000010100000000000000000000000000000000000000000000000000000000100011000000000000000000000000000000000000000000000000000000000010010000000000000000000000000000000000000000000000000000000000001000100000000000000000000000000000000000000000000000000000000000100001000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000001000011110000000000000000000000 
+	Parameter C_M_AXI_HIGH_ADDR bound to: 512'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000010100000001111111111111111000000000000000000000000000000000100011000000000011111111111111100000000000000000000000000000000010010000000000000011111111111110000000000000000000000000000000001000100000000111111111111111111000000000000000000000000000000000100001000000000111111111111111100000000000000000000000000000000010000000000000011111111111111110000000000000000000000000000000001000011110000001111111111111111 
 	Parameter C_S_AXI_BASE_ID bound to: 128'b00000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000 
 	Parameter C_S_AXI_HIGH_ID bound to: 128'b00000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000 
 	Parameter C_S_AXI_THREAD_ID_WIDTH bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
@@ -141,7 +141,7 @@ INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_21_crossbar' [/home/
 	Parameter P_M_AXI_READ_ISSUING bound to: 288'b000000000000000000000000000000010000000000000000000000000000100000000000000000000000000000001000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000001000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000000010 
 	Parameter P_M_AXI_WRITE_ISSUING bound to: 288'b000000000000000000000000000000010000000000000000000000000000100000000000000000000000000000001000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000001000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000000010 
 	Parameter P_DECERR bound to: 2'b11 
-INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_21_si_transactor' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:3800]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_21_si_transactor' [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:3800]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_SI bound to: 0 - type: integer 
 	Parameter C_DIR bound to: 1 - type: integer 
@@ -157,8 +157,8 @@ INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_21_si_transactor' [/
 	Parameter C_RMESG_WIDTH bound to: 67 - type: integer 
 	Parameter C_BASE_ID bound to: 1'b0 
 	Parameter C_HIGH_ID bound to: 1'b0 
-	Parameter C_BASE_ADDR bound to: 512'b11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111000000000000000000000000000000000100011000000000000000000000000011111111111111111111111111111111111111111111111111111111111111110000000000000000000000000000000001000100000000000000000000000000000000000000000000000000000000000100001000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000001000011110000000000000000000000 
-	Parameter C_HIGH_ADDR bound to: 512'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100011000000000000111111111111100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000100000000001111111111111111000000000000000000000000000000000100001000000000000111111111111100000000000000000000000000000000010000000000000000011111111111110000000000000000000000000000000001000011110000001111111111111111 
+	Parameter C_BASE_ADDR bound to: 512'b11111111111111111111111111111111111111111111111111111111111111110000000000000000000000000000000001000010100000000000000000000000000000000000000000000000000000000100011000000000000000000000000000000000000000000000000000000000010010000000000000000000000000000000000000000000000000000000000001000100000000000000000000000000000000000000000000000000000000000100001000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000001000011110000000000000000000000 
+	Parameter C_HIGH_ADDR bound to: 512'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000010100000001111111111111111000000000000000000000000000000000100011000000000011111111111111100000000000000000000000000000000010010000000000000011111111111110000000000000000000000000000000001000100000000111111111111111111000000000000000000000000000000000100001000000000111111111111111100000000000000000000000000000000010000000000000011111111111111110000000000000000000000000000000001000011110000001111111111111111 
 	Parameter C_SINGLE_THREAD bound to: 0 - type: integer 
 	Parameter C_TARGET_QUAL bound to: 8'b11111111 
 	Parameter C_M_AXI_SECURE bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
@@ -179,7 +179,7 @@ INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_21_si_transactor' [/
 	Parameter P_NUM_ID_VAL bound to: 1 - type: integer 
 	Parameter P_NUM_THREADS bound to: 1 - type: integer 
 	Parameter P_M_SECURE_MASK bound to: 8'b00000000 
-INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_21_addr_decoder' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:794]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_21_addr_decoder' [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:794]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_NUM_TARGETS bound to: 8 - type: integer 
 	Parameter C_NUM_TARGETS_LOG bound to: 3 - type: integer 
@@ -188,56 +188,72 @@ INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_21_addr_decoder' [/h
 	Parameter C_TARGET_ENC bound to: 1 - type: integer 
 	Parameter C_TARGET_HOT bound to: 1 - type: integer 
 	Parameter C_REGION_ENC bound to: 1 - type: integer 
-	Parameter C_BASE_ADDR bound to: 512'b11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111000000000000000000000000000000000100011000000000000000000000000011111111111111111111111111111111111111111111111111111111111111110000000000000000000000000000000001000100000000000000000000000000000000000000000000000000000000000100001000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000001000011110000000000000000000000 
-	Parameter C_HIGH_ADDR bound to: 512'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100011000000000000111111111111100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000100000000001111111111111111000000000000000000000000000000000100001000000000000111111111111100000000000000000000000000000000010000000000000000011111111111110000000000000000000000000000000001000011110000001111111111111111 
+	Parameter C_BASE_ADDR bound to: 512'b11111111111111111111111111111111111111111111111111111111111111110000000000000000000000000000000001000010100000000000000000000000000000000000000000000000000000000100011000000000000000000000000000000000000000000000000000000000010010000000000000000000000000000000000000000000000000000000000001000100000000000000000000000000000000000000000000000000000000000100001000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000001000011110000000000000000000000 
+	Parameter C_HIGH_ADDR bound to: 512'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000010100000001111111111111111000000000000000000000000000000000100011000000000011111111111111100000000000000000000000000000000010010000000000000011111111111110000000000000000000000000000000001000100000000111111111111111111000000000000000000000000000000000100001000000000111111111111111100000000000000000000000000000000010000000000000011111111111111110000000000000000000000000000000001000011110000001111111111111111 
 	Parameter C_TARGET_QUAL bound to: 9'b011111111 
 	Parameter C_RESOLUTION bound to: 2 - type: integer 
 	Parameter C_COMPARATOR_THRESHOLD bound to: 6 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_comparator_static' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_comparator_static' [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
 	Parameter C_FAMILY bound to: rtl - type: string 
 	Parameter C_VALUE bound to: 30'b010000111100000000000000000000 
 	Parameter C_DATA_WIDTH bound to: 30 - type: integer 
 	Parameter C_BITS_PER_LUT bound to: 6 - type: integer 
 	Parameter C_NUM_LUT bound to: 5 - type: integer 
 	Parameter C_FIX_DATA_WIDTH bound to: 30 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_carry_and' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:62]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_carry_and' [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:62]
 	Parameter C_FAMILY bound to: rtl - type: string 
-INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_carry_and' (1#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:62]
-INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_comparator_static' (2#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
-INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_comparator_static__parameterized0' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_carry_and' (1#1) [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:62]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_comparator_static' (2#1) [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_comparator_static__parameterized0' [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
 	Parameter C_FAMILY bound to: rtl - type: string 
 	Parameter C_VALUE bound to: 30'b010000000000000000000000000000 
 	Parameter C_DATA_WIDTH bound to: 30 - type: integer 
 	Parameter C_BITS_PER_LUT bound to: 6 - type: integer 
 	Parameter C_NUM_LUT bound to: 5 - type: integer 
 	Parameter C_FIX_DATA_WIDTH bound to: 30 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_comparator_static__parameterized0' (2#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
-INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_comparator_static__parameterized1' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_comparator_static__parameterized0' (2#1) [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_comparator_static__parameterized1' [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
 	Parameter C_FAMILY bound to: rtl - type: string 
 	Parameter C_VALUE bound to: 30'b010000100000000000000000000000 
 	Parameter C_DATA_WIDTH bound to: 30 - type: integer 
 	Parameter C_BITS_PER_LUT bound to: 6 - type: integer 
 	Parameter C_NUM_LUT bound to: 5 - type: integer 
 	Parameter C_FIX_DATA_WIDTH bound to: 30 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_comparator_static__parameterized1' (2#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
-INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_comparator_static__parameterized2' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_comparator_static__parameterized1' (2#1) [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_comparator_static__parameterized2' [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
 	Parameter C_FAMILY bound to: rtl - type: string 
 	Parameter C_VALUE bound to: 30'b010001000000000000000000000000 
 	Parameter C_DATA_WIDTH bound to: 30 - type: integer 
 	Parameter C_BITS_PER_LUT bound to: 6 - type: integer 
 	Parameter C_NUM_LUT bound to: 5 - type: integer 
 	Parameter C_FIX_DATA_WIDTH bound to: 30 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_comparator_static__parameterized2' (2#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
-INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_comparator_static__parameterized3' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_comparator_static__parameterized2' (2#1) [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_comparator_static__parameterized3' [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
+	Parameter C_FAMILY bound to: rtl - type: string 
+	Parameter C_VALUE bound to: 30'b010010000000000000000000000000 
+	Parameter C_DATA_WIDTH bound to: 30 - type: integer 
+	Parameter C_BITS_PER_LUT bound to: 6 - type: integer 
+	Parameter C_NUM_LUT bound to: 5 - type: integer 
+	Parameter C_FIX_DATA_WIDTH bound to: 30 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_comparator_static__parameterized3' (2#1) [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_comparator_static__parameterized4' [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
 	Parameter C_FAMILY bound to: rtl - type: string 
 	Parameter C_VALUE bound to: 30'b010001100000000000000000000000 
 	Parameter C_DATA_WIDTH bound to: 30 - type: integer 
 	Parameter C_BITS_PER_LUT bound to: 6 - type: integer 
 	Parameter C_NUM_LUT bound to: 5 - type: integer 
 	Parameter C_FIX_DATA_WIDTH bound to: 30 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_comparator_static__parameterized3' (2#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_21_addr_decoder' (3#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:794]
-INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_19_axic_srl_fifo' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:698]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_comparator_static__parameterized4' (2#1) [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_comparator_static__parameterized5' [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
+	Parameter C_FAMILY bound to: rtl - type: string 
+	Parameter C_VALUE bound to: 30'b010000101000000000000000000000 
+	Parameter C_DATA_WIDTH bound to: 30 - type: integer 
+	Parameter C_BITS_PER_LUT bound to: 6 - type: integer 
+	Parameter C_NUM_LUT bound to: 5 - type: integer 
+	Parameter C_FIX_DATA_WIDTH bound to: 30 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_comparator_static__parameterized5' (2#1) [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_21_addr_decoder' (3#1) [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:794]
+INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_19_axic_srl_fifo' [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:698]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_FIFO_WIDTH bound to: 8 - type: integer 
 	Parameter C_MAX_CTRL_FANOUT bound to: 33 - type: integer 
@@ -249,7 +265,7 @@ INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_19_axic_srl_fifo' [
 	Parameter P_ALMOSTFULL_TEMP bound to: 5'b11110 
 	Parameter P_ALMOSTFULL bound to: 4'b1110 
 	Parameter P_NUM_REPS bound to: 1 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_19_ndeep_srl' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:1135]
+INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_19_ndeep_srl' [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:1135]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_A_WIDTH bound to: 4 - type: integer 
 	Parameter P_SRLASIZE bound to: 5 - type: integer 
@@ -260,11 +276,11 @@ INFO: [Synth 8-6157] synthesizing module 'SRLC32E' [/opt/Xilinx/Vivado/2019.2/sc
 	Parameter INIT bound to: 32'b00000000000000000000000000000000 
 	Parameter IS_CLK_INVERTED bound to: 1'b0 
 INFO: [Synth 8-6155] done synthesizing module 'SRLC32E' (4#1) [/opt/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:78115]
-INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_19_ndeep_srl' (5#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:1135]
-WARNING: [Synth 8-6014] Unused sequential element areset_d1_reg was removed.  [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:750]
-WARNING: [Synth 8-6014] Unused sequential element S_READY_i_reg was removed.  [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:789]
-INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_19_axic_srl_fifo' (6#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:698]
-INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_mux_enc' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_19_ndeep_srl' (5#1) [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:1135]
+WARNING: [Synth 8-6014] Unused sequential element areset_d1_reg was removed.  [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:750]
+WARNING: [Synth 8-6014] Unused sequential element S_READY_i_reg was removed.  [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:789]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_19_axic_srl_fifo' (6#1) [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:698]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_mux_enc' [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_RATIO bound to: 9 - type: integer 
 	Parameter C_SEL_WIDTH bound to: 4 - type: integer 
@@ -273,11 +289,11 @@ INFO: [Synth 8-6157] synthesizing module 'MUXF7' [/opt/Xilinx/Vivado/2019.2/scri
 INFO: [Synth 8-6155] done synthesizing module 'MUXF7' (7#1) [/opt/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:42989]
 INFO: [Synth 8-6157] synthesizing module 'MUXF8' [/opt/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:43026]
 INFO: [Synth 8-6155] done synthesizing module 'MUXF8' (8#1) [/opt/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:43026]
-INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc' (9#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
-WARNING: [Synth 8-6014] Unused sequential element gen_single_thread.debug_r_beat_cnt_i_reg was removed.  [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:4192]
-WARNING: [Synth 8-6014] Unused sequential element gen_single_thread.active_id_reg was removed.  [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:4150]
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_21_si_transactor' (10#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:3800]
-INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_21_si_transactor__parameterized0' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:3800]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc' (9#1) [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
+WARNING: [Synth 8-6014] Unused sequential element gen_single_thread.debug_r_beat_cnt_i_reg was removed.  [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:4192]
+WARNING: [Synth 8-6014] Unused sequential element gen_single_thread.active_id_reg was removed.  [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:4150]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_21_si_transactor' (10#1) [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:3800]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_21_si_transactor__parameterized0' [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:3800]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_SI bound to: 0 - type: integer 
 	Parameter C_DIR bound to: 0 - type: integer 
@@ -293,8 +309,8 @@ INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_21_si_transactor__pa
 	Parameter C_RMESG_WIDTH bound to: 3 - type: integer 
 	Parameter C_BASE_ID bound to: 1'b0 
 	Parameter C_HIGH_ID bound to: 1'b0 
-	Parameter C_BASE_ADDR bound to: 512'b11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111000000000000000000000000000000000100011000000000000000000000000011111111111111111111111111111111111111111111111111111111111111110000000000000000000000000000000001000100000000000000000000000000000000000000000000000000000000000100001000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000001000011110000000000000000000000 
-	Parameter C_HIGH_ADDR bound to: 512'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100011000000000000111111111111100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000100000000001111111111111111000000000000000000000000000000000100001000000000000111111111111100000000000000000000000000000000010000000000000000011111111111110000000000000000000000000000000001000011110000001111111111111111 
+	Parameter C_BASE_ADDR bound to: 512'b11111111111111111111111111111111111111111111111111111111111111110000000000000000000000000000000001000010100000000000000000000000000000000000000000000000000000000100011000000000000000000000000000000000000000000000000000000000010010000000000000000000000000000000000000000000000000000000000001000100000000000000000000000000000000000000000000000000000000000100001000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000001000011110000000000000000000000 
+	Parameter C_HIGH_ADDR bound to: 512'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000010100000001111111111111111000000000000000000000000000000000100011000000000011111111111111100000000000000000000000000000000010010000000000000011111111111110000000000000000000000000000000001000100000000111111111111111111000000000000000000000000000000000100001000000000111111111111111100000000000000000000000000000000010000000000000011111111111111110000000000000000000000000000000001000011110000001111111111111111 
 	Parameter C_SINGLE_THREAD bound to: 0 - type: integer 
 	Parameter C_TARGET_QUAL bound to: 8'b11111111 
 	Parameter C_M_AXI_SECURE bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
@@ -315,26 +331,26 @@ INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_21_si_transactor__pa
 	Parameter P_NUM_ID_VAL bound to: 1 - type: integer 
 	Parameter P_NUM_THREADS bound to: 1 - type: integer 
 	Parameter P_M_SECURE_MASK bound to: 8'b00000000 
-INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized0' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized0' [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_RATIO bound to: 9 - type: integer 
 	Parameter C_SEL_WIDTH bound to: 4 - type: integer 
 	Parameter C_DATA_WIDTH bound to: 5 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized0' (10#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
-WARNING: [Synth 8-6014] Unused sequential element gen_single_thread.debug_r_beat_cnt_i_reg was removed.  [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:4192]
-WARNING: [Synth 8-6014] Unused sequential element gen_single_thread.active_id_reg was removed.  [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:4150]
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_21_si_transactor__parameterized0' (10#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:3800]
-INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_21_splitter' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:4461]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized0' (10#1) [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
+WARNING: [Synth 8-6014] Unused sequential element gen_single_thread.debug_r_beat_cnt_i_reg was removed.  [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:4192]
+WARNING: [Synth 8-6014] Unused sequential element gen_single_thread.active_id_reg was removed.  [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:4150]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_21_si_transactor__parameterized0' (10#1) [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:3800]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_21_splitter' [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:4461]
 	Parameter C_NUM_M bound to: 2 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_21_splitter' (11#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:4461]
-INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_21_wdata_router' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:4736]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_21_splitter' (11#1) [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:4461]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_21_wdata_router' [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:4736]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_WMESG_WIDTH bound to: 74 - type: integer 
 	Parameter C_NUM_MASTER_SLOTS bound to: 9 - type: integer 
 	Parameter C_SELECT_WIDTH bound to: 4 - type: integer 
 	Parameter C_FIFO_DEPTH_LOG bound to: 3 - type: integer 
 	Parameter P_FIFO_DEPTH_LOG bound to: 3 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_19_axic_reg_srl_fifo' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:889]
+INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_19_axic_reg_srl_fifo' [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:889]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_FIFO_WIDTH bound to: 4 - type: integer 
 	Parameter C_MAX_CTRL_FANOUT bound to: 33 - type: integer 
@@ -349,18 +365,18 @@ INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_19_axic_reg_srl_fif
 	Parameter ZERO bound to: 2'b10 
 	Parameter ONE bound to: 2'b11 
 	Parameter TWO bound to: 2'b01 
-INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_19_ndeep_srl__parameterized0' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:1135]
+INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_19_ndeep_srl__parameterized0' [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:1135]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_A_WIDTH bound to: 3 - type: integer 
 	Parameter P_SRLASIZE bound to: 5 - type: integer 
 	Parameter P_SRLDEPTH bound to: 32 - type: integer 
 	Parameter P_NUMSRLS bound to: 1 - type: integer 
 	Parameter P_SHIFT_DEPTH bound to: 8 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_19_ndeep_srl__parameterized0' (11#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:1135]
-INFO: [Synth 8-155] case statement is not full and has no default [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:986]
-INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_19_axic_reg_srl_fifo' (12#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:889]
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_21_wdata_router' (13#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:4736]
-INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_21_si_transactor__parameterized1' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:3800]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_19_ndeep_srl__parameterized0' (11#1) [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:1135]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:986]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_19_axic_reg_srl_fifo' (12#1) [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:889]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_21_wdata_router' (13#1) [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:4736]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_21_si_transactor__parameterized1' [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:3800]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_SI bound to: 1 - type: integer 
 	Parameter C_DIR bound to: 1 - type: integer 
@@ -376,8 +392,8 @@ INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_21_si_transactor__pa
 	Parameter C_RMESG_WIDTH bound to: 67 - type: integer 
 	Parameter C_BASE_ID bound to: 1'b1 
 	Parameter C_HIGH_ID bound to: 1'b1 
-	Parameter C_BASE_ADDR bound to: 512'b11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111000000000000000000000000000000000100011000000000000000000000000011111111111111111111111111111111111111111111111111111111111111110000000000000000000000000000000001000100000000000000000000000000000000000000000000000000000000000100001000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000001000011110000000000000000000000 
-	Parameter C_HIGH_ADDR bound to: 512'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100011000000000000111111111111100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000100000000001111111111111111000000000000000000000000000000000100001000000000000111111111111100000000000000000000000000000000010000000000000000011111111111110000000000000000000000000000000001000011110000001111111111111111 
+	Parameter C_BASE_ADDR bound to: 512'b11111111111111111111111111111111111111111111111111111111111111110000000000000000000000000000000001000010100000000000000000000000000000000000000000000000000000000100011000000000000000000000000000000000000000000000000000000000010010000000000000000000000000000000000000000000000000000000000001000100000000000000000000000000000000000000000000000000000000000100001000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000001000011110000000000000000000000 
+	Parameter C_HIGH_ADDR bound to: 512'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000010100000001111111111111111000000000000000000000000000000000100011000000000011111111111111100000000000000000000000000000000010010000000000000011111111111110000000000000000000000000000000001000100000000111111111111111111000000000000000000000000000000000100001000000000111111111111111100000000000000000000000000000000010000000000000011111111111111110000000000000000000000000000000001000011110000001111111111111111 
 	Parameter C_SINGLE_THREAD bound to: 0 - type: integer 
 	Parameter C_TARGET_QUAL bound to: 8'b11111111 
 	Parameter C_M_AXI_SECURE bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
@@ -398,7 +414,7 @@ INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_21_si_transactor__pa
 	Parameter P_NUM_ID_VAL bound to: 1 - type: integer 
 	Parameter P_NUM_THREADS bound to: 1 - type: integer 
 	Parameter P_M_SECURE_MASK bound to: 8'b00000000 
-INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_19_axic_srl_fifo__parameterized0' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:698]
+INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_19_axic_srl_fifo__parameterized0' [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:698]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_FIFO_WIDTH bound to: 8 - type: integer 
 	Parameter C_MAX_CTRL_FANOUT bound to: 33 - type: integer 
@@ -410,21 +426,21 @@ INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_19_axic_srl_fifo__p
 	Parameter P_ALMOSTFULL_TEMP bound to: 3'b110 
 	Parameter P_ALMOSTFULL bound to: 2'b10 
 	Parameter P_NUM_REPS bound to: 1 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_19_ndeep_srl__parameterized1' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:1135]
+INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_19_ndeep_srl__parameterized1' [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:1135]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_A_WIDTH bound to: 2 - type: integer 
 	Parameter P_SRLASIZE bound to: 5 - type: integer 
 	Parameter P_SRLDEPTH bound to: 32 - type: integer 
 	Parameter P_NUMSRLS bound to: 1 - type: integer 
 	Parameter P_SHIFT_DEPTH bound to: 4 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_19_ndeep_srl__parameterized1' (13#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:1135]
-WARNING: [Synth 8-6014] Unused sequential element areset_d1_reg was removed.  [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:750]
-WARNING: [Synth 8-6014] Unused sequential element S_READY_i_reg was removed.  [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:789]
-INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_19_axic_srl_fifo__parameterized0' (13#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:698]
-WARNING: [Synth 8-6014] Unused sequential element gen_single_thread.debug_r_beat_cnt_i_reg was removed.  [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:4192]
-WARNING: [Synth 8-6014] Unused sequential element gen_single_thread.active_id_reg was removed.  [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:4150]
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_21_si_transactor__parameterized1' (13#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:3800]
-INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_21_si_transactor__parameterized2' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:3800]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_19_ndeep_srl__parameterized1' (13#1) [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:1135]
+WARNING: [Synth 8-6014] Unused sequential element areset_d1_reg was removed.  [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:750]
+WARNING: [Synth 8-6014] Unused sequential element S_READY_i_reg was removed.  [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:789]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_19_axic_srl_fifo__parameterized0' (13#1) [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:698]
+WARNING: [Synth 8-6014] Unused sequential element gen_single_thread.debug_r_beat_cnt_i_reg was removed.  [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:4192]
+WARNING: [Synth 8-6014] Unused sequential element gen_single_thread.active_id_reg was removed.  [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:4150]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_21_si_transactor__parameterized1' (13#1) [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:3800]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_21_si_transactor__parameterized2' [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:3800]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_SI bound to: 1 - type: integer 
 	Parameter C_DIR bound to: 0 - type: integer 
@@ -440,8 +456,8 @@ INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_21_si_transactor__pa
 	Parameter C_RMESG_WIDTH bound to: 3 - type: integer 
 	Parameter C_BASE_ID bound to: 1'b1 
 	Parameter C_HIGH_ID bound to: 1'b1 
-	Parameter C_BASE_ADDR bound to: 512'b11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111000000000000000000000000000000000100011000000000000000000000000011111111111111111111111111111111111111111111111111111111111111110000000000000000000000000000000001000100000000000000000000000000000000000000000000000000000000000100001000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000001000011110000000000000000000000 
-	Parameter C_HIGH_ADDR bound to: 512'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100011000000000000111111111111100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000100000000001111111111111111000000000000000000000000000000000100001000000000000111111111111100000000000000000000000000000000010000000000000000011111111111110000000000000000000000000000000001000011110000001111111111111111 
+	Parameter C_BASE_ADDR bound to: 512'b11111111111111111111111111111111111111111111111111111111111111110000000000000000000000000000000001000010100000000000000000000000000000000000000000000000000000000100011000000000000000000000000000000000000000000000000000000000010010000000000000000000000000000000000000000000000000000000000001000100000000000000000000000000000000000000000000000000000000000100001000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000001000011110000000000000000000000 
+	Parameter C_HIGH_ADDR bound to: 512'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000010100000001111111111111111000000000000000000000000000000000100011000000000011111111111111100000000000000000000000000000000010010000000000000011111111111110000000000000000000000000000000001000100000000111111111111111111000000000000000000000000000000000100001000000000111111111111111100000000000000000000000000000000010000000000000011111111111111110000000000000000000000000000000001000011110000001111111111111111 
 	Parameter C_SINGLE_THREAD bound to: 0 - type: integer 
 	Parameter C_TARGET_QUAL bound to: 8'b11111111 
 	Parameter C_M_AXI_SECURE bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
@@ -462,17 +478,17 @@ INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_21_si_transactor__pa
 	Parameter P_NUM_ID_VAL bound to: 1 - type: integer 
 	Parameter P_NUM_THREADS bound to: 1 - type: integer 
 	Parameter P_M_SECURE_MASK bound to: 8'b00000000 
-WARNING: [Synth 8-6014] Unused sequential element gen_single_thread.debug_r_beat_cnt_i_reg was removed.  [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:4192]
-WARNING: [Synth 8-6014] Unused sequential element gen_single_thread.active_id_reg was removed.  [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:4150]
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_21_si_transactor__parameterized2' (13#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:3800]
-INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_21_wdata_router__parameterized0' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:4736]
+WARNING: [Synth 8-6014] Unused sequential element gen_single_thread.debug_r_beat_cnt_i_reg was removed.  [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:4192]
+WARNING: [Synth 8-6014] Unused sequential element gen_single_thread.active_id_reg was removed.  [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:4150]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_21_si_transactor__parameterized2' (13#1) [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:3800]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_21_wdata_router__parameterized0' [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:4736]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_WMESG_WIDTH bound to: 74 - type: integer 
 	Parameter C_NUM_MASTER_SLOTS bound to: 9 - type: integer 
 	Parameter C_SELECT_WIDTH bound to: 4 - type: integer 
 	Parameter C_FIFO_DEPTH_LOG bound to: 1 - type: integer 
 	Parameter P_FIFO_DEPTH_LOG bound to: 1 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_19_axic_reg_srl_fifo__parameterized0' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:889]
+INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_19_axic_reg_srl_fifo__parameterized0' [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:889]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_FIFO_WIDTH bound to: 4 - type: integer 
 	Parameter C_MAX_CTRL_FANOUT bound to: 33 - type: integer 
@@ -487,10 +503,10 @@ INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_19_axic_reg_srl_fif
 	Parameter ZERO bound to: 2'b10 
 	Parameter ONE bound to: 2'b11 
 	Parameter TWO bound to: 2'b01 
-INFO: [Synth 8-155] case statement is not full and has no default [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:986]
-INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_19_axic_reg_srl_fifo__parameterized0' (13#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:889]
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_21_wdata_router__parameterized0' (13#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:4736]
-INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_21_addr_decoder__parameterized0' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:794]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:986]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_19_axic_reg_srl_fifo__parameterized0' (13#1) [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:889]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_21_wdata_router__parameterized0' (13#1) [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:4736]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_21_addr_decoder__parameterized0' [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:794]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_NUM_TARGETS bound to: 2 - type: integer 
 	Parameter C_NUM_TARGETS_LOG bound to: 1 - type: integer 
@@ -504,8 +520,8 @@ INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_21_addr_decoder__par
 	Parameter C_TARGET_QUAL bound to: 3'b011 
 	Parameter C_RESOLUTION bound to: 0 - type: integer 
 	Parameter C_COMPARATOR_THRESHOLD bound to: 6 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_21_addr_decoder__parameterized0' (13#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:794]
-INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_19_axic_srl_fifo__parameterized1' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:698]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_21_addr_decoder__parameterized0' (13#1) [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:794]
+INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_19_axic_srl_fifo__parameterized1' [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:698]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_FIFO_WIDTH bound to: 8 - type: integer 
 	Parameter C_MAX_CTRL_FANOUT bound to: 33 - type: integer 
@@ -517,17 +533,17 @@ INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_19_axic_srl_fifo__p
 	Parameter P_ALMOSTFULL_TEMP bound to: 3'b110 
 	Parameter P_ALMOSTFULL bound to: 2'b10 
 	Parameter P_NUM_REPS bound to: 1 - type: integer 
-WARNING: [Synth 8-6014] Unused sequential element areset_d1_reg was removed.  [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:750]
-WARNING: [Synth 8-6014] Unused sequential element S_READY_i_reg was removed.  [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:789]
-INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_19_axic_srl_fifo__parameterized1' (13#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:698]
-INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_21_wdata_mux' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:4561]
+WARNING: [Synth 8-6014] Unused sequential element areset_d1_reg was removed.  [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:750]
+WARNING: [Synth 8-6014] Unused sequential element S_READY_i_reg was removed.  [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:789]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_19_axic_srl_fifo__parameterized1' (13#1) [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:698]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_21_wdata_mux' [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:4561]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_WMESG_WIDTH bound to: 74 - type: integer 
 	Parameter C_NUM_SLAVE_SLOTS bound to: 2 - type: integer 
 	Parameter C_SELECT_WIDTH bound to: 1 - type: integer 
 	Parameter C_FIFO_DEPTH_LOG bound to: 1 - type: integer 
 	Parameter P_FIFO_DEPTH_LOG bound to: 1 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_19_axic_reg_srl_fifo__parameterized1' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:889]
+INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_19_axic_reg_srl_fifo__parameterized1' [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:889]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_FIFO_WIDTH bound to: 1 - type: integer 
 	Parameter C_MAX_CTRL_FANOUT bound to: 33 - type: integer 
@@ -542,17 +558,17 @@ INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_19_axic_reg_srl_fif
 	Parameter ZERO bound to: 2'b10 
 	Parameter ONE bound to: 2'b11 
 	Parameter TWO bound to: 2'b01 
-INFO: [Synth 8-155] case statement is not full and has no default [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:986]
-WARNING: [Synth 8-6014] Unused sequential element s_ready_i_reg was removed.  [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:1038]
-INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_19_axic_reg_srl_fifo__parameterized1' (13#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:889]
-INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized1' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:986]
+WARNING: [Synth 8-6014] Unused sequential element s_ready_i_reg was removed.  [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:1038]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_19_axic_reg_srl_fifo__parameterized1' (13#1) [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:889]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized1' [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
 	Parameter C_FAMILY bound to: rtl - type: string 
 	Parameter C_RATIO bound to: 2 - type: integer 
 	Parameter C_SEL_WIDTH bound to: 1 - type: integer 
 	Parameter C_DATA_WIDTH bound to: 74 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized1' (13#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_21_wdata_mux' (14#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:4561]
-INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_20_axi_register_slice' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/72d4/hdl/axi_register_slice_v2_1_vl_rfs.v:3704]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized1' (13#1) [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_21_wdata_mux' (14#1) [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:4561]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_20_axi_register_slice' [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/72d4/hdl/axi_register_slice_v2_1_vl_rfs.v:3704]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_AXI_PROTOCOL bound to: 0 - type: integer 
 	Parameter C_AXI_ID_WIDTH bound to: 1 - type: integer 
@@ -664,7 +680,7 @@ INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_20_axi_registe
 	Parameter G_AXI_RUSER_INDEX bound to: 68 - type: integer 
 	Parameter G_AXI_RUSER_WIDTH bound to: 0 - type: integer 
 	Parameter G_AXI_RPAYLOAD_WIDTH bound to: 68 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:60]
+INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:60]
 	Parameter C_AXI_PROTOCOL bound to: 0 - type: integer 
 	Parameter C_AXI_ID_WIDTH bound to: 1 - type: integer 
 	Parameter C_AXI_ADDR_WIDTH bound to: 1 - type: integer 
@@ -756,8 +772,8 @@ INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' 
 	Parameter G_AXI_RUSER_INDEX bound to: 68 - type: integer 
 	Parameter G_AXI_RUSER_WIDTH bound to: 0 - type: integer 
 	Parameter G_AXI_RPAYLOAD_WIDTH bound to: 68 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' (15#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:60]
-INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:474]
+INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' (15#1) [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:60]
+INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:474]
 	Parameter C_AXI_PROTOCOL bound to: 0 - type: integer 
 	Parameter C_AXI_ID_WIDTH bound to: 1 - type: integer 
 	Parameter C_AXI_ADDR_WIDTH bound to: 1 - type: integer 
@@ -849,30 +865,30 @@ INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' 
 	Parameter G_AXI_RUSER_INDEX bound to: 68 - type: integer 
 	Parameter G_AXI_RUSER_WIDTH bound to: 0 - type: integer 
 	Parameter G_AXI_RPAYLOAD_WIDTH bound to: 68 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' (16#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:474]
-INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_20_axic_register_slice' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/72d4/hdl/axi_register_slice_v2_1_vl_rfs.v:1476]
+INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' (16#1) [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:474]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_20_axic_register_slice' [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/72d4/hdl/axi_register_slice_v2_1_vl_rfs.v:1476]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_DATA_WIDTH bound to: 31 - type: integer 
 	Parameter C_REG_CONFIG bound to: 0 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_20_axic_register_slice' (17#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/72d4/hdl/axi_register_slice_v2_1_vl_rfs.v:1476]
-INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_20_axic_register_slice__parameterized0' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/72d4/hdl/axi_register_slice_v2_1_vl_rfs.v:1476]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_20_axic_register_slice' (17#1) [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/72d4/hdl/axi_register_slice_v2_1_vl_rfs.v:1476]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_20_axic_register_slice__parameterized0' [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/72d4/hdl/axi_register_slice_v2_1_vl_rfs.v:1476]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_DATA_WIDTH bound to: 73 - type: integer 
 	Parameter C_REG_CONFIG bound to: 0 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_20_axic_register_slice__parameterized0' (17#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/72d4/hdl/axi_register_slice_v2_1_vl_rfs.v:1476]
-INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_20_axic_register_slice__parameterized1' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/72d4/hdl/axi_register_slice_v2_1_vl_rfs.v:1476]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_20_axic_register_slice__parameterized0' (17#1) [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/72d4/hdl/axi_register_slice_v2_1_vl_rfs.v:1476]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_20_axic_register_slice__parameterized1' [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/72d4/hdl/axi_register_slice_v2_1_vl_rfs.v:1476]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_DATA_WIDTH bound to: 3 - type: integer 
 	Parameter C_REG_CONFIG bound to: 7 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_20_axic_register_slice__parameterized1' (17#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/72d4/hdl/axi_register_slice_v2_1_vl_rfs.v:1476]
-INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_20_axic_register_slice__parameterized2' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/72d4/hdl/axi_register_slice_v2_1_vl_rfs.v:1476]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_20_axic_register_slice__parameterized1' (17#1) [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/72d4/hdl/axi_register_slice_v2_1_vl_rfs.v:1476]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_20_axic_register_slice__parameterized2' [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/72d4/hdl/axi_register_slice_v2_1_vl_rfs.v:1476]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_DATA_WIDTH bound to: 68 - type: integer 
 	Parameter C_REG_CONFIG bound to: 1 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_20_axic_register_slice__parameterized2' (17#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/72d4/hdl/axi_register_slice_v2_1_vl_rfs.v:1476]
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_20_axi_register_slice' (18#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/72d4/hdl/axi_register_slice_v2_1_vl_rfs.v:3704]
-WARNING: [Synth 8-7023] instance 'reg_slice_mi' of module 'axi_register_slice_v2_1_20_axi_register_slice' has 93 connections declared, but only 92 given [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:3122]
-INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_19_axic_srl_fifo__parameterized2' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:698]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_20_axic_register_slice__parameterized2' (17#1) [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/72d4/hdl/axi_register_slice_v2_1_vl_rfs.v:1476]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_20_axi_register_slice' (18#1) [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/72d4/hdl/axi_register_slice_v2_1_vl_rfs.v:3704]
+WARNING: [Synth 8-7023] instance 'reg_slice_mi' of module 'axi_register_slice_v2_1_20_axi_register_slice' has 93 connections declared, but only 92 given [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:3122]
+INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_19_axic_srl_fifo__parameterized2' [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:698]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_FIFO_WIDTH bound to: 8 - type: integer 
 	Parameter C_MAX_CTRL_FANOUT bound to: 33 - type: integer 
@@ -884,17 +900,17 @@ INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_19_axic_srl_fifo__p
 	Parameter P_ALMOSTFULL_TEMP bound to: 4'b1110 
 	Parameter P_ALMOSTFULL bound to: 3'b110 
 	Parameter P_NUM_REPS bound to: 1 - type: integer 
-WARNING: [Synth 8-6014] Unused sequential element areset_d1_reg was removed.  [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:750]
-WARNING: [Synth 8-6014] Unused sequential element S_READY_i_reg was removed.  [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:789]
-INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_19_axic_srl_fifo__parameterized2' (18#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:698]
-INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_21_wdata_mux__parameterized0' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:4561]
+WARNING: [Synth 8-6014] Unused sequential element areset_d1_reg was removed.  [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:750]
+WARNING: [Synth 8-6014] Unused sequential element S_READY_i_reg was removed.  [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:789]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_19_axic_srl_fifo__parameterized2' (18#1) [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:698]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_21_wdata_mux__parameterized0' [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:4561]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_WMESG_WIDTH bound to: 74 - type: integer 
 	Parameter C_NUM_SLAVE_SLOTS bound to: 2 - type: integer 
 	Parameter C_SELECT_WIDTH bound to: 1 - type: integer 
 	Parameter C_FIFO_DEPTH_LOG bound to: 3 - type: integer 
 	Parameter P_FIFO_DEPTH_LOG bound to: 3 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_19_axic_reg_srl_fifo__parameterized2' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:889]
+INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_19_axic_reg_srl_fifo__parameterized2' [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:889]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_FIFO_WIDTH bound to: 1 - type: integer 
 	Parameter C_MAX_CTRL_FANOUT bound to: 33 - type: integer 
@@ -909,18 +925,18 @@ INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_19_axic_reg_srl_fif
 	Parameter ZERO bound to: 2'b10 
 	Parameter ONE bound to: 2'b11 
 	Parameter TWO bound to: 2'b01 
-INFO: [Synth 8-155] case statement is not full and has no default [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:986]
-WARNING: [Synth 8-6014] Unused sequential element s_ready_i_reg was removed.  [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:1038]
-INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_19_axic_reg_srl_fifo__parameterized2' (18#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:889]
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_21_wdata_mux__parameterized0' (18#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:4561]
-WARNING: [Synth 8-7023] instance 'reg_slice_mi' of module 'axi_register_slice_v2_1_20_axi_register_slice' has 93 connections declared, but only 92 given [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:3122]
-WARNING: [Synth 8-7023] instance 'reg_slice_mi' of module 'axi_register_slice_v2_1_20_axi_register_slice' has 93 connections declared, but only 92 given [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:3122]
-WARNING: [Synth 8-7023] instance 'reg_slice_mi' of module 'axi_register_slice_v2_1_20_axi_register_slice' has 93 connections declared, but only 92 given [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:3122]
-WARNING: [Synth 8-7023] instance 'reg_slice_mi' of module 'axi_register_slice_v2_1_20_axi_register_slice' has 93 connections declared, but only 92 given [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:3122]
-WARNING: [Synth 8-7023] instance 'reg_slice_mi' of module 'axi_register_slice_v2_1_20_axi_register_slice' has 93 connections declared, but only 92 given [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:3122]
-WARNING: [Synth 8-7023] instance 'reg_slice_mi' of module 'axi_register_slice_v2_1_20_axi_register_slice' has 93 connections declared, but only 92 given [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:3122]
-WARNING: [Synth 8-7023] instance 'reg_slice_mi' of module 'axi_register_slice_v2_1_20_axi_register_slice' has 93 connections declared, but only 92 given [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:3122]
-INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_19_axic_srl_fifo__parameterized3' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:698]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:986]
+WARNING: [Synth 8-6014] Unused sequential element s_ready_i_reg was removed.  [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:1038]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_19_axic_reg_srl_fifo__parameterized2' (18#1) [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:889]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_21_wdata_mux__parameterized0' (18#1) [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:4561]
+WARNING: [Synth 8-7023] instance 'reg_slice_mi' of module 'axi_register_slice_v2_1_20_axi_register_slice' has 93 connections declared, but only 92 given [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:3122]
+WARNING: [Synth 8-7023] instance 'reg_slice_mi' of module 'axi_register_slice_v2_1_20_axi_register_slice' has 93 connections declared, but only 92 given [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:3122]
+WARNING: [Synth 8-7023] instance 'reg_slice_mi' of module 'axi_register_slice_v2_1_20_axi_register_slice' has 93 connections declared, but only 92 given [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:3122]
+WARNING: [Synth 8-7023] instance 'reg_slice_mi' of module 'axi_register_slice_v2_1_20_axi_register_slice' has 93 connections declared, but only 92 given [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:3122]
+WARNING: [Synth 8-7023] instance 'reg_slice_mi' of module 'axi_register_slice_v2_1_20_axi_register_slice' has 93 connections declared, but only 92 given [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:3122]
+WARNING: [Synth 8-7023] instance 'reg_slice_mi' of module 'axi_register_slice_v2_1_20_axi_register_slice' has 93 connections declared, but only 92 given [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:3122]
+WARNING: [Synth 8-7023] instance 'reg_slice_mi' of module 'axi_register_slice_v2_1_20_axi_register_slice' has 93 connections declared, but only 92 given [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:3122]
+INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_19_axic_srl_fifo__parameterized3' [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:698]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_FIFO_WIDTH bound to: 8 - type: integer 
 	Parameter C_MAX_CTRL_FANOUT bound to: 33 - type: integer 
@@ -932,17 +948,17 @@ INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_19_axic_srl_fifo__p
 	Parameter P_ALMOSTFULL_TEMP bound to: 3'b110 
 	Parameter P_ALMOSTFULL bound to: 2'b10 
 	Parameter P_NUM_REPS bound to: 1 - type: integer 
-WARNING: [Synth 8-6014] Unused sequential element areset_d1_reg was removed.  [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:750]
-WARNING: [Synth 8-6014] Unused sequential element S_READY_i_reg was removed.  [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:789]
-INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_19_axic_srl_fifo__parameterized3' (18#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:698]
-INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_21_wdata_mux__parameterized1' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:4561]
+WARNING: [Synth 8-6014] Unused sequential element areset_d1_reg was removed.  [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:750]
+WARNING: [Synth 8-6014] Unused sequential element S_READY_i_reg was removed.  [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:789]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_19_axic_srl_fifo__parameterized3' (18#1) [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:698]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_21_wdata_mux__parameterized1' [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:4561]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_WMESG_WIDTH bound to: 74 - type: integer 
 	Parameter C_NUM_SLAVE_SLOTS bound to: 2 - type: integer 
 	Parameter C_SELECT_WIDTH bound to: 1 - type: integer 
 	Parameter C_FIFO_DEPTH_LOG bound to: 0 - type: integer 
 	Parameter P_FIFO_DEPTH_LOG bound to: 0 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_19_axic_reg_srl_fifo__parameterized3' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:889]
+INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_19_axic_reg_srl_fifo__parameterized3' [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:889]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_FIFO_WIDTH bound to: 1 - type: integer 
 	Parameter C_MAX_CTRL_FANOUT bound to: 33 - type: integer 
@@ -957,12 +973,12 @@ INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_19_axic_reg_srl_fif
 	Parameter ZERO bound to: 2'b10 
 	Parameter ONE bound to: 2'b11 
 	Parameter TWO bound to: 2'b01 
-INFO: [Synth 8-155] case statement is not full and has no default [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:986]
-WARNING: [Synth 8-6014] Unused sequential element s_ready_i_reg was removed.  [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:1038]
-INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_19_axic_reg_srl_fifo__parameterized3' (18#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:889]
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_21_wdata_mux__parameterized1' (18#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:4561]
-WARNING: [Synth 8-7023] instance 'reg_slice_mi' of module 'axi_register_slice_v2_1_20_axi_register_slice' has 93 connections declared, but only 92 given [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:3122]
-INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_21_decerr_slave' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:3501]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:986]
+WARNING: [Synth 8-6014] Unused sequential element s_ready_i_reg was removed.  [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:1038]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_19_axic_reg_srl_fifo__parameterized3' (18#1) [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:889]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_21_wdata_mux__parameterized1' (18#1) [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:4561]
+WARNING: [Synth 8-7023] instance 'reg_slice_mi' of module 'axi_register_slice_v2_1_20_axi_register_slice' has 93 connections declared, but only 92 given [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:3122]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_21_decerr_slave' [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:3501]
 	Parameter C_AXI_ID_WIDTH bound to: 1 - type: integer 
 	Parameter C_AXI_DATA_WIDTH bound to: 64 - type: integer 
 	Parameter C_AXI_BUSER_WIDTH bound to: 1 - type: integer 
@@ -977,9 +993,9 @@ INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_21_decerr_slave' [/h
 	Parameter P_AXI4 bound to: 0 - type: integer 
 	Parameter P_AXI3 bound to: 1 - type: integer 
 	Parameter P_AXILITE bound to: 2 - type: integer 
-INFO: [Synth 8-155] case statement is not full and has no default [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:3633]
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_21_decerr_slave' (19#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:3501]
-INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_21_addr_arbiter' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:423]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:3633]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_21_decerr_slave' (19#1) [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:3501]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_21_addr_arbiter' [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:423]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_NUM_S bound to: 2 - type: integer 
 	Parameter C_NUM_S_LOG bound to: 1 - type: integer 
@@ -987,31 +1003,31 @@ INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_21_addr_arbiter' [/h
 	Parameter C_MESG_WIDTH bound to: 64 - type: integer 
 	Parameter C_ARB_PRIORITY bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
 	Parameter P_PRIO_MASK bound to: 2'b00 
-INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized2' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized2' [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
 	Parameter C_FAMILY bound to: rtl - type: string 
 	Parameter C_RATIO bound to: 2 - type: integer 
 	Parameter C_SEL_WIDTH bound to: 1 - type: integer 
 	Parameter C_DATA_WIDTH bound to: 64 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized2' (19#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
-INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized3' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized2' (19#1) [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized3' [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
 	Parameter C_FAMILY bound to: rtl - type: string 
 	Parameter C_RATIO bound to: 2 - type: integer 
 	Parameter C_SEL_WIDTH bound to: 1 - type: integer 
 	Parameter C_DATA_WIDTH bound to: 9 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized3' (19#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_21_addr_arbiter' (20#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:423]
-WARNING: [Synth 8-6014] Unused sequential element gen_master_slots[0].gen_mi_write.gen_debug_w.debug_w_beat_cnt_i_reg was removed.  [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:2997]
-WARNING: [Synth 8-6014] Unused sequential element gen_master_slots[1].gen_mi_write.gen_debug_w.debug_w_beat_cnt_i_reg was removed.  [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:2997]
-WARNING: [Synth 8-6014] Unused sequential element gen_master_slots[2].gen_mi_write.gen_debug_w.debug_w_beat_cnt_i_reg was removed.  [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:2997]
-WARNING: [Synth 8-6014] Unused sequential element gen_master_slots[3].gen_mi_write.gen_debug_w.debug_w_beat_cnt_i_reg was removed.  [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:2997]
-WARNING: [Synth 8-6014] Unused sequential element gen_master_slots[4].gen_mi_write.gen_debug_w.debug_w_beat_cnt_i_reg was removed.  [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:2997]
-WARNING: [Synth 8-6014] Unused sequential element gen_master_slots[5].gen_mi_write.gen_debug_w.debug_w_beat_cnt_i_reg was removed.  [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:2997]
-WARNING: [Synth 8-6014] Unused sequential element gen_master_slots[6].gen_mi_write.gen_debug_w.debug_w_beat_cnt_i_reg was removed.  [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:2997]
-WARNING: [Synth 8-6014] Unused sequential element gen_master_slots[7].gen_mi_write.gen_debug_w.debug_w_beat_cnt_i_reg was removed.  [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:2997]
-WARNING: [Synth 8-6014] Unused sequential element gen_master_slots[8].gen_mi_write.gen_debug_w.debug_w_beat_cnt_i_reg was removed.  [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:2997]
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_21_crossbar' (21#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:2239]
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_21_axi_crossbar' (22#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:4884]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_xbar_0' (23#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ip/design_1_xbar_0/synth/design_1_xbar_0.v:59]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized3' (19#1) [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_21_addr_arbiter' (20#1) [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:423]
+WARNING: [Synth 8-6014] Unused sequential element gen_master_slots[0].gen_mi_write.gen_debug_w.debug_w_beat_cnt_i_reg was removed.  [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:2997]
+WARNING: [Synth 8-6014] Unused sequential element gen_master_slots[1].gen_mi_write.gen_debug_w.debug_w_beat_cnt_i_reg was removed.  [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:2997]
+WARNING: [Synth 8-6014] Unused sequential element gen_master_slots[2].gen_mi_write.gen_debug_w.debug_w_beat_cnt_i_reg was removed.  [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:2997]
+WARNING: [Synth 8-6014] Unused sequential element gen_master_slots[3].gen_mi_write.gen_debug_w.debug_w_beat_cnt_i_reg was removed.  [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:2997]
+WARNING: [Synth 8-6014] Unused sequential element gen_master_slots[4].gen_mi_write.gen_debug_w.debug_w_beat_cnt_i_reg was removed.  [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:2997]
+WARNING: [Synth 8-6014] Unused sequential element gen_master_slots[5].gen_mi_write.gen_debug_w.debug_w_beat_cnt_i_reg was removed.  [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:2997]
+WARNING: [Synth 8-6014] Unused sequential element gen_master_slots[6].gen_mi_write.gen_debug_w.debug_w_beat_cnt_i_reg was removed.  [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:2997]
+WARNING: [Synth 8-6014] Unused sequential element gen_master_slots[7].gen_mi_write.gen_debug_w.debug_w_beat_cnt_i_reg was removed.  [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:2997]
+WARNING: [Synth 8-6014] Unused sequential element gen_master_slots[8].gen_mi_write.gen_debug_w.debug_w_beat_cnt_i_reg was removed.  [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:2997]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_21_crossbar' (21#1) [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:2239]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_21_axi_crossbar' (22#1) [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:4884]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xbar_0' (23#1) [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ip/design_1_xbar_0/synth/design_1_xbar_0.v:59]
 WARNING: [Synth 8-3331] design axi_register_slice_v2_1_20_axic_register_slice has unconnected port ACLK
 WARNING: [Synth 8-3331] design axi_register_slice_v2_1_20_axic_register_slice has unconnected port ARESET
 WARNING: [Synth 8-3331] design axi_register_slice_v2_1_20_axic_register_slice__parameterized0 has unconnected port ACLK
@@ -1068,7 +1084,7 @@ WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected
 WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port m_axi_ruser[1]
 WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port m_axi_ruser[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:14 ; elapsed = 00:00:26 . Memory (MB): peak = 2121.266 ; gain = 360.371 ; free physical = 447 ; free virtual = 21471
+Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:25 . Memory (MB): peak = 2119.270 ; gain = 359.402 ; free physical = 21036 ; free virtual = 27629
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1081,70 +1097,70 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:27 . Memory (MB): peak = 2139.078 ; gain = 378.184 ; free physical = 449 ; free virtual = 21472
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:25 . Memory (MB): peak = 2137.082 ; gain = 377.215 ; free physical = 21039 ; free virtual = 27632
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:27 . Memory (MB): peak = 2139.078 ; gain = 378.184 ; free physical = 449 ; free virtual = 21472
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:25 . Memory (MB): peak = 2137.082 ; gain = 377.215 ; free physical = 21039 ; free virtual = 27632
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.16 ; elapsed = 00:00:00.16 . Memory (MB): peak = 2142.047 ; gain = 0.000 ; free physical = 513 ; free virtual = 21538
+Netlist sorting complete. Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.13 . Memory (MB): peak = 2140.051 ; gain = 0.000 ; free physical = 21026 ; free virtual = 27619
 INFO: [Netlist 29-17] Analyzing 296 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0_ooc.xdc] for cell 'inst'
-Finished Parsing XDC File [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0_ooc.xdc] for cell 'inst'
-Parsing XDC File [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/design_1_xbar_0_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/design_1_xbar_0_synth_1/dont_touch.xdc]
+Parsing XDC File [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.runs/design_1_xbar_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.runs/design_1_xbar_0_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2275.891 ; gain = 0.000 ; free physical = 656 ; free virtual = 21679
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2273.895 ; gain = 0.000 ; free physical = 20923 ; free virtual = 27498
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.23 ; elapsed = 00:00:00.13 . Memory (MB): peak = 2275.891 ; gain = 0.000 ; free physical = 656 ; free virtual = 21679
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.23 ; elapsed = 00:00:00.15 . Memory (MB): peak = 2273.895 ; gain = 0.000 ; free physical = 20916 ; free virtual = 27490
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:22 ; elapsed = 00:00:35 . Memory (MB): peak = 2275.891 ; gain = 514.996 ; free physical = 1519 ; free virtual = 22542
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:33 . Memory (MB): peak = 2273.895 ; gain = 514.027 ; free physical = 21005 ; free virtual = 27581
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:22 ; elapsed = 00:00:35 . Memory (MB): peak = 2275.891 ; gain = 514.996 ; free physical = 1519 ; free virtual = 22542
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:33 . Memory (MB): peak = 2273.895 ; gain = 514.027 ; free physical = 21005 ; free virtual = 27581
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property DONT_TOUCH = true for inst. (constraint file  /home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/design_1_xbar_0_synth_1/dont_touch.xdc, line 9).
+Applied set_property DONT_TOUCH = true for inst. (constraint file  /home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.runs/design_1_xbar_0_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:35 . Memory (MB): peak = 2275.891 ; gain = 514.996 ; free physical = 1519 ; free virtual = 22542
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:33 . Memory (MB): peak = 2273.895 ; gain = 514.027 ; free physical = 21005 ; free virtual = 27581
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-4471] merging register 'gen_axi.s_axi_rvalid_i_reg' into 'gen_axi.read_cs_reg[0:0]' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:3669]
+INFO: [Synth 8-4471] merging register 'gen_axi.s_axi_rvalid_i_reg' into 'gen_axi.read_cs_reg[0:0]' [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:3669]
 INFO: [Synth 8-802] inferred FSM for state register 'gen_axi.write_cs_reg' in module 'axi_crossbar_v2_1_21_decerr_slave'
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:759]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:4155]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:4155]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/60de/hdl/axi_data_fifo_v2_1_vl_rfs.v:759]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:4155]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:4155]
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'axi_data_fifo_v2_1_19_axic_reg_srl_fifo'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'axi_data_fifo_v2_1_19_axic_reg_srl_fifo__parameterized0'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'axi_data_fifo_v2_1_19_axic_reg_srl_fifo__parameterized1'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'axi_data_fifo_v2_1_19_axic_reg_srl_fifo__parameterized2'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'axi_data_fifo_v2_1_19_axic_reg_srl_fifo__parameterized3'
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:3092]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:3092]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:3092]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:3092]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:3092]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:3092]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:3092]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:3087]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:3087]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:3087]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:3087]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:3087]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:3087]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:3087]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:3092]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:3092]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:3092]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:3092]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:3092]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:3092]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:3092]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:3087]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:3087]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:3087]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:3087]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:3087]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:3087]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:3087]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -1199,7 +1215,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'axi_data_fifo_v2_1_19_axic_reg_srl_fifo__parameterized3'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:37 . Memory (MB): peak = 2275.891 ; gain = 514.996 ; free physical = 1470 ; free virtual = 22492
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:35 . Memory (MB): peak = 2273.895 ; gain = 514.027 ; free physical = 20928 ; free virtual = 27525
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1585,20 +1601,12 @@ INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_slave_slo
 INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_slave_slots[1].gen_si_write.si_transactor_aw/gen_single_thread.active_region_reg[0]' (FDRE) to 'inst/gen_samd.crossbar_samd/gen_slave_slots[1].gen_si_write.si_transactor_aw/gen_single_thread.active_region_reg[2]'
 INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_slave_slots[1].gen_si_write.si_transactor_aw/gen_single_thread.active_region_reg[1]' (FDRE) to 'inst/gen_samd.crossbar_samd/gen_slave_slots[1].gen_si_write.si_transactor_aw/gen_single_thread.active_region_reg[2]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\gen_samd.crossbar_samd /\gen_slave_slots[1].gen_si_write.si_transactor_aw /\gen_single_thread.active_region_reg[2] )
-INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_slave_slots[0].gen_si_read.si_transactor_ar/gen_single_thread.active_target_hot_reg[4]' (FDRE) to 'inst/gen_samd.crossbar_samd/gen_slave_slots[0].gen_si_read.si_transactor_ar/gen_single_thread.active_target_hot_reg[6]'
-INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_slave_slots[0].gen_si_read.si_transactor_ar/gen_single_thread.active_target_hot_reg[6]' (FDRE) to 'inst/gen_samd.crossbar_samd/gen_slave_slots[0].gen_si_read.si_transactor_ar/gen_single_thread.active_target_hot_reg[7]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\gen_samd.crossbar_samd /\gen_slave_slots[0].gen_si_read.si_transactor_ar /\gen_single_thread.active_target_hot_reg[7] )
 INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_slave_slots[0].gen_si_read.si_transactor_ar/gen_single_thread.active_target_hot_reg[8]' (FDRE) to 'inst/gen_samd.crossbar_samd/gen_slave_slots[0].gen_si_read.si_transactor_ar/gen_single_thread.active_target_enc_reg[3]'
-INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_slave_slots[1].gen_si_read.si_transactor_ar/gen_single_thread.active_target_hot_reg[4]' (FDRE) to 'inst/gen_samd.crossbar_samd/gen_slave_slots[1].gen_si_read.si_transactor_ar/gen_single_thread.active_target_hot_reg[7]'
-INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_slave_slots[1].gen_si_read.si_transactor_ar/gen_single_thread.active_target_hot_reg[6]' (FDRE) to 'inst/gen_samd.crossbar_samd/gen_slave_slots[1].gen_si_read.si_transactor_ar/gen_single_thread.active_target_hot_reg[7]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\gen_samd.crossbar_samd /\gen_slave_slots[1].gen_si_read.si_transactor_ar /\gen_single_thread.active_target_hot_reg[7] )
 INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_slave_slots[1].gen_si_read.si_transactor_ar/gen_single_thread.active_target_hot_reg[8]' (FDRE) to 'inst/gen_samd.crossbar_samd/gen_slave_slots[1].gen_si_read.si_transactor_ar/gen_single_thread.active_target_enc_reg[3]'
-INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_slave_slots[0].gen_si_write.si_transactor_aw/gen_single_thread.active_target_hot_reg[4]' (FDRE) to 'inst/gen_samd.crossbar_samd/gen_slave_slots[0].gen_si_write.si_transactor_aw/gen_single_thread.active_target_hot_reg[6]'
-INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_slave_slots[0].gen_si_write.si_transactor_aw/gen_single_thread.active_target_hot_reg[6]' (FDRE) to 'inst/gen_samd.crossbar_samd/gen_slave_slots[0].gen_si_write.si_transactor_aw/gen_single_thread.active_target_hot_reg[7]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\gen_samd.crossbar_samd /\gen_slave_slots[0].gen_si_write.si_transactor_aw /\gen_single_thread.active_target_hot_reg[7] )
 INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_slave_slots[0].gen_si_write.si_transactor_aw/gen_single_thread.active_target_hot_reg[8]' (FDRE) to 'inst/gen_samd.crossbar_samd/gen_slave_slots[0].gen_si_write.si_transactor_aw/gen_single_thread.active_target_enc_reg[3]'
-INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_slave_slots[1].gen_si_write.si_transactor_aw/gen_single_thread.active_target_hot_reg[4]' (FDRE) to 'inst/gen_samd.crossbar_samd/gen_slave_slots[1].gen_si_write.si_transactor_aw/gen_single_thread.active_target_hot_reg[7]'
-INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_slave_slots[1].gen_si_write.si_transactor_aw/gen_single_thread.active_target_hot_reg[6]' (FDRE) to 'inst/gen_samd.crossbar_samd/gen_slave_slots[1].gen_si_write.si_transactor_aw/gen_single_thread.active_target_hot_reg[7]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\gen_samd.crossbar_samd /\gen_slave_slots[1].gen_si_write.si_transactor_aw /\gen_single_thread.active_target_hot_reg[7] )
 INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_slave_slots[1].gen_si_write.si_transactor_aw/gen_single_thread.active_target_hot_reg[8]' (FDRE) to 'inst/gen_samd.crossbar_samd/gen_slave_slots[1].gen_si_write.si_transactor_aw/gen_single_thread.active_target_enc_reg[3]'
 INFO: [Synth 8-3332] Sequential element (wrouter_aw_fifo/FSM_onehot_state_reg[2]) is unused and will be removed from module axi_crossbar_v2_1_21_wdata_router.
@@ -1612,15 +1620,11 @@ INFO: [Synth 8-3332] Sequential element (FSM_onehot_state_reg[2]) is unused and 
 INFO: [Synth 8-3332] Sequential element (FSM_onehot_state_reg[2]) is unused and will be removed from module axi_data_fifo_v2_1_19_axic_reg_srl_fifo__parameterized2__6.
 INFO: [Synth 8-3332] Sequential element (FSM_onehot_state_reg[2]) is unused and will be removed from module axi_data_fifo_v2_1_19_axic_reg_srl_fifo__parameterized2.
 INFO: [Synth 8-3332] Sequential element (FSM_onehot_state_reg[2]) is unused and will be removed from module axi_data_fifo_v2_1_19_axic_reg_srl_fifo__parameterized3.
-INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/addr_arbiter_ar/gen_arbiter.m_target_hot_i_reg[4]' (FDRE) to 'inst/gen_samd.crossbar_samd/addr_arbiter_ar/gen_arbiter.m_target_hot_i_reg[7]'
-INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/addr_arbiter_ar/gen_arbiter.m_target_hot_i_reg[6]' (FDRE) to 'inst/gen_samd.crossbar_samd/addr_arbiter_ar/gen_arbiter.m_target_hot_i_reg[7]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\gen_samd.crossbar_samd /addr_arbiter_ar/\gen_arbiter.m_target_hot_i_reg[7] )
 INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/addr_arbiter_ar/gen_arbiter.m_mesg_i_reg[49]' (FDRE) to 'inst/gen_samd.crossbar_samd/addr_arbiter_ar/gen_arbiter.m_mesg_i_reg[50]'
 INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/addr_arbiter_ar/gen_arbiter.m_mesg_i_reg[50]' (FDRE) to 'inst/gen_samd.crossbar_samd/addr_arbiter_ar/gen_arbiter.m_mesg_i_reg[51]'
 INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/addr_arbiter_ar/gen_arbiter.m_mesg_i_reg[51]' (FDRE) to 'inst/gen_samd.crossbar_samd/addr_arbiter_ar/gen_arbiter.m_mesg_i_reg[52]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\gen_samd.crossbar_samd /addr_arbiter_ar/\gen_arbiter.m_mesg_i_reg[52] )
-INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/addr_arbiter_aw/gen_arbiter.m_target_hot_i_reg[4]' (FDRE) to 'inst/gen_samd.crossbar_samd/addr_arbiter_aw/gen_arbiter.m_target_hot_i_reg[7]'
-INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/addr_arbiter_aw/gen_arbiter.m_target_hot_i_reg[6]' (FDRE) to 'inst/gen_samd.crossbar_samd/addr_arbiter_aw/gen_arbiter.m_target_hot_i_reg[7]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\gen_samd.crossbar_samd /addr_arbiter_aw/\gen_arbiter.m_target_hot_i_reg[7] )
 INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/addr_arbiter_aw/gen_arbiter.m_mesg_i_reg[49]' (FDRE) to 'inst/gen_samd.crossbar_samd/addr_arbiter_aw/gen_arbiter.m_mesg_i_reg[50]'
 INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/addr_arbiter_aw/gen_arbiter.m_mesg_i_reg[50]' (FDRE) to 'inst/gen_samd.crossbar_samd/addr_arbiter_aw/gen_arbiter.m_mesg_i_reg[51]'
@@ -1628,35 +1632,17 @@ INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/addr_arbiter_
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\gen_samd.crossbar_samd /addr_arbiter_aw/\gen_arbiter.m_mesg_i_reg[52] )
 INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_master_slots[8].reg_slice_mi/b.b_pipe/m_payload_i_reg[0]' (FDE) to 'inst/gen_samd.crossbar_samd/gen_master_slots[8].reg_slice_mi/b.b_pipe/m_payload_i_reg[1]'
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\gen_samd.crossbar_samd /\gen_master_slots[8].reg_slice_mi /\b.b_pipe/m_payload_i_reg[1] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\gen_samd.crossbar_samd /\gen_master_slots[4].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo /\gen_rep[0].fifoaddr_reg[0] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\gen_samd.crossbar_samd /\gen_master_slots[4].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo /\gen_rep[0].fifoaddr_reg[1] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\gen_samd.crossbar_samd /\gen_master_slots[4].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo /\gen_rep[0].fifoaddr_reg[2] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\gen_samd.crossbar_samd /\gen_master_slots[6].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo /\gen_rep[0].fifoaddr_reg[0] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\gen_samd.crossbar_samd /\gen_master_slots[6].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo /\gen_rep[0].fifoaddr_reg[1] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\gen_samd.crossbar_samd /\gen_master_slots[6].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo /\gen_rep[0].fifoaddr_reg[2] )
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\gen_samd.crossbar_samd /\gen_master_slots[7].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo /\gen_rep[0].fifoaddr_reg[0] )
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\gen_samd.crossbar_samd /\gen_master_slots[7].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo /\gen_rep[0].fifoaddr_reg[1] )
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\gen_samd.crossbar_samd /\gen_master_slots[7].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo /\gen_rep[0].fifoaddr_reg[2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\gen_samd.crossbar_samd /\gen_master_slots[4].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo /\FSM_onehot_state_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\gen_samd.crossbar_samd /\gen_master_slots[4].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo /\FSM_onehot_state_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\gen_samd.crossbar_samd /\gen_master_slots[6].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo /\FSM_onehot_state_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\gen_samd.crossbar_samd /\gen_master_slots[6].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo /\FSM_onehot_state_reg[1] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\gen_samd.crossbar_samd /\gen_master_slots[7].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo /\FSM_onehot_state_reg[0] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\gen_samd.crossbar_samd /\gen_master_slots[7].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo /\FSM_onehot_state_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\gen_samd.crossbar_samd /\gen_master_slots[4].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo /\storage_data1_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\gen_samd.crossbar_samd /\gen_master_slots[6].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo /\storage_data1_reg[0] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\gen_samd.crossbar_samd /\gen_master_slots[7].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo /\storage_data1_reg[0] )
-INFO: [Synth 8-3332] Sequential element (FSM_onehot_state_reg[3]) is unused and will be removed from module axi_data_fifo_v2_1_19_axic_reg_srl_fifo__parameterized2__4.
-INFO: [Synth 8-3332] Sequential element (FSM_onehot_state_reg[1]) is unused and will be removed from module axi_data_fifo_v2_1_19_axic_reg_srl_fifo__parameterized2__4.
-INFO: [Synth 8-3332] Sequential element (FSM_onehot_state_reg[0]) is unused and will be removed from module axi_data_fifo_v2_1_19_axic_reg_srl_fifo__parameterized2__4.
-INFO: [Synth 8-3332] Sequential element (FSM_onehot_state_reg[3]) is unused and will be removed from module axi_data_fifo_v2_1_19_axic_reg_srl_fifo__parameterized2__6.
-INFO: [Synth 8-3332] Sequential element (FSM_onehot_state_reg[1]) is unused and will be removed from module axi_data_fifo_v2_1_19_axic_reg_srl_fifo__parameterized2__6.
-INFO: [Synth 8-3332] Sequential element (FSM_onehot_state_reg[0]) is unused and will be removed from module axi_data_fifo_v2_1_19_axic_reg_srl_fifo__parameterized2__6.
 INFO: [Synth 8-3332] Sequential element (FSM_onehot_state_reg[3]) is unused and will be removed from module axi_data_fifo_v2_1_19_axic_reg_srl_fifo__parameterized2.
 INFO: [Synth 8-3332] Sequential element (FSM_onehot_state_reg[1]) is unused and will be removed from module axi_data_fifo_v2_1_19_axic_reg_srl_fifo__parameterized2.
 INFO: [Synth 8-3332] Sequential element (FSM_onehot_state_reg[0]) is unused and will be removed from module axi_data_fifo_v2_1_19_axic_reg_srl_fifo__parameterized2.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:44 . Memory (MB): peak = 2275.891 ; gain = 514.996 ; free physical = 1506 ; free virtual = 22534
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:41 . Memory (MB): peak = 2273.895 ; gain = 514.027 ; free physical = 20943 ; free virtual = 27544
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1668,13 +1654,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:36 ; elapsed = 00:00:52 . Memory (MB): peak = 2275.891 ; gain = 514.996 ; free physical = 1375 ; free virtual = 22405
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:00:48 . Memory (MB): peak = 2273.895 ; gain = 514.027 ; free physical = 20841 ; free virtual = 27442
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:00:54 . Memory (MB): peak = 2275.891 ; gain = 514.996 ; free physical = 1362 ; free virtual = 22394
+Finished Timing Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:49 . Memory (MB): peak = 2273.895 ; gain = 514.027 ; free physical = 20836 ; free virtual = 27437
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1692,26 +1678,24 @@ INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_master_sl
 INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_master_slots[3].reg_slice_mi/b.b_pipe/aresetn_d_reg[0]' (FDR) to 'inst/gen_samd.crossbar_samd/gen_master_slots[6].reg_slice_mi/b.b_pipe/aresetn_d_reg[0]'
 INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_master_slots[4].reg_slice_mi/b.b_pipe/aresetn_d_reg[0]' (FDR) to 'inst/gen_samd.crossbar_samd/gen_master_slots[6].reg_slice_mi/b.b_pipe/aresetn_d_reg[0]'
 INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_master_slots[5].reg_slice_mi/b.b_pipe/aresetn_d_reg[0]' (FDR) to 'inst/gen_samd.crossbar_samd/gen_master_slots[6].reg_slice_mi/b.b_pipe/aresetn_d_reg[0]'
-INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_master_slots[6].reg_slice_mi/b.b_pipe/aresetn_d_reg[1]' (FDR) to 'inst/gen_samd.crossbar_samd/gen_master_slots[2].reg_slice_mi/b.b_pipe/aresetn_d_reg[1]'
 INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_master_slots[6].reg_slice_mi/b.b_pipe/aresetn_d_reg[0]' (FDR) to 'inst/gen_samd.crossbar_samd/gen_master_slots[7].reg_slice_mi/b.b_pipe/aresetn_d_reg[0]'
-INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_master_slots[7].reg_slice_mi/b.b_pipe/aresetn_d_reg[1]' (FDR) to 'inst/gen_samd.crossbar_samd/gen_master_slots[2].reg_slice_mi/b.b_pipe/aresetn_d_reg[1]'
-INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_master_slots[5].reg_slice_mi/b.b_pipe/aresetn_d_reg[1]' (FDR) to 'inst/gen_samd.crossbar_samd/gen_master_slots[2].reg_slice_mi/b.b_pipe/aresetn_d_reg[1]'
-INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_master_slots[2].reg_slice_mi/b.b_pipe/aresetn_d_reg[1]' (FDR) to 'inst/gen_samd.crossbar_samd/gen_master_slots[3].reg_slice_mi/b.b_pipe/aresetn_d_reg[1]'
-INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_master_slots[3].reg_slice_mi/b.b_pipe/aresetn_d_reg[1]' (FDR) to 'inst/gen_samd.crossbar_samd/gen_master_slots[0].reg_slice_mi/b.b_pipe/aresetn_d_reg[1]'
-INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_master_slots[1].reg_slice_mi/b.b_pipe/aresetn_d_reg[1]' (FDR) to 'inst/gen_samd.crossbar_samd/gen_master_slots[0].reg_slice_mi/b.b_pipe/aresetn_d_reg[1]'
-INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_master_slots[8].reg_slice_mi/b.b_pipe/aresetn_d_reg[1]' (FDR) to 'inst/gen_samd.crossbar_samd/gen_master_slots[0].reg_slice_mi/b.b_pipe/aresetn_d_reg[1]'
-INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_master_slots[0].reg_slice_mi/b.b_pipe/aresetn_d_reg[1]' (FDR) to 'inst/gen_samd.crossbar_samd/gen_master_slots[4].reg_slice_mi/b.b_pipe/aresetn_d_reg[1]'
-INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_master_slots[8].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/areset_d1_reg' (FD) to 'inst/gen_samd.crossbar_samd/gen_master_slots[5].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/areset_d1_reg'
-INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_master_slots[0].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/areset_d1_reg' (FD) to 'inst/gen_samd.crossbar_samd/gen_master_slots[5].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/areset_d1_reg'
+INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_master_slots[7].reg_slice_mi/b.b_pipe/aresetn_d_reg[1]' (FDR) to 'inst/gen_samd.crossbar_samd/gen_master_slots[6].reg_slice_mi/b.b_pipe/aresetn_d_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_master_slots[2].reg_slice_mi/b.b_pipe/aresetn_d_reg[1]' (FDR) to 'inst/gen_samd.crossbar_samd/gen_master_slots[6].reg_slice_mi/b.b_pipe/aresetn_d_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_master_slots[8].reg_slice_mi/b.b_pipe/aresetn_d_reg[1]' (FDR) to 'inst/gen_samd.crossbar_samd/gen_master_slots[6].reg_slice_mi/b.b_pipe/aresetn_d_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_master_slots[1].reg_slice_mi/b.b_pipe/aresetn_d_reg[1]' (FDR) to 'inst/gen_samd.crossbar_samd/gen_master_slots[6].reg_slice_mi/b.b_pipe/aresetn_d_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_master_slots[4].reg_slice_mi/b.b_pipe/aresetn_d_reg[1]' (FDR) to 'inst/gen_samd.crossbar_samd/gen_master_slots[6].reg_slice_mi/b.b_pipe/aresetn_d_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_master_slots[0].reg_slice_mi/b.b_pipe/aresetn_d_reg[1]' (FDR) to 'inst/gen_samd.crossbar_samd/gen_master_slots[6].reg_slice_mi/b.b_pipe/aresetn_d_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_master_slots[6].reg_slice_mi/b.b_pipe/aresetn_d_reg[1]' (FDR) to 'inst/gen_samd.crossbar_samd/gen_master_slots[3].reg_slice_mi/b.b_pipe/aresetn_d_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_master_slots[3].reg_slice_mi/b.b_pipe/aresetn_d_reg[1]' (FDR) to 'inst/gen_samd.crossbar_samd/gen_master_slots[5].reg_slice_mi/b.b_pipe/aresetn_d_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_master_slots[4].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/areset_d1_reg' (FD) to 'inst/gen_samd.crossbar_samd/gen_master_slots[8].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/areset_d1_reg'
+INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/areset_d1_reg' (FD) to 'inst/gen_samd.crossbar_samd/gen_master_slots[8].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/areset_d1_reg'
+INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_master_slots[0].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/areset_d1_reg' (FD) to 'inst/gen_samd.crossbar_samd/gen_master_slots[8].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/areset_d1_reg'
+INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_master_slots[8].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/areset_d1_reg' (FD) to 'inst/gen_samd.crossbar_samd/gen_master_slots[6].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/areset_d1_reg'
+INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_master_slots[6].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/areset_d1_reg' (FD) to 'inst/gen_samd.crossbar_samd/gen_master_slots[5].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/areset_d1_reg'
 INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_master_slots[5].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/areset_d1_reg' (FD) to 'inst/gen_samd.crossbar_samd/gen_master_slots[3].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/areset_d1_reg'
 INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_master_slots[3].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/areset_d1_reg' (FD) to 'inst/gen_samd.crossbar_samd/gen_master_slots[2].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/areset_d1_reg'
-INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_master_slots[2].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/areset_d1_reg' (FD) to 'inst/gen_samd.crossbar_samd/gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/areset_d1_reg'
-INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/areset_d1_reg' (FD) to 'inst/gen_samd.crossbar_samd/gen_slave_slots[1].gen_si_write.wdata_router_w/wrouter_aw_fifo/areset_d1_reg'
+INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_master_slots[2].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/areset_d1_reg' (FD) to 'inst/gen_samd.crossbar_samd/gen_slave_slots[1].gen_si_write.wdata_router_w/wrouter_aw_fifo/areset_d1_reg'
 INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_slave_slots[0].gen_si_write.wdata_router_w/wrouter_aw_fifo/areset_d1_reg' (FD) to 'inst/gen_samd.crossbar_samd/gen_slave_slots[1].gen_si_write.wdata_router_w/wrouter_aw_fifo/areset_d1_reg'
-INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_slave_slots[0].gen_si_read.si_transactor_ar/gen_single_thread.active_target_hot_reg[5]' (FDRE) to 'inst/gen_samd.crossbar_samd/gen_slave_slots[0].gen_si_read.si_transactor_ar/gen_single_thread.active_target_enc_reg[2]'
-INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_slave_slots[1].gen_si_read.si_transactor_ar/gen_single_thread.active_target_hot_reg[5]' (FDRE) to 'inst/gen_samd.crossbar_samd/gen_slave_slots[1].gen_si_read.si_transactor_ar/gen_single_thread.active_target_enc_reg[2]'
-INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_slave_slots[0].gen_si_write.si_transactor_aw/gen_single_thread.active_target_hot_reg[5]' (FDRE) to 'inst/gen_samd.crossbar_samd/gen_slave_slots[0].gen_si_write.si_transactor_aw/gen_single_thread.active_target_enc_reg[2]'
-INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_slave_slots[1].gen_si_write.si_transactor_aw/gen_single_thread.active_target_hot_reg[5]' (FDRE) to 'inst/gen_samd.crossbar_samd/gen_slave_slots[1].gen_si_write.si_transactor_aw/gen_single_thread.active_target_enc_reg[2]'
 INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_master_slots[8].reg_slice_mi/r.r_pipe/m_payload_i_reg[64]' (FDSE) to 'inst/gen_samd.crossbar_samd/gen_master_slots[8].reg_slice_mi/r.r_pipe/m_payload_i_reg[2]'
 INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_master_slots[8].reg_slice_mi/r.r_pipe/m_payload_i_reg[65]' (FDSE) to 'inst/gen_samd.crossbar_samd/gen_master_slots[8].reg_slice_mi/r.r_pipe/m_payload_i_reg[2]'
 INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_master_slots[8].reg_slice_mi/r.r_pipe/m_payload_i_reg[2]' (FDSE) to 'inst/gen_samd.crossbar_samd/gen_master_slots[8].reg_slice_mi/r.r_pipe/m_payload_i_reg[3]'
@@ -1748,7 +1732,7 @@ INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_master_sl
 INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_master_slots[8].reg_slice_mi/r.r_pipe/m_payload_i_reg[60]' (FDSE) to 'inst/gen_samd.crossbar_samd/gen_master_slots[8].reg_slice_mi/r.r_pipe/m_payload_i_reg[62]'
 INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_master_slots[8].reg_slice_mi/r.r_pipe/m_payload_i_reg[62]' (FDSE) to 'inst/gen_samd.crossbar_samd/gen_master_slots[8].reg_slice_mi/r.r_pipe/m_payload_i_reg[63]'
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:40 ; elapsed = 00:00:55 . Memory (MB): peak = 2275.891 ; gain = 514.996 ; free physical = 1358 ; free virtual = 22390
+Finished Technology Mapping : Time (s): cpu = 00:00:36 ; elapsed = 00:00:51 . Memory (MB): peak = 2273.895 ; gain = 514.027 ; free physical = 20827 ; free virtual = 27428
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1772,13 +1756,13 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:43 ; elapsed = 00:00:58 . Memory (MB): peak = 2275.891 ; gain = 514.996 ; free physical = 1363 ; free virtual = 22392
+Finished IO Insertion : Time (s): cpu = 00:00:39 ; elapsed = 00:00:54 . Memory (MB): peak = 2273.895 ; gain = 514.027 ; free physical = 20823 ; free virtual = 27424
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:43 ; elapsed = 00:00:58 . Memory (MB): peak = 2275.891 ; gain = 514.996 ; free physical = 1363 ; free virtual = 22392
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:39 ; elapsed = 00:00:54 . Memory (MB): peak = 2273.895 ; gain = 514.027 ; free physical = 20823 ; free virtual = 27424
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1797,25 +1781,25 @@ Report Check Netlist:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:43 ; elapsed = 00:00:59 . Memory (MB): peak = 2275.891 ; gain = 514.996 ; free physical = 1363 ; free virtual = 22392
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:39 ; elapsed = 00:00:54 . Memory (MB): peak = 2273.895 ; gain = 514.027 ; free physical = 20823 ; free virtual = 27424
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:43 ; elapsed = 00:00:59 . Memory (MB): peak = 2275.891 ; gain = 514.996 ; free physical = 1363 ; free virtual = 22392
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:39 ; elapsed = 00:00:54 . Memory (MB): peak = 2273.895 ; gain = 514.027 ; free physical = 20823 ; free virtual = 27424
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:43 ; elapsed = 00:00:59 . Memory (MB): peak = 2275.891 ; gain = 514.996 ; free physical = 1363 ; free virtual = 22392
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:39 ; elapsed = 00:00:54 . Memory (MB): peak = 2273.895 ; gain = 514.027 ; free physical = 20823 ; free virtual = 27424
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:43 ; elapsed = 00:00:59 . Memory (MB): peak = 2275.891 ; gain = 514.996 ; free physical = 1363 ; free virtual = 22392
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:39 ; elapsed = 00:00:54 . Memory (MB): peak = 2273.895 ; gain = 514.027 ; free physical = 20823 ; free virtual = 27424
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1831,130 +1815,136 @@ Report Cell Usage:
 +------+--------+------+
 |      |Cell    |Count |
 +------+--------+------+
-|1     |LUT1    |    17|
-|2     |LUT2    |    36|
-|3     |LUT3    |  1118|
-|4     |LUT4    |   103|
-|5     |LUT5    |   111|
-|6     |LUT6    |   497|
+|1     |LUT1    |    23|
+|2     |LUT2    |    54|
+|3     |LUT3    |  1279|
+|4     |LUT4    |   133|
+|5     |LUT5    |   144|
+|6     |LUT6    |   592|
 |7     |MUXF7   |   140|
 |8     |MUXF8   |   140|
-|9     |SRLC32E |    14|
-|10    |FDRE    |  1442|
-|11    |FDSE    |    33|
+|9     |SRLC32E |    16|
+|10    |FDRE    |  1488|
+|11    |FDSE    |    41|
 +------+--------+------+
 
 Report Instance Areas: 
 +------+---------------------------------------------------------+------------------------------------------------------------------+------+
 |      |Instance                                                 |Module                                                            |Cells |
 +------+---------------------------------------------------------+------------------------------------------------------------------+------+
-|1     |top                                                      |                                                                  |  3651|
-|2     |  inst                                                   |axi_crossbar_v2_1_21_axi_crossbar                                 |  3651|
-|3     |    \gen_samd.crossbar_samd                              |axi_crossbar_v2_1_21_crossbar                                     |  3651|
-|4     |      addr_arbiter_ar                                    |axi_crossbar_v2_1_21_addr_arbiter                                 |   220|
-|5     |        \gen_arbiter.mux_mesg                            |generic_baseblocks_v2_1_0_mux_enc__parameterized2_47              |    57|
-|6     |      addr_arbiter_aw                                    |axi_crossbar_v2_1_21_addr_arbiter_0                               |   232|
+|1     |top                                                      |                                                                  |  4050|
+|2     |  inst                                                   |axi_crossbar_v2_1_21_axi_crossbar                                 |  4050|
+|3     |    \gen_samd.crossbar_samd                              |axi_crossbar_v2_1_21_crossbar                                     |  4050|
+|4     |      addr_arbiter_ar                                    |axi_crossbar_v2_1_21_addr_arbiter                                 |   261|
+|5     |        \gen_arbiter.mux_mesg                            |generic_baseblocks_v2_1_0_mux_enc__parameterized2_53              |    57|
+|6     |      addr_arbiter_aw                                    |axi_crossbar_v2_1_21_addr_arbiter_0                               |   313|
 |7     |        \gen_arbiter.mux_mesg                            |generic_baseblocks_v2_1_0_mux_enc__parameterized2                 |    57|
-|8     |      \gen_decerr_slave.decerr_slave_inst                |axi_crossbar_v2_1_21_decerr_slave                                 |    47|
-|9     |      \gen_master_slots[0].gen_mi_write.wdata_mux_w      |axi_crossbar_v2_1_21_wdata_mux                                    |    88|
-|10    |        \gen_wmux.wmux_aw_fifo                           |axi_data_fifo_v2_1_19_axic_reg_srl_fifo__parameterized1           |    87|
-|11    |          \gen_srls[0].gen_rep[0].srl_nx1                |axi_data_fifo_v2_1_19_ndeep_srl__parameterized1_46                |     2|
-|12    |      \gen_master_slots[0].reg_slice_mi                  |axi_register_slice_v2_1_20_axi_register_slice                     |   226|
-|13    |        \b.b_pipe                                        |axi_register_slice_v2_1_20_axic_register_slice__parameterized1_44 |    13|
-|14    |        \r.r_pipe                                        |axi_register_slice_v2_1_20_axic_register_slice__parameterized2_45 |   213|
-|15    |      \gen_master_slots[1].gen_mi_write.wdata_mux_w      |axi_crossbar_v2_1_21_wdata_mux__parameterized0                    |    91|
-|16    |        \gen_wmux.wmux_aw_fifo                           |axi_data_fifo_v2_1_19_axic_reg_srl_fifo__parameterized2_42        |    90|
-|17    |          \gen_srls[0].gen_rep[0].srl_nx1                |axi_data_fifo_v2_1_19_ndeep_srl__parameterized0_43                |     2|
-|18    |      \gen_master_slots[1].reg_slice_mi                  |axi_register_slice_v2_1_20_axi_register_slice_1                   |   224|
-|19    |        \b.b_pipe                                        |axi_register_slice_v2_1_20_axic_register_slice__parameterized1_40 |    12|
-|20    |        \r.r_pipe                                        |axi_register_slice_v2_1_20_axic_register_slice__parameterized2_41 |   212|
-|21    |      \gen_master_slots[2].gen_mi_write.wdata_mux_w      |axi_crossbar_v2_1_21_wdata_mux__parameterized0_2                  |    91|
-|22    |        \gen_wmux.wmux_aw_fifo                           |axi_data_fifo_v2_1_19_axic_reg_srl_fifo__parameterized2_38        |    90|
-|23    |          \gen_srls[0].gen_rep[0].srl_nx1                |axi_data_fifo_v2_1_19_ndeep_srl__parameterized0_39                |     1|
-|24    |      \gen_master_slots[2].reg_slice_mi                  |axi_register_slice_v2_1_20_axi_register_slice_3                   |   228|
-|25    |        \b.b_pipe                                        |axi_register_slice_v2_1_20_axic_register_slice__parameterized1_36 |    14|
-|26    |        \r.r_pipe                                        |axi_register_slice_v2_1_20_axic_register_slice__parameterized2_37 |   214|
-|27    |      \gen_master_slots[3].gen_mi_write.wdata_mux_w      |axi_crossbar_v2_1_21_wdata_mux__parameterized0_4                  |    92|
-|28    |        \gen_wmux.wmux_aw_fifo                           |axi_data_fifo_v2_1_19_axic_reg_srl_fifo__parameterized2_34        |    91|
-|29    |          \gen_srls[0].gen_rep[0].srl_nx1                |axi_data_fifo_v2_1_19_ndeep_srl__parameterized0_35                |     1|
-|30    |      \gen_master_slots[3].reg_slice_mi                  |axi_register_slice_v2_1_20_axi_register_slice_5                   |   230|
-|31    |        \b.b_pipe                                        |axi_register_slice_v2_1_20_axic_register_slice__parameterized1_32 |    15|
-|32    |        \r.r_pipe                                        |axi_register_slice_v2_1_20_axic_register_slice__parameterized2_33 |   215|
-|33    |      \gen_master_slots[4].reg_slice_mi                  |axi_register_slice_v2_1_20_axi_register_slice_6                   |   222|
-|34    |        \b.b_pipe                                        |axi_register_slice_v2_1_20_axic_register_slice__parameterized1_30 |    16|
-|35    |        \r.r_pipe                                        |axi_register_slice_v2_1_20_axic_register_slice__parameterized2_31 |   206|
-|36    |      \gen_master_slots[5].gen_mi_write.wdata_mux_w      |axi_crossbar_v2_1_21_wdata_mux__parameterized0_7                  |    97|
-|37    |        \gen_wmux.wmux_aw_fifo                           |axi_data_fifo_v2_1_19_axic_reg_srl_fifo__parameterized2           |    96|
-|38    |          \gen_srls[0].gen_rep[0].srl_nx1                |axi_data_fifo_v2_1_19_ndeep_srl__parameterized0_29                |     4|
-|39    |      \gen_master_slots[5].reg_slice_mi                  |axi_register_slice_v2_1_20_axi_register_slice_8                   |   234|
-|40    |        \b.b_pipe                                        |axi_register_slice_v2_1_20_axic_register_slice__parameterized1_27 |    15|
-|41    |        \r.r_pipe                                        |axi_register_slice_v2_1_20_axic_register_slice__parameterized2_28 |   219|
-|42    |      \gen_master_slots[6].reg_slice_mi                  |axi_register_slice_v2_1_20_axi_register_slice_9                   |   213|
-|43    |        \b.b_pipe                                        |axi_register_slice_v2_1_20_axic_register_slice__parameterized1_25 |     7|
-|44    |        \r.r_pipe                                        |axi_register_slice_v2_1_20_axic_register_slice__parameterized2_26 |   206|
-|45    |      \gen_master_slots[7].reg_slice_mi                  |axi_register_slice_v2_1_20_axi_register_slice_10                  |   216|
-|46    |        \b.b_pipe                                        |axi_register_slice_v2_1_20_axic_register_slice__parameterized1_23 |    10|
-|47    |        \r.r_pipe                                        |axi_register_slice_v2_1_20_axic_register_slice__parameterized2_24 |   206|
-|48    |      \gen_master_slots[8].gen_mi_write.wdata_mux_w      |axi_crossbar_v2_1_21_wdata_mux__parameterized1                    |    22|
-|49    |        \gen_wmux.wmux_aw_fifo                           |axi_data_fifo_v2_1_19_axic_reg_srl_fifo__parameterized3           |    21|
-|50    |          \gen_srls[0].gen_rep[0].srl_nx1                |axi_data_fifo_v2_1_19_ndeep_srl__parameterized1_22                |     4|
-|51    |      \gen_master_slots[8].reg_slice_mi                  |axi_register_slice_v2_1_20_axi_register_slice_11                  |    27|
-|52    |        \b.b_pipe                                        |axi_register_slice_v2_1_20_axic_register_slice__parameterized1    |     9|
-|53    |        \r.r_pipe                                        |axi_register_slice_v2_1_20_axic_register_slice__parameterized2    |    18|
-|54    |      \gen_slave_slots[0].gen_si_read.si_transactor_ar   |axi_crossbar_v2_1_21_si_transactor                                |   306|
-|55    |        \gen_single_thread.mux_resp_single_thread        |generic_baseblocks_v2_1_0_mux_enc_21                              |   268|
-|56    |      \gen_slave_slots[0].gen_si_write.si_transactor_aw  |axi_crossbar_v2_1_21_si_transactor__parameterized0                |    39|
-|57    |        \gen_single_thread.mux_resp_single_thread        |generic_baseblocks_v2_1_0_mux_enc__parameterized0_20              |    10|
-|58    |      \gen_slave_slots[0].gen_si_write.splitter_aw_si    |axi_crossbar_v2_1_21_splitter                                     |     6|
-|59    |      \gen_slave_slots[0].gen_si_write.wdata_router_w    |axi_crossbar_v2_1_21_wdata_router                                 |    51|
-|60    |        wrouter_aw_fifo                                  |axi_data_fifo_v2_1_19_axic_reg_srl_fifo                           |    51|
-|61    |          \gen_srls[0].gen_rep[0].srl_nx1                |axi_data_fifo_v2_1_19_ndeep_srl__parameterized0                   |     2|
-|62    |          \gen_srls[0].gen_rep[1].srl_nx1                |axi_data_fifo_v2_1_19_ndeep_srl__parameterized0_17                |     3|
-|63    |          \gen_srls[0].gen_rep[2].srl_nx1                |axi_data_fifo_v2_1_19_ndeep_srl__parameterized0_18                |     2|
-|64    |          \gen_srls[0].gen_rep[3].srl_nx1                |axi_data_fifo_v2_1_19_ndeep_srl__parameterized0_19                |    11|
-|65    |      \gen_slave_slots[1].gen_si_read.si_transactor_ar   |axi_crossbar_v2_1_21_si_transactor__parameterized1                |   288|
-|66    |        \gen_single_thread.mux_resp_single_thread        |generic_baseblocks_v2_1_0_mux_enc                                 |   272|
-|67    |      \gen_slave_slots[1].gen_si_write.si_transactor_aw  |axi_crossbar_v2_1_21_si_transactor__parameterized2                |    42|
-|68    |        \gen_single_thread.mux_resp_single_thread        |generic_baseblocks_v2_1_0_mux_enc__parameterized0                 |    14|
-|69    |      \gen_slave_slots[1].gen_si_write.splitter_aw_si    |axi_crossbar_v2_1_21_splitter_12                                  |     6|
-|70    |      \gen_slave_slots[1].gen_si_write.wdata_router_w    |axi_crossbar_v2_1_21_wdata_router__parameterized0                 |    59|
-|71    |        wrouter_aw_fifo                                  |axi_data_fifo_v2_1_19_axic_reg_srl_fifo__parameterized0           |    59|
-|72    |          \gen_srls[0].gen_rep[0].srl_nx1                |axi_data_fifo_v2_1_19_ndeep_srl__parameterized1                   |     3|
-|73    |          \gen_srls[0].gen_rep[1].srl_nx1                |axi_data_fifo_v2_1_19_ndeep_srl__parameterized1_14                |     3|
-|74    |          \gen_srls[0].gen_rep[2].srl_nx1                |axi_data_fifo_v2_1_19_ndeep_srl__parameterized1_15                |     2|
-|75    |          \gen_srls[0].gen_rep[3].srl_nx1                |axi_data_fifo_v2_1_19_ndeep_srl__parameterized1_16                |    17|
-|76    |      splitter_aw_mi                                     |axi_crossbar_v2_1_21_splitter_13                                  |     7|
+|8     |      \gen_decerr_slave.decerr_slave_inst                |axi_crossbar_v2_1_21_decerr_slave                                 |    46|
+|9     |      \gen_master_slots[0].gen_mi_write.wdata_mux_w      |axi_crossbar_v2_1_21_wdata_mux                                    |    89|
+|10    |        \gen_wmux.wmux_aw_fifo                           |axi_data_fifo_v2_1_19_axic_reg_srl_fifo__parameterized1           |    88|
+|11    |          \gen_srls[0].gen_rep[0].srl_nx1                |axi_data_fifo_v2_1_19_ndeep_srl__parameterized1_52                |     1|
+|12    |      \gen_master_slots[0].reg_slice_mi                  |axi_register_slice_v2_1_20_axi_register_slice                     |   238|
+|13    |        \b.b_pipe                                        |axi_register_slice_v2_1_20_axic_register_slice__parameterized1_50 |    19|
+|14    |        \r.r_pipe                                        |axi_register_slice_v2_1_20_axic_register_slice__parameterized2_51 |   219|
+|15    |      \gen_master_slots[1].gen_mi_write.wdata_mux_w      |axi_crossbar_v2_1_21_wdata_mux__parameterized0                    |    90|
+|16    |        \gen_wmux.wmux_aw_fifo                           |axi_data_fifo_v2_1_19_axic_reg_srl_fifo__parameterized2_48        |    89|
+|17    |          \gen_srls[0].gen_rep[0].srl_nx1                |axi_data_fifo_v2_1_19_ndeep_srl__parameterized0_49                |     1|
+|18    |      \gen_master_slots[1].reg_slice_mi                  |axi_register_slice_v2_1_20_axi_register_slice_1                   |   231|
+|19    |        \b.b_pipe                                        |axi_register_slice_v2_1_20_axic_register_slice__parameterized1_46 |    15|
+|20    |        \r.r_pipe                                        |axi_register_slice_v2_1_20_axic_register_slice__parameterized2_47 |   216|
+|21    |      \gen_master_slots[2].gen_mi_write.wdata_mux_w      |axi_crossbar_v2_1_21_wdata_mux__parameterized0_2                  |    92|
+|22    |        \gen_wmux.wmux_aw_fifo                           |axi_data_fifo_v2_1_19_axic_reg_srl_fifo__parameterized2_44        |    91|
+|23    |          \gen_srls[0].gen_rep[0].srl_nx1                |axi_data_fifo_v2_1_19_ndeep_srl__parameterized0_45                |     1|
+|24    |      \gen_master_slots[2].reg_slice_mi                  |axi_register_slice_v2_1_20_axi_register_slice_3                   |   229|
+|25    |        \b.b_pipe                                        |axi_register_slice_v2_1_20_axic_register_slice__parameterized1_42 |    13|
+|26    |        \r.r_pipe                                        |axi_register_slice_v2_1_20_axic_register_slice__parameterized2_43 |   216|
+|27    |      \gen_master_slots[3].gen_mi_write.wdata_mux_w      |axi_crossbar_v2_1_21_wdata_mux__parameterized0_4                  |    91|
+|28    |        \gen_wmux.wmux_aw_fifo                           |axi_data_fifo_v2_1_19_axic_reg_srl_fifo__parameterized2_40        |    90|
+|29    |          \gen_srls[0].gen_rep[0].srl_nx1                |axi_data_fifo_v2_1_19_ndeep_srl__parameterized0_41                |     1|
+|30    |      \gen_master_slots[3].reg_slice_mi                  |axi_register_slice_v2_1_20_axi_register_slice_5                   |   234|
+|31    |        \b.b_pipe                                        |axi_register_slice_v2_1_20_axic_register_slice__parameterized1_38 |    16|
+|32    |        \r.r_pipe                                        |axi_register_slice_v2_1_20_axic_register_slice__parameterized2_39 |   218|
+|33    |      \gen_master_slots[4].gen_mi_write.wdata_mux_w      |axi_crossbar_v2_1_21_wdata_mux__parameterized0_6                  |    90|
+|34    |        \gen_wmux.wmux_aw_fifo                           |axi_data_fifo_v2_1_19_axic_reg_srl_fifo__parameterized2_36        |    89|
+|35    |          \gen_srls[0].gen_rep[0].srl_nx1                |axi_data_fifo_v2_1_19_ndeep_srl__parameterized0_37                |     1|
+|36    |      \gen_master_slots[4].reg_slice_mi                  |axi_register_slice_v2_1_20_axi_register_slice_7                   |   222|
+|37    |        \b.b_pipe                                        |axi_register_slice_v2_1_20_axic_register_slice__parameterized1_34 |    10|
+|38    |        \r.r_pipe                                        |axi_register_slice_v2_1_20_axic_register_slice__parameterized2_35 |   212|
+|39    |      \gen_master_slots[5].gen_mi_write.wdata_mux_w      |axi_crossbar_v2_1_21_wdata_mux__parameterized0_8                  |    90|
+|40    |        \gen_wmux.wmux_aw_fifo                           |axi_data_fifo_v2_1_19_axic_reg_srl_fifo__parameterized2_32        |    89|
+|41    |          \gen_srls[0].gen_rep[0].srl_nx1                |axi_data_fifo_v2_1_19_ndeep_srl__parameterized0_33                |     1|
+|42    |      \gen_master_slots[5].reg_slice_mi                  |axi_register_slice_v2_1_20_axi_register_slice_9                   |   239|
+|43    |        \b.b_pipe                                        |axi_register_slice_v2_1_20_axic_register_slice__parameterized1_30 |    23|
+|44    |        \r.r_pipe                                        |axi_register_slice_v2_1_20_axic_register_slice__parameterized2_31 |   216|
+|45    |      \gen_master_slots[6].gen_mi_write.wdata_mux_w      |axi_crossbar_v2_1_21_wdata_mux__parameterized0_10                 |    90|
+|46    |        \gen_wmux.wmux_aw_fifo                           |axi_data_fifo_v2_1_19_axic_reg_srl_fifo__parameterized2           |    89|
+|47    |          \gen_srls[0].gen_rep[0].srl_nx1                |axi_data_fifo_v2_1_19_ndeep_srl__parameterized0_29                |     1|
+|48    |      \gen_master_slots[6].reg_slice_mi                  |axi_register_slice_v2_1_20_axi_register_slice_11                  |   225|
+|49    |        \b.b_pipe                                        |axi_register_slice_v2_1_20_axic_register_slice__parameterized1_27 |    11|
+|50    |        \r.r_pipe                                        |axi_register_slice_v2_1_20_axic_register_slice__parameterized2_28 |   214|
+|51    |      \gen_master_slots[7].reg_slice_mi                  |axi_register_slice_v2_1_20_axi_register_slice_12                  |   216|
+|52    |        \b.b_pipe                                        |axi_register_slice_v2_1_20_axic_register_slice__parameterized1_25 |    10|
+|53    |        \r.r_pipe                                        |axi_register_slice_v2_1_20_axic_register_slice__parameterized2_26 |   206|
+|54    |      \gen_master_slots[8].gen_mi_write.wdata_mux_w      |axi_crossbar_v2_1_21_wdata_mux__parameterized1                    |    15|
+|55    |        \gen_wmux.wmux_aw_fifo                           |axi_data_fifo_v2_1_19_axic_reg_srl_fifo__parameterized3           |    14|
+|56    |          \gen_srls[0].gen_rep[0].srl_nx1                |axi_data_fifo_v2_1_19_ndeep_srl__parameterized1_24                |     1|
+|57    |      \gen_master_slots[8].reg_slice_mi                  |axi_register_slice_v2_1_20_axi_register_slice_13                  |    28|
+|58    |        \b.b_pipe                                        |axi_register_slice_v2_1_20_axic_register_slice__parameterized1    |     8|
+|59    |        \r.r_pipe                                        |axi_register_slice_v2_1_20_axic_register_slice__parameterized2    |    20|
+|60    |      \gen_slave_slots[0].gen_si_read.si_transactor_ar   |axi_crossbar_v2_1_21_si_transactor                                |   310|
+|61    |        \gen_single_thread.mux_resp_single_thread        |generic_baseblocks_v2_1_0_mux_enc_23                              |   269|
+|62    |      \gen_slave_slots[0].gen_si_write.si_transactor_aw  |axi_crossbar_v2_1_21_si_transactor__parameterized0                |    58|
+|63    |        \gen_single_thread.mux_resp_single_thread        |generic_baseblocks_v2_1_0_mux_enc__parameterized0_22              |    11|
+|64    |      \gen_slave_slots[0].gen_si_write.splitter_aw_si    |axi_crossbar_v2_1_21_splitter                                     |     7|
+|65    |      \gen_slave_slots[0].gen_si_write.wdata_router_w    |axi_crossbar_v2_1_21_wdata_router                                 |    65|
+|66    |        wrouter_aw_fifo                                  |axi_data_fifo_v2_1_19_axic_reg_srl_fifo                           |    65|
+|67    |          \gen_srls[0].gen_rep[0].srl_nx1                |axi_data_fifo_v2_1_19_ndeep_srl__parameterized0                   |     3|
+|68    |          \gen_srls[0].gen_rep[1].srl_nx1                |axi_data_fifo_v2_1_19_ndeep_srl__parameterized0_19                |     3|
+|69    |          \gen_srls[0].gen_rep[2].srl_nx1                |axi_data_fifo_v2_1_19_ndeep_srl__parameterized0_20                |     2|
+|70    |          \gen_srls[0].gen_rep[3].srl_nx1                |axi_data_fifo_v2_1_19_ndeep_srl__parameterized0_21                |    15|
+|71    |      \gen_slave_slots[1].gen_si_read.si_transactor_ar   |axi_crossbar_v2_1_21_si_transactor__parameterized1                |   297|
+|72    |        \gen_single_thread.mux_resp_single_thread        |generic_baseblocks_v2_1_0_mux_enc                                 |   269|
+|73    |      \gen_slave_slots[1].gen_si_write.si_transactor_aw  |axi_crossbar_v2_1_21_si_transactor__parameterized2                |    34|
+|74    |        \gen_single_thread.mux_resp_single_thread        |generic_baseblocks_v2_1_0_mux_enc__parameterized0                 |    10|
+|75    |      \gen_slave_slots[1].gen_si_write.splitter_aw_si    |axi_crossbar_v2_1_21_splitter_14                                  |     7|
+|76    |      \gen_slave_slots[1].gen_si_write.wdata_router_w    |axi_crossbar_v2_1_21_wdata_router__parameterized0                 |    73|
+|77    |        wrouter_aw_fifo                                  |axi_data_fifo_v2_1_19_axic_reg_srl_fifo__parameterized0           |    73|
+|78    |          \gen_srls[0].gen_rep[0].srl_nx1                |axi_data_fifo_v2_1_19_ndeep_srl__parameterized1                   |     4|
+|79    |          \gen_srls[0].gen_rep[1].srl_nx1                |axi_data_fifo_v2_1_19_ndeep_srl__parameterized1_16                |     5|
+|80    |          \gen_srls[0].gen_rep[2].srl_nx1                |axi_data_fifo_v2_1_19_ndeep_srl__parameterized1_17                |     3|
+|81    |          \gen_srls[0].gen_rep[3].srl_nx1                |axi_data_fifo_v2_1_19_ndeep_srl__parameterized1_18                |    15|
+|82    |      splitter_aw_mi                                     |axi_crossbar_v2_1_21_splitter_15                                  |     3|
 +------+---------------------------------------------------------+------------------------------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:43 ; elapsed = 00:00:59 . Memory (MB): peak = 2275.891 ; gain = 514.996 ; free physical = 1363 ; free virtual = 22392
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:39 ; elapsed = 00:00:54 . Memory (MB): peak = 2273.895 ; gain = 514.027 ; free physical = 20823 ; free virtual = 27424
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 49 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:40 ; elapsed = 00:00:55 . Memory (MB): peak = 2275.891 ; gain = 378.184 ; free physical = 1418 ; free virtual = 22446
-Synthesis Optimization Complete : Time (s): cpu = 00:00:43 ; elapsed = 00:00:59 . Memory (MB): peak = 2275.891 ; gain = 514.996 ; free physical = 1418 ; free virtual = 22446
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:36 ; elapsed = 00:00:51 . Memory (MB): peak = 2273.895 ; gain = 377.215 ; free physical = 20877 ; free virtual = 27478
+Synthesis Optimization Complete : Time (s): cpu = 00:00:40 ; elapsed = 00:00:54 . Memory (MB): peak = 2273.895 ; gain = 514.027 ; free physical = 20877 ; free virtual = 27478
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.07 . Memory (MB): peak = 2275.891 ; gain = 0.000 ; free physical = 1487 ; free virtual = 22515
+Netlist sorting complete. Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2273.895 ; gain = 0.000 ; free physical = 20946 ; free virtual = 27547
 INFO: [Netlist 29-17] Analyzing 280 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2275.891 ; gain = 0.000 ; free physical = 1411 ; free virtual = 22446
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2273.895 ; gain = 0.000 ; free physical = 20887 ; free virtual = 27488
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-305 Infos, 139 Warnings, 0 Critical Warnings and 0 Errors encountered.
+277 Infos, 139 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:51 ; elapsed = 00:01:09 . Memory (MB): peak = 2275.891 ; gain = 768.500 ; free physical = 1542 ; free virtual = 22578
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2275.891 ; gain = 0.000 ; free physical = 1542 ; free virtual = 22579
+synth_design: Time (s): cpu = 00:00:47 ; elapsed = 00:01:03 . Memory (MB): peak = 2273.895 ; gain = 767.500 ; free physical = 21022 ; free virtual = 27623
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2273.895 ; gain = 0.000 ; free physical = 21022 ; free virtual = 27623
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint '/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/design_1_xbar_0_synth_1/design_1_xbar_0.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint '/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.runs/design_1_xbar_0_synth_1/design_1_xbar_0.dcp' has been generated.
 WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_xbar_0, cache-ID = 2d1eecacc72ec2d0
-INFO: [Coretcl 2-1174] Renamed 75 cell refs.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2299.902 ; gain = 0.000 ; free physical = 1541 ; free virtual = 22577
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_xbar_0, cache-ID = 349b5b030fe28494
+INFO: [Coretcl 2-1174] Renamed 81 cell refs.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2297.906 ; gain = 0.000 ; free physical = 21020 ; free virtual = 27626
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint '/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/design_1_xbar_0_synth_1/design_1_xbar_0.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint '/home/wask/workspace/mgr/neuralhls/vivado/simple_perceptron/simple_perceptron.runs/design_1_xbar_0_synth_1/design_1_xbar_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_xbar_0_utilization_synth.rpt -pb design_1_xbar_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Sep  9 11:01:36 2020...
+INFO: [Common 17-206] Exiting Vivado at Mon Oct  5 11:15:24 2020...

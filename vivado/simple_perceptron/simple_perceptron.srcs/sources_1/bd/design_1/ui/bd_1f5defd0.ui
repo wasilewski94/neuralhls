@@ -1,34 +1,67 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.694118",
-   "Default View_TopLeft":"-553,0",
+   "Default View_ScaleFactor":"0.735578",
+   "Default View_TopLeft":"283,538",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0.21  2019-05-29 bk=1.5064 VDI=41 GEI=36 GUI=JA:9.0 TLS
 #  -string -flagsOSRD
-preplace port DDR -pg 1 -lvl 4 -x 1050 -y 60 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -lvl 4 -x 1050 -y 80 -defaultsOSRD
+preplace port DDR -pg 1 -lvl 4 -x 1770 -y 60 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 4 -x 1770 -y 80 -defaultsOSRD
 preplace inst processing_system7_0 -pg 1 -lvl 1 -x 240 -y 160 -defaultsOSRD
-preplace inst ps7_0_axi_periph -pg 1 -lvl 2 -x 620 -y 390 -defaultsOSRD
+preplace inst ps7_0_axi_periph -pg 1 -lvl 2 -x 630 -y 540 -defaultsOSRD
 preplace inst rst_ps7_0_100M -pg 1 -lvl 1 -x 240 -y 430 -defaultsOSRD
-preplace inst neural_net -pg 1 -lvl 3 -x 920 -y 410 -defaultsOSRD
-preplace netloc processing_system7_0_FCLK_CLK0 1 0 3 20 320 460 90 810
+preplace inst neural_net -pg 1 -lvl 3 -x 1060 -y 414 -defaultsOSRD
+preplace inst axi_timer_0 -pg 1 -lvl 3 -x 1060 -y 190 -defaultsOSRD
+preplace inst neural_net|calcPerceptron_0_bram -pg 1 -lvl 2 -x 1580 -y 664 -defaultsOSRD
+preplace inst neural_net|axi_bram_ctrl_0 -pg 1 -lvl 1 -x 1230 -y 674 -defaultsOSRD
+preplace inst neural_net|axi_bram_ctrl_1 -pg 1 -lvl 1 -x 1230 -y 534 -defaultsOSRD
+preplace inst neural_net|axi_bram_ctrl_2 -pg 1 -lvl 1 -x 1230 -y 394 -defaultsOSRD
+preplace inst neural_net|axi_bram_ctrl_3 -pg 1 -lvl 1 -x 1230 -y 1014 -defaultsOSRD
+preplace inst neural_net|calcPerceptron_0_bram_0 -pg 1 -lvl 2 -x 1580 -y 524 -defaultsOSRD
+preplace inst neural_net|calcPerceptron_0_bram_1 -pg 1 -lvl 2 -x 1580 -y 384 -defaultsOSRD
+preplace inst neural_net|calcPerceptron_0_bram_2 -pg 1 -lvl 2 -x 1580 -y 844 -defaultsOSRD
+preplace inst neural_net|axi_bram_ctrl_4 -pg 1 -lvl 1 -x 1230 -y 1154 -defaultsOSRD
+preplace inst neural_net|blk_mem_gen_0 -pg 1 -lvl 2 -x 1580 -y 1144 -defaultsOSRD
+preplace inst neural_net|calcPerceptron_0 -pg 1 -lvl 1 -x 1230 -y 844 -defaultsOSRD
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 3 20 320 480 220 820
 preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 2 30 330 450
-preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 1 2 470 100 780J
-preplace netloc ps7_0_axi_periph_M00_AXI 1 2 1 800 320n
-preplace netloc ps7_0_axi_periph_M01_AXI 1 2 1 N 340
-preplace netloc ps7_0_axi_periph_M02_AXI 1 2 1 N 360
-preplace netloc processing_system7_0_DDR 1 1 3 NJ 60 NJ 60 NJ
-preplace netloc processing_system7_0_M_AXI_GP0 1 1 1 450 140n
-preplace netloc ps7_0_axi_periph_M03_AXI 1 2 1 N 380
-preplace netloc ps7_0_axi_periph_M04_AXI 1 2 1 770 400n
-preplace netloc ps7_0_axi_periph_M05_AXI 1 2 1 790 400n
+preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 1 2 460 250 840
+preplace netloc ps7_0_axi_periph_M01_AXI 1 2 1 850 490n
+preplace netloc ps7_0_axi_periph_M03_AXI 1 2 1 810 530n
+preplace netloc ps7_0_axi_periph_M02_AXI 1 2 1 850 510n
 preplace netloc processing_system7_0_FIXED_IO 1 1 3 NJ 80 NJ 80 NJ
-levelinfo -pg 1 0 240 620 920 1050
-pagesize -pg 1 -db -bbox -sgen 0 0 1170 680
+preplace netloc ps7_0_axi_periph_M05_AXI 1 2 1 790 570n
+preplace netloc processing_system7_0_DDR 1 1 3 NJ 60 NJ 60 NJ
+preplace netloc ps7_0_axi_periph_M00_AXI 1 2 1 830 470n
+preplace netloc ps7_0_axi_periph_M06_AXI 1 2 1 800 140n
+preplace netloc ps7_0_axi_periph_M04_AXI 1 2 1 780 550n
+preplace netloc processing_system7_0_M_AXI_GP0 1 1 1 470 140n
+preplace netloc neural_net|rst_ps7_0_100M_peripheral_aresetn 1 0 1 1040 414n
+preplace netloc neural_net|processing_system7_0_FCLK_CLK0 1 0 1 1020 394n
+preplace netloc neural_net|ps7_0_axi_periph_M01_AXI 1 0 1 1030 494n
+preplace netloc neural_net|axi_bram_ctrl_3_BRAM_PORTA 1 1 1 1450 854n
+preplace netloc neural_net|S_AXI4_1 1 0 1 N 1134
+preplace netloc neural_net|calcPerceptron_1_x_PORTA 1 1 1 1430 654n
+preplace netloc neural_net|s_axi_CTRL_BUS_1 1 0 1 N 824
+preplace netloc neural_net|ps7_0_axi_periph_M03_AXI 1 0 1 1010 374n
+preplace netloc neural_net|calcPerceptron_1_res_PORTA 1 1 1 1440 514n
+preplace netloc neural_net|ps7_0_axi_periph_M02_AXI 1 0 1 N 514
+preplace netloc neural_net|calcPerceptron_1_b_PORTA 1 1 1 N 834
+preplace netloc neural_net|calcPerceptron_1_w_PORTA 1 1 1 1420 374n
+preplace netloc neural_net|calcPerceptron_0_model_PORTA 1 1 1 1430 874n
+preplace netloc neural_net|axi_bram_ctrl_0_BRAM_PORTA 1 1 1 N 674
+preplace netloc neural_net|axi_bram_ctrl_1_BRAM_PORTA 1 1 1 N 534
+preplace netloc neural_net|axi_bram_ctrl_4_BRAM_PORTA 1 1 1 N 1154
+preplace netloc neural_net|ps7_0_axi_periph_M05_AXI 1 0 1 1010 804n
+preplace netloc neural_net|axi_bram_ctrl_2_BRAM_PORTA 1 1 1 N 394
+levelinfo -pg 1 0 240 630 1060 1770
+levelinfo -hier neural_net * 1230 1580 *
+pagesize -pg 1 -db -bbox -sgen 0 0 1890 1260
+pagesize -hier neural_net -db -bbox -sgen 980 314 1720 1234
 "
 }
 {
-   "da_axi4_cnt":"19",
+   "da_axi4_cnt":"24",
    "da_board_cnt":"1",
    "da_bram_cntlr_cnt":"8",
    "da_clkrst_cnt":"6",

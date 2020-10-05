@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'calcPerceptron'" level="0">
-<item name = "Date">Tue Sep 22 23:46:33 2020
+<item name = "Date">Mon Oct  5 13:07:17 2020
 </item>
 <item name = "Version">2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)</item>
 <item name = "Project">simple_perceptron</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 8.677 ns, 1.25 ns</column>
+<column name="ap_clk">10.00 ns, 8.685 ns, 1.25 ns</column>
 </table>
 </item>
 </section>
@@ -35,8 +35,11 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- Loop 1">?, ?, ?, -, -, ?, no</column>
-<column name=" + Loop 1.1">?, ?, 11, -, -, ?, no</column>
+<column name="- calcPerceptron_label2">?, ?, ?, -, -, ?, no</column>
+<column name=" + calcPerceptron_label3">?, ?, ?, -, -, ?, no</column>
+<column name="  ++ calcPerceptron_label0">?, ?, 12, -, -, ?, no</column>
+<column name=" + calcPerceptron_label1">?, ?, 3, -, -, ?, no</column>
+<column name="- Loop 2">?, ?, 20, -, -, ?, no</column>
 </table>
 </item>
 </section>

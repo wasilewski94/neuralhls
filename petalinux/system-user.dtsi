@@ -32,6 +32,10 @@
     compatible = "generic-uio";
 };
 
+&neural_net_axi_bram_ctrl_4 {
+    compatible = "generic-uio";
+};
+
 &neural_net_calcPerceptron_0 {
     compatible = "generic-uio";
 };

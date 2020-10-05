@@ -1,0 +1,127 @@
+/*
+
+Xilinx Vitis v2019.2 (64-bit) [Major: 2019, Minor: 2]
+SW Build: 2708876 on Wed Nov 6 21:40:25 MST 2019
+
+Process ID (PID): 11925
+License: Customer
+
+Current time: 	Mon Oct 05 13:11:55 CEST 2020
+Time zone: 	Central European Standard Time (Europe/Warsaw)
+
+OS: Ubuntu
+OS Version: 5.4.0-48-generic
+OS Architecture: amd64
+Available processors (cores): 8
+
+Display: :0
+Screen size: 2560x1080
+Screen resolution (DPI): 100
+Available screens: 2
+Available disk space: 467 GB
+
+Java version: 	9.0.4 64-bit
+Java home: 	/opt/Xilinx/Vitis/2019.2/tps/lnx64/jre9.0.4
+Java executable location: 	/opt/Xilinx/Vitis/2019.2/tps/lnx64/jre9.0.4/bin/java
+Java initial memory (-Xms): 	64 MB
+Java maximum memory (-Xmx):	 4 GB
+
+Java library paths: /opt/Xilinx/Vitis/2019.2/lib/lnx64.o/Ubuntu/18:/opt/Xilinx/Vitis/2019.2/lib/lnx64.o/Ubuntu:/opt/Xilinx/Vitis/2019.2/lib/lnx64.o:/opt/Xilinx/Vitis/2019.2/tps/lnx64/jre9.0.4/lib/:/opt/Xilinx/Vitis/2019.2/tps/lnx64/jre9.0.4/lib//server:/opt/Xilinx/Vitis/2019.2/lib/lnx64.o:/opt/Xilinx/Vitis/2019.2/lib/lnx64.o/Ubuntu/18:/opt/Xilinx/Vitis/2019.2/lib/lnx64.o/Ubuntu:/opt/Xilinx/Vitis/2019.2/lib/lnx64.o:/opt/Xilinx/Vitis/2019.2/lib/lnx64.o/Ubuntu/18:/opt/Xilinx/Vitis/2019.2/lib/lnx64.o/Ubuntu:/opt/Xilinx/Vitis/2019.2/lib/lnx64.o:/opt/Xilinx/Vitis/2019.2/runtime/lib/x86_64:/opt/Xilinx/Vivado/2019.2/bin/../lnx64/tools/dot/lib:/opt/Xilinx/Vitis/2019.2/bin/../lnx64/tools/dot/lib:/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib
+
+Java class paths: /opt/Xilinx/Vitis/2019.2/eclipse/lnx64.o//plugins/org.eclipse.equinox.launcher_1.5.0.v20180512-1130.jar
+LD_LIBRARY_PATH: /opt/Xilinx/Vitis
+
+User name: 	wask
+User home directory: /home/wask
+User working directory: /home/wask/workspace/mgr/neuralhls/vivado
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /opt/Xilinx/Vitis
+HDI_APPROOT: /opt/Xilinx/Vitis/2019.2
+RDI_DATADIR: /opt/Xilinx/Vitis/2019.2/data
+RDI_BINDIR: /opt/Xilinx/Vitis/2019.2/bin
+
+Vitis preferences directory: /home/wask/.Xilinx/Vitis/2019.2/
+Vitis workspace directory: /home/wask/workspace/vitis
+Vitis workspace log file location: /home/wask/workspace/vitis/.metadata/.log
+Engine tmp dir: 	./.Xil/sdx-11925-legion
+
+Xilinx Environment Variables
+----------------------------
+XILINX_DSP: 
+XILINX_ENABLE_SCOUT_HLS: 0
+XILINX_HLS: /opt/Xilinx/Vivado/2019.2
+XILINX_PLANAHEAD: /opt/Xilinx/Vitis/2019.2
+XILINX_SDK: /opt/Xilinx/Vitis/2019.2
+XILINX_VITIS: /opt/Xilinx/Vitis/2019.2
+XILINX_VIVADO: /opt/Xilinx/Vivado/2019.2
+XILINX_VIVADO_HLS: /opt/Xilinx/Vivado/2019.2
+_RDI_DONT_SET_XILINX_AS_PATH: True
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+selectTree("mlp_hls_sw_system", "Explorer", "ProjectExplorer", "Tree");
+selectTree("main.cpp", "mlp_hls_sw_system > mlp_hls_sw > src", EventType.DOUBLE_CLICK, "Explorer", "ProjectExplorer", "Tree");
+selectTree("mlp_hls", "mlp_hls_sw_system > mlp_hls_sw > src", EventType.POPUP_TRIGGER_CLICK, "Explorer", "ProjectExplorer", "Tree");
+selectMenuItem("Update Hardware Specification", "Explorer", "ProjectExplorer", "MenuItem.UPDATE_HARDWARE");
+selectButton("OK", "Update Hardware Specification", "ScwSyncHwSpecDialog", "Button.OK");
+selectButton("OK", "Update Hardware Specification", "MessageDialog", "Button.OK");
+selectTree("Board Support Package", "mlp_hls > ps7_cortexa9_0 > zynq_fsbl", "mlp_hls", "ScwEditor", "Tree");
+selectButton("Reset BSP Sources", "mlp_hls", "ScwEditor", "Button.RESET_BSP_SOURCES");
+selectTree("Board Support Package", "mlp_hls > ps7_cortexa9_0 > standalone on ps7_cortexa9_0", "mlp_hls", "ScwEditor", "Tree");
+selectButton("Reset BSP Sources", "mlp_hls", "ScwEditor", "Button.RESET_BSP_SOURCES");
+selectButton("OK", "Error", "ErrorDialog", "Button.OK");
+selectButton("Reset BSP Sources", "mlp_hls", "ScwEditor", "Button.RESET_BSP_SOURCES");
+selectTree("mlp_hls", EventType.POPUP_TRIGGER_CLICK, "Explorer", "ProjectExplorer", "Tree");
+selectMenuItem("Build Project", "Explorer", "ProjectExplorer", "MenuItem.BUILD_PROJECT");
+selectTree("mlp_hls_sw_system", EventType.POPUP_TRIGGER_CLICK, "Explorer", "ProjectExplorer", "Tree");
+selectMenuItem("Build Project", "Explorer", "ProjectExplorer", "MenuItem.BUILD_PROJECT");
+activateView("Problems", "ProblemsView", "CTabItem.PROBLEMS");
+activateView("Console", "ConsoleView", "CTabItem.CONSOLE");
+activateView("main.cpp", "mlp_hls_sw/src/main.cpp", "CEditor", "CTabItem.MAIN_CPP");
+selectTree("mlp_hls_sw_system", EventType.POPUP_TRIGGER_CLICK, "Explorer", "ProjectExplorer", "Tree");
+selectMenuItem("Build Project", "Explorer", "ProjectExplorer", "MenuItem.BUILD_PROJECT");
+selectTree("mlp_hls_sw_system", "Explorer", "ProjectExplorer", "Tree");
+selectToolBarButton("Connect to serial port", "Vitis Serial Terminal", "SDKTerminalView", "ToolItem.CONNECT_TO_SERIAL");
+selectCombo("/dev/ttyUSB0", "Connect to serial port", "SerialConnectionDialog", "ComboViewer.PORT");
+selectButton("OK", "Connect to serial port", "SerialConnectionDialog", "Button.OK");
+selectTree("mlp_hls_sw_system", EventType.POPUP_TRIGGER_CLICK, "Explorer", "ProjectExplorer", "Tree");
+selectMenuItem("Run As", "Explorer", "ProjectExplorer", "MenuItem.RUN_AS");
+selectMenuItem("1 Launch on Hardware", "mlp_hls_sw_system", "WorkbenchWindow", "MenuItem.1_LAUNCH_ON_HARDWARE");
+selectTree("mlp_hls_sw_system", EventType.POPUP_TRIGGER_CLICK, "Explorer", "ProjectExplorer", "Tree");
+selectMenuItem("Build Project", "Explorer", "ProjectExplorer", "MenuItem.BUILD_PROJECT");
+selectTree("mlp_hls_sw_system", EventType.POPUP_TRIGGER_CLICK, "Explorer", "ProjectExplorer", "Tree");
+selectMenuItem("Run As", "Explorer", "ProjectExplorer", "MenuItem.RUN_AS");
+selectMenuItem("1 Launch on Hardware", "mlp_hls_sw_system", "WorkbenchWindow", "MenuItem.1_LAUNCH_ON_HARDWARE");
+activateView("New Renderings", "CTabItem", "NEW_RENDERINGS");
+selectTree("mlp_hls_sw_system", EventType.POPUP_TRIGGER_CLICK, "Explorer", "ProjectExplorer", "Tree");
+selectMenuItem("Build Project", "Explorer", "ProjectExplorer", "MenuItem.BUILD_PROJECT");
+selectTree("mlp_hls_sw_system", EventType.POPUP_TRIGGER_CLICK, "Explorer", "ProjectExplorer", "Tree");
+selectMenuItem("Run As", "Explorer", "ProjectExplorer", "MenuItem.RUN_AS");
+selectMenuItem("1 Launch on Hardware", "mlp_hls_sw_system", "WorkbenchWindow", "MenuItem.1_LAUNCH_ON_HARDWARE");
+activateView("New Renderings", "CTabItem", "NEW_RENDERINGS");
+selectTree("mlp_hls_sw_system", EventType.POPUP_TRIGGER_CLICK, "Explorer", "ProjectExplorer", "Tree");
+selectMenuItem("Build Project", "Explorer", "ProjectExplorer", "MenuItem.BUILD_PROJECT");
+selectTree("mlp_hls_sw_system", EventType.POPUP_TRIGGER_CLICK, "Explorer", "ProjectExplorer", "Tree");
+selectMenuItem("Run As", "Explorer", "ProjectExplorer", "MenuItem.RUN_AS");
+selectMenuItem("1 Launch on Hardware", "mlp_hls_sw_system", "WorkbenchWindow", "MenuItem.1_LAUNCH_ON_HARDWARE");
+activateView("New Renderings", "CTabItem", "NEW_RENDERINGS");
+selectTree("inputs.h", "mlp_hls_sw_system > mlp_hls_sw > src", EventType.DOUBLE_CLICK, "Explorer", "ProjectExplorer", "Tree");
+closeView("inputs.h", "mlp_hls_sw/src/inputs.h", "CEditor", "CTabItem.INPUTS_H");
+selectTree("mlp_hls_sw_system", "mlp_hls_sw_system > mlp_hls_sw > src", EventType.POPUP_TRIGGER_CLICK, "Explorer", "ProjectExplorer", "Tree");
+selectMenuItem("Build Project", "Explorer", "ProjectExplorer", "MenuItem.BUILD_PROJECT");
+selectTree("mlp_hls_sw_system", "mlp_hls_sw_system > mlp_hls_sw > src", EventType.POPUP_TRIGGER_CLICK, "Explorer", "ProjectExplorer", "Tree");
+selectMenuItem("Run As", "Explorer", "ProjectExplorer", "MenuItem.RUN_AS");
+selectMenuItem("1 Launch on Hardware", "mlp_hls_sw_system", "WorkbenchWindow", "MenuItem.1_LAUNCH_ON_HARDWARE");
+activateView("New Renderings", "CTabItem", "NEW_RENDERINGS");
+selectTree("mlp_hls_sw_system", EventType.POPUP_TRIGGER_CLICK, "Explorer", "ProjectExplorer", "Tree");
+selectMenuItem("Build Project", "Explorer", "ProjectExplorer", "MenuItem.BUILD_PROJECT");
+selectTree("mlp_hls_sw_system", EventType.POPUP_TRIGGER_CLICK, "Explorer", "ProjectExplorer", "Tree");
+selectMenuItem("Run As", "Explorer", "ProjectExplorer", "MenuItem.RUN_AS");
+selectMenuItem("1 Launch on Hardware", "mlp_hls_sw_system", "WorkbenchWindow", "MenuItem.1_LAUNCH_ON_HARDWARE");
+activateView("New Renderings", "CTabItem", "NEW_RENDERINGS");

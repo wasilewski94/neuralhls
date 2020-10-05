@@ -13,10 +13,10 @@ def softmax(x):
 # load weights and biases from a model pretrained in keras
 weights1 = np.load('weights1.npy')
 weights2 = np.load('weights2.npy')
-# weights3 = np.load('weights3.npy')
+weights3 = np.load('weights3.npy')
 biases1 = np.load('biases1.npy')
 biases2 = np.load('biases2.npy')
-# biases3 = np.load('biases3.npy')
+biases3 = np.load('biases3.npy')
 
 cam = cv2.VideoCapture(2)
 img_width = 640
@@ -26,10 +26,10 @@ cam.set(4, img_height)
 
 max_dim_ratio = 2.0 # it is the maximum difference between heigth and width of the digit to be detected ( (w/h) <= max_dim_diff )
 min_dim_ratio = 0.3
-num_row = 5 # output plot size
-num_col = 7
-max_digits = 100 # the maximum number of digits that can be found at each frame
+max_digits = 10 # the maximum number of digits that can be found at each frame
 crop_padding_top = 4
+num_row = 2 # output plot size
+num_col = 5
 
 cv2.namedWindow('stream from Z-Turn camera',cv2.WINDOW_NORMAL)
 cv2.resizeWindow('stream from Z-Turn camera', 640,480)
@@ -54,7 +54,7 @@ while True:
     for i,cnt in enumerate(contours):
 
         x,y,w,h = cv2.boundingRect(cnt)
-        if(found_digits <= max_digits and h > 20 and h<200 and w > 10 and w < 200 and min_dim_ratio <= (w/float(h)) <= max_dim_ratio and hierarchy[0][i][3] == -1):
+        if(found_digits <= max_digits and h > 40 and h<200 and w > 10 and w < 200 and min_dim_ratio <= (w/float(h)) <= max_dim_ratio and hierarchy[0][i][3] == -1):
             found_digits +=1
             cv2.rectangle(img,(x,y),(x+w,y+h),(0,255,0),2)
             #cropping each image and process
@@ -94,13 +94,13 @@ while True:
             #     print(i, "|", format(results2layer[i], '.8f'))
 
             # print("\n3nd layer output:")
-            # results3layer = softmax(np.dot(results2layer, weights3) + biases3)
-            # for i in range(10):
-            #     print(i, "|", format(results2layer[i], '.8f'))
+            results3layer = softmax(np.dot(results2layer, weights3) + biases3)
+            for i in range(10):
+                print(i, "|", format(results3layer[i], '.8f'))
 
 
-            digit = np.argmax(results2layer)
-            # print("Recognized digit: " + str(digit)+ " with output: " + str(results2layer[digit]))
+            digit = np.argmax(results3layer)
+            print("Recognized digit: " + str(digit)+ " with output: " + str(results3layer[digit]))
 
             recognized_digits.append(digit)
             outputs.append(results2layer[digit])
@@ -123,7 +123,10 @@ while True:
             # ax.set_title("{}({:.2f})".format(recognized_digits[i], outputs[i]))
             ax.set_title("{}".format(recognized_digits[i]))
         plt.tight_layout()
+        # save image
+        cv2.imwrite('2hid-layer-img.png', img)
         plt.show()
+
     if k%256 == 27:
         # ESC pressed
         print("Escape hit, closing...")

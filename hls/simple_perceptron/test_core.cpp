@@ -1,52 +1,36 @@
-#include <stdio.h>
 #include <hls_math.h>
-void calcPerceptron(float x[784], float w[12704], float b[26], float res[26], int inputs, int neurons, int w_offset, int b_offset);
+#include <ap_fixed.h>
+#include <stdio.h>
 
-int main()
-{
-
-	float XVec[784] = {
 #include "hls_input.h"
-	};
-
-	float WVec[12704] = {
 #include "hls_weights.h"
-		};
-
-	float res[26];
-
-	float b[26] = {
 #include "hls_biases.h"
-	};
 
-	// Call the DUT
-	calcPerceptron(XVec, WVec, b, res, 784, 16, 0, 0);
+// typedef ap_fixed<20,5> xtype;
+typedef float xtype;
 
-	// Print the results
-	for (int i = 0; i < 16; i++)
-	{
-		printf("Result[%d]=%f\n", i, res[i]);
-		XVec[i] = res[i];
-	}
 
-//	for (int i = 0; i < 10; i++)
-//	{
-//		b[i] = b[i+16];
-//	}
+void calcPerceptron(xtype x[784], xtype w[64000], xtype b[500], xtype res[300], int model[30]);
 
-//	for (int i = 0; i < 160; i++)
-//	{
-//		WVec[i] = WVec[i+12544];
-//	}
+int main() {
+//		          layers, activation_hidden,     activation_out       inputs,  neurons1, neurons2,  neurons3
+	int model[30] = {2,      0,                      0,              784,         16,      10	};
 
-	calcPerceptron(XVec, WVec, b, res, 16, 10, 12544, 16);
+//	 activation hidden:
+	//sigmoid (0)
+	//relu (1)
 
-	// Print the results
-	for (int i = 0; i < 10; i++)
-	{
-		printf("Result[%d]=%f\n", i, res[i]);
-		XVec[i] = res[i];
-	}
+//	 activation out:
+	//sigmoid (0)
+	//softmax (1)
 
-	return 0;
+	xtype res[300];
+
+	calcPerceptron(xk, weights, biases, res, model);
+
+    for(int i=0; i<10; i++) {
+        printf("%f\n", res[i]);
+    }
+
+    return 0;
 }

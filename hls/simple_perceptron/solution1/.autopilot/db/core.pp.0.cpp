@@ -26874,31 +26874,83 @@ namespace hls {
 
 };
 # 2 "simple_perceptron/core.cpp" 2
+# 12 "simple_perceptron/core.cpp"
+typedef float xtype;
+void calcPerceptron(xtype x[784], xtype w[64000], xtype b[500], xtype res[300], int model[30]) {_ssdm_SpecArrayDimSize(x, 784);_ssdm_SpecArrayDimSize(w, 64000);_ssdm_SpecArrayDimSize(b, 500);_ssdm_SpecArrayDimSize(res, 300);_ssdm_SpecArrayDimSize(model, 30);
 
-void calcPerceptron(float x[784], float w[12704], float b[26], float res[26], int inputs, int neurons, int w_offset, int b_offset)
-{_ssdm_SpecArrayDimSize(x, 784);_ssdm_SpecArrayDimSize(w, 12704);_ssdm_SpecArrayDimSize(b, 26);_ssdm_SpecArrayDimSize(res, 26);
 #pragma HLS INTERFACE s_axilite port=return bundle=CTRL_BUS
-#pragma HLS INTERFACE s_axilite port=&inputs bundle=CTRL_BUS
-#pragma HLS INTERFACE s_axilite port=&neurons bundle=CTRL_BUS
-#pragma HLS INTERFACE s_axilite port=&w_offset bundle=CTRL_BUS
-#pragma HLS INTERFACE s_axilite port=&b_offset bundle=CTRL_BUS
 
 #pragma HLS INTERFACE bram port=&x
 #pragma HLS INTERFACE bram port=&w
 #pragma HLS INTERFACE bram port=&res
 #pragma HLS INTERFACE bram port=&b
+#pragma HLS INTERFACE bram port=&model
+
+ xtype sum = 0.0;
+    float zero_ref = 0.0;
+    float softmax_sum = 0.0;
+    int layers = model[0];
+    float prune_thresh = res[0];
 
 
-float sum = 0.0;
 
+    int w_offset = 0;
+    int b_offset = 0;
 
+ calcPerceptron_label2:
+ for(int l=0; l<layers; l++) {
+#pragma HLS PIPELINE
+# 35 "simple_perceptron/core.cpp"
 
-for(int j = 0; j<neurons; j++){
- for (int i = 0; i < inputs; i++) {
-  sum += x[i] * w[i + inputs*j + w_offset];
+  calcPerceptron_label3:
+  for(int j=0; j<model[l+4]; j++){
+#pragma HLS PIPELINE
+# 37 "simple_perceptron/core.cpp"
+
+            calcPerceptron_label0:
+   for (int i = 0; i < model[l+3]; i++) {
+#pragma HLS UNROLL
+# 39 "simple_perceptron/core.cpp"
+
+    if (hls::fabs(w[i + model[l+3]*j + w_offset]) > prune_thresh) {
+     sum += x[i] * w[i + model[l+3]*j + w_offset];
+    }
+            }
+   if(l == layers-1) {
+    if(model[2] == 0){
+     res[j] = 1.0 / (1 + hls::expf(-( sum + b[j + b_offset])));
+    } else {
+     res[j] = hls::expf( sum + b[j + b_offset]);
+     softmax_sum +=res[j];
+    }
+   } else {
+    if(model[1] == 0){
+     res[j] = 1.0 / (1 + hls::expf(-( sum + b[j + b_offset])));
+    } else {
+     res[j] = hls::fmax(sum, zero_ref );
+    }
+   }
+
+   sum = 0.0;
+        }
+        calcPerceptron_label1:
+  for(int k = 0; k<model[l+4]; k++) {
+#pragma HLS UNROLL
+# 62 "simple_perceptron/core.cpp"
+
+            x[k] = res[k];
+        }
+  w_offset += model[l+4]*model[l+3];
+  b_offset += model[l+4];
+
  }
- res[j] = 1.0 / (1 + hls::expf(-( sum + b[j + b_offset])));
- sum = 0.0;
-}
+
+
+ if(model[2] == 1){
+  for(int j=0; j<model[layers+3]; j++){
+   res[j] /= softmax_sum;
+  }
+ }
+
 
 }
