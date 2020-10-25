@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="hls_weights2.h" path="/home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/hls_weights2.h"/>
+    <originFiles name="hls_weights1.h" path="/home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/hls_weights1.h"/>
+    <originFiles name="hls_biases.h" path="/home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/hls_biases.h"/>
+    <originFiles name="core.h" path="/home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/core.h"/>
+    <originFiles name="core.cpp" path="/home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/core.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="test_core.cpp" path="/home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/test_core.cpp"/>
+    <originFiles name="hls_input.h" path="/home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/hls_input.h"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

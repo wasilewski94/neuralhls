@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'calcPerceptron/x_Din_A' to 0." projectName="simple_perceptron" solutionName="restype" date="2020-10-12T02:43:03.838+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'calcPerceptron/x_WEN_A' to 0." projectName="simple_perceptron" solutionName="restype" date="2020-10-12T02:43:02.948+0200" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('w_load_30', simple_perceptron/core.cpp:45) on array 'w' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'w'." projectName="simple_perceptron" solutionName="restype" date="2020-10-12T02:42:02.632+0200" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'exp_generic&lt;decimal16>' to 'exp_generic_decimal16_s'." projectName="simple_perceptron" solutionName="restype" date="2020-10-12T02:41:07.545+0200" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'sum' (simple_perceptron/core.cpp:33)." projectName="simple_perceptron" solutionName="restype" date="2020-10-12T02:41:05.370+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'exp_reduce_::exp_generic&lt;decimal16>' to 'exp_generic&lt;decimal16>' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_exp_.h:18:3)" projectName="simple_perceptron" solutionName="restype" date="2020-10-12T02:41:05.333+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'calcPerceptron_label3' (simple_perceptron/core.cpp:61) because its parent loop or function is pipelined." projectName="simple_perceptron" solutionName="restype" date="2020-10-12T02:40:50.094+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'calcPerceptron_label1' (simple_perceptron/core.cpp:42) because its parent loop or function is pipelined." projectName="simple_perceptron" solutionName="restype" date="2020-10-12T02:40:50.065+0200" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>
